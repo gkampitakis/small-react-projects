@@ -1,11 +1,11 @@
 import React from 'react';
-import Birthday from './projects/birthday/birthday';
+import Birthday from './projects/birthday/Birthday';
 import Tours from './projects/tours/tours';
 
 function App () {
   return (
     <div className="App">
-      <Tours />
+      <Birthday />
     </div>
   );
 }
