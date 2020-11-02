@@ -179,7 +179,9 @@ main {
 
 .tour-info {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .title {
@@ -193,9 +195,6 @@ main {
   background: var(--clr-primary-5);
   margin-left: auto;
   margin-right: auto;
-}
-
-.refetch-btn {
 }
 
 .single-tour button {
@@ -220,6 +219,13 @@ main {
   letter-spacing: var(--spacing);
   background: transparent;
   border: 1px solid var(--clr-red-dark);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+}
+
+.tour-price {
+  color: var(--clr-primary-5);
+  background: var(--clr-primary-10);
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
 }
