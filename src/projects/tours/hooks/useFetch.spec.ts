@@ -1,7 +1,6 @@
 import { useFetch } from './useFetch';
 import { act, renderHook } from '@testing-library/react-hooks';
 import { FetchMock } from 'jest-fetch-mock';
-import { error } from 'console';
 
 const fetchMock = (fetch as FetchMock);
 

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, ReactElement } from 'react';
 
-function Error ({ error }: { error: Error }) {
+function Error ({ error }: { error: Error }): ReactElement {
   useEffect(() => {
     console.log(error);
   }, [error]);

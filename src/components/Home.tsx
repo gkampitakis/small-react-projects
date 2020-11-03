@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, ReactElement } from 'react';
 import Error from './Error';
 
 interface HomeProps {
@@ -8,11 +8,11 @@ interface HomeProps {
   }[];
   loading: boolean;
   error: Error | null;
-  Component: any;
+  Component: undefined | string;
   loadComponent: (e: ChangeEvent<HTMLSelectElement>) => void;
 }
 
-export default function Home ({ options, error, Component, loadComponent, loading }: HomeProps) {
+export default function Home ({ options, error, Component, loadComponent, loading }: HomeProps): ReactElement {
   return (
     <div className="home">
       <h1>Welcome to Small React Projects</h1>
