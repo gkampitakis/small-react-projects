@@ -7,7 +7,7 @@ function useFetch (url: string): [unknown | undefined, boolean, () => void, Erro
 
   const retrieveData = useCallback(() => {
     setLoading(true);
-    
+
     fetch(url)
       .then(d => d.json())
       .then(d => setData(d))
