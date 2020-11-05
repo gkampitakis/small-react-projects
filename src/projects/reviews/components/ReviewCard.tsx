@@ -19,7 +19,7 @@ export default function ReviewCard ({ data, controls }:
           <FaQuoteRight />
         </span>
       </div>
-      <h4>{data.name}</h4>
+      <h4 className="author">{data.name}</h4>
       <p className="job">{data.job}</p>
       <p className="info">
         {data.text}
