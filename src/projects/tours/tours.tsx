@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useFetch } from './hooks/useFetch';
+import { useFetch } from '../../hooks/useFetch';
 import { TourI } from './components/interface';
 import Loading from './components/Loading';
 import Error from './components/Error';
