@@ -1,15 +1,29 @@
 import React, { useEffect, ReactElement } from 'react';
 
-function Error ({ error }: { error: Error }): ReactElement {
+interface ErrorProps {
+  error?: Error;
+  message?: string;
+}
+
+function Error ({ error, message }: ErrorProps): ReactElement {
   useEffect(() => {
     console.log(error);
   }, [error]);
 
+  const msg = message ? message : error?.message;
+
   return (
-    <>
-      <h2>An unexpected Error ocurred</h2>
-      <p>You can check console for more information</p>
-    </>
+    <section className="errorContainer">
+      <img src="./images/error.svg" />
+      <footer>
+        {
+          msg && <h2>{msg}</h2>
+        }
+        {
+          error && <p>You can check console for more information</p>
+        }
+      </footer>
+    </section >
   );
 }
 

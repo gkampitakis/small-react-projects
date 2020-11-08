@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import { TourI } from './components/interface';
 import Loading from './components/Loading';
-import Error from './components/Error';
+import Error from '../../components/Error';
 import Tour from './components/Tour';
 import './index.css';
 
@@ -24,7 +24,7 @@ export default function Tours () {
     <main>
       {
         loading && <Loading /> ||
-        error && <Error error={error} /> ||
+        error && <Error message={error} /> ||
         tours &&
         <>
           <div className="title">

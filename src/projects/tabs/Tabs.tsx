@@ -3,6 +3,7 @@ import { useFetch } from '../../hooks/useFetch';
 import './index.css';
 import Details from './components/Details';
 import Tab from './components/Tab';
+import Error from '../../components/Error';
 
 const DATA_URL = 'https://course-api.com/react-tabs-project';
 
@@ -28,7 +29,7 @@ export default function Tabs () {
         </div>
       </div>
       {loading && <h2 className="loading">Loading...</h2>}
-      {error && <h2>An error ocurred</h2>}
+      {error && <Error message={error} />}
       {
         data &&
         <section className="main-content">

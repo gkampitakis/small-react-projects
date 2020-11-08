@@ -33,7 +33,7 @@ describe('Tours', () => {
 
     await waitFor(() => {
       expect(logSpy).toHaveBeenCalledTimes(1)
-      const errorMessage = screen.queryByText(/unexpected error/i);
+      const errorMessage = screen.queryByText(/Mock Error/i);
       expect(errorMessage).toBeTruthy();
 
     });
