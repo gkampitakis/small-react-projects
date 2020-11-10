@@ -1,18 +1,21 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 
 function getItem (item: string, defaultValue?: unknown) {
-  const list = localStorage.getItem(item);
+  const storedItem = localStorage.getItem(item);
 
-  if (list) return JSON.parse(list);
-  if (!list && !defaultValue) return undefined;
+  if (!storedItem) {
+    defaultValue && localStorage.setItem(item, JSON.stringify(defaultValue))
 
-  localStorage.setItem(item, JSON.stringify(defaultValue));
-  return defaultValue;
+    return defaultValue;
+  }
+
+  return JSON.parse(storedItem);
 }
 
-export function useLocalStorage<T> (item: string, defaultValue?: T): [T | undefined, (data: T) => void, () => void] {
-  const [data, setData] = useState<T | undefined>(getItem(item, defaultValue));
+
+export function useLocalStorage<T> (item: string, defaultValue?: T): [T, (data: T | ((data: T) => T)) => void, () => void] {
+  const [data, setData] = useState<T>(getItem(item, defaultValue));
 
   const sync = useCallback(() => {
     setData(getItem(item));
@@ -22,11 +25,16 @@ export function useLocalStorage<T> (item: string, defaultValue?: T): [T | undefi
     sync();
   }, [sync]);
 
-  function setItems (data: T) {
-    localStorage.setItem(item, JSON.stringify(data));
-    setData(data);
+  function setItems (value: T | ((value: T) => T)) {
+    try {
+      const newValue = value instanceof Function ? value(data) : value;
+
+      localStorage.setItem(item, JSON.stringify(newValue));
+      setData(value);
+    } catch (error) {
+      console.warn(`Error setting localStorage key "${item}": ${error.message}`);
+    }
   }
 
   return [data, setItems, sync];
 }
-
