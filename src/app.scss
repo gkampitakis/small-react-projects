@@ -166,7 +166,7 @@ Loading Component
       width: 100%;
       position: absolute;
       height: 6px;
-      background-color: #61DAFB;
+      background-color: #61dafb;
       animation-name: loader-animation;
       animation-duration: 4s;
       animation-iteration-count: infinite;
@@ -207,3 +207,30 @@ Loading Component
 404 Component
 ===========
 */
+
+.not_found {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 30rem;
+  }
+
+  .return-btn {
+    padding: 0.6rem 1rem;
+    border-radius: 0.25rem;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    color: white;
+    background: #61dafb;
+    transition: all 0.3s linear;
+
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
