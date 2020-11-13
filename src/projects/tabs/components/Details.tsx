@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { FaAngleDoubleRight } from 'react-icons/fa'
+
 
 interface DetailsProps {
   data: {
@@ -12,7 +13,8 @@ interface DetailsProps {
   }
 }
 
-export default function Details ({ data }: DetailsProps) {
+
+export default function Details ({ data }: DetailsProps): ReactElement {
   return (
     <section className="details">
       <header>
@@ -32,5 +34,5 @@ export default function Details ({ data }: DetailsProps) {
         more info
       </button>
     </section>
-  )
+  );
 }

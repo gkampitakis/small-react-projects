@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
+
 
 interface MenuItemProps {
   item: {
@@ -10,7 +11,8 @@ interface MenuItemProps {
   }
 }
 
-export default function MenuItem ({ item }: MenuItemProps) {
+
+export default function MenuItem ({ item }: MenuItemProps): ReactElement {
   return (
     <article className="menuItem">
       <img src={item.img} alt={item.title} />
@@ -22,5 +24,5 @@ export default function MenuItem ({ item }: MenuItemProps) {
         <p>{item.desc}</p>
       </div>
     </article>
-  )
+  );
 }

@@ -1,9 +1,11 @@
 import React, { useEffect, ReactElement } from 'react';
 
+
 interface ErrorProps {
   error?: Error;
   message?: string;
 }
+
 
 function Error ({ error, message }: ErrorProps): ReactElement {
   useEffect(() => {

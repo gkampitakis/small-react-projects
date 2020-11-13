@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Tour from './Tour';
 import userEvent from '@testing-library/user-event';
-import { info } from 'console';
+
 
 describe('Tour', () => {
 

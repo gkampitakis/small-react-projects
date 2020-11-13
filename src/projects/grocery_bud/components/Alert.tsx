@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactElement } from 'react';
+
 
 export interface AlertI {
   msg: string;
@@ -9,7 +10,8 @@ type AlertProps = AlertI & {
   data: { title: string; id: string }[]
 }
 
-export default function Alert ({ msg, type, data }: AlertProps) {
+
+export default function Alert ({ msg, type, data }: AlertProps): ReactElement {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -29,5 +31,5 @@ export default function Alert ({ msg, type, data }: AlertProps) {
     <>
       {show && <p className={`alert alert-${type}`}>{msg}</p>}
     </>
-  )
+  );
 }

@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import loremData from './data';
 import './index.css';
 
-export default function LoremGenerator () {
+
+export default function LoremGenerator (): ReactElement {
   const [count, setCount] = useState('0');
   const [data, setData] = useState<string[]>([]);
 
@@ -22,7 +23,7 @@ export default function LoremGenerator () {
 
   return (
     <section className="section-center">
-      <h3>Tired of borin Lorem Ipsum</h3>
+      <h3>Tired of boring Lorem Ipsum</h3>
       <form className="lorem-form" onSubmit={handleSubmit}>
         <label htmlFor="amount">Paragraphs: </label>
         <input

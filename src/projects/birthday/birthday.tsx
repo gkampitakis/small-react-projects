@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import Card from './components/Card';
 import data from './data';
 import './index.css';
 
-export default function Birthday () {
+
+export default function Birthday (): ReactElement {
   const [people, setPeople] = useState(data);
 
   return (

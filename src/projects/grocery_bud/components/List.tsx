@@ -1,14 +1,17 @@
 import React, { memo } from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 
+
 const EditMemo = memo(FaEdit);
 const TrashMemo = memo(FaTrash);
+
 
 interface ListProps {
   data: { id: string; title: string; }[];
   removeItem: (id: string) => void;
   editItem: (id: string) => void;
 }
+
 
 function List ({ data, editItem, removeItem }: ListProps) {
   return (
@@ -29,8 +32,5 @@ function List ({ data, editItem, removeItem }: ListProps) {
     </>
   )
 }
-
-//add cancel and not edit on same change
-//TODO: also wrap the big words
 
 export default memo(List);

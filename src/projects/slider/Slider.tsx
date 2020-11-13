@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import people from './data';
 import Review from './components/Review';
 import './index.css';
 
-export default function Slider () {
+
+export default function Slider (): ReactElement {
   const [index, setIndex] = useState(0);
 
   function next () {
@@ -46,7 +47,7 @@ export default function Slider () {
             }
 
             return (
-              <Review key={data.id} data={rest} className={position} />
+              <Review key={id} data={rest} className={position} />
             )
           })
         }
@@ -58,5 +59,5 @@ export default function Slider () {
         </button>
       </div>
     </section>
-  )
+  );
 }

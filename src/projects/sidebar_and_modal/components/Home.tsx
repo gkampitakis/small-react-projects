@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { useGlobalContext } from '../context';
 
-export default function Home () {
+
+export default function Home (): ReactElement {
   const { openSidebar, openModal } = useGlobalContext();
 
   return (
@@ -14,5 +15,5 @@ export default function Home () {
         show modal
       </button>
     </main>
-  )
+  );
 }

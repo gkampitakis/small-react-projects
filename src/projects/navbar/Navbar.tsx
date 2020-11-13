@@ -1,19 +1,20 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, ReactElement } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { links, social } from './data';
 import './index.css';
 
-export default function Navbar () {
+
+export default function Navbar (): ReactElement {
   const [showLinks, setShowLinks] = useState(false);
-  const linksContainerRef = useRef<any>(null);
-  const linksRef = useRef<any>(null);
+  const linksContainerRef = useRef<HTMLDivElement>(null);
+  const linksRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    const linksHeight = linksRef.current.getBoundingClientRect().height;
+    const linksHeight = linksRef.current!.getBoundingClientRect().height;
     if (showLinks) {
-      linksContainerRef.current.style.height = `${linksHeight}px`;
+      linksContainerRef.current!.style.height = `${linksHeight}px`;
     } else {
-      linksContainerRef.current.style.height = '0px';
+      linksContainerRef.current!.style.height = '0px';
     }
   }, [showLinks])
 
@@ -42,5 +43,5 @@ export default function Navbar () {
         </ul>
       </div>
     </nav >
-  )
+  );
 }

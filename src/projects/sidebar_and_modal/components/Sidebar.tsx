@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { useGlobalContext } from '../context';
 import { social, links } from '../data';
 
-export default function Sidebar () {
+
+export default function Sidebar (): ReactElement {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
 
   return (
@@ -40,5 +41,5 @@ export default function Sidebar () {
         </ul>
       </div>
     </aside>
-  )
+  );
 }

@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { render, screen, cleanup, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import Tours from './Tours';
 
+
 const fetchMock = (fetch as FetchMock);
 
 describe('Tours', () => {

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import ReviewCardProps from './interface';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
+
 
 interface controls {
   next: () => void;
@@ -8,8 +9,9 @@ interface controls {
   random: () => void;
 }
 
+
 export default function ReviewCard ({ data, controls }:
-  { data: ReviewCardProps; controls: controls }) {
+  { data: ReviewCardProps; controls: controls }): ReactElement {
 
   return (
     <article className="review-card">
@@ -36,5 +38,5 @@ export default function ReviewCard ({ data, controls }:
         surprise me
       </button>
     </article>
-  )
+  );
 }

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import List from './List';
+
 
 interface CardProps {
   data: {
@@ -11,7 +12,8 @@ interface CardProps {
   clearFn: () => void;
 }
 
-export default function Card ({ data, clearFn }: CardProps) {
+
+export default function Card ({ data, clearFn }: CardProps): ReactElement {
   return (
     <main>
       <section className="container">

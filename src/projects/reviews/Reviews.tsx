@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import ReviewCard from './components/ReviewCard';
-import './index.css';
 import seedData from './data';
+import './index.css';
 
-export default function Reviews () {
+
+export default function Reviews (): ReactElement {
   const [index, setIndex] = useState(0);
 
   function next () {
@@ -36,5 +37,5 @@ export default function Reviews () {
         <ReviewCard controls={{ next, previous, random }} data={seedData[index]} />
       </section>
     </main>
-  )
+  );
 }

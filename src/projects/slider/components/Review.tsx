@@ -1,5 +1,6 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { ReactElement } from 'react';
 import { FaQuoteRight } from 'react-icons/fa';
+
 
 interface ReviewProps {
   className: string;
@@ -11,7 +12,8 @@ interface ReviewProps {
   };
 }
 
-export default function Review ({ data, className }: ReviewProps) {
+
+export default function Review ({ data, className }: ReviewProps): ReactElement {
   return (
     <article className={className}>
       <img className="person-img" src={data.image} alt={data.name} />
@@ -20,5 +22,5 @@ export default function Review ({ data, className }: ReviewProps) {
       <p className="quote">{data.quote}</p>
       <FaQuoteRight className="icon" />
     </article>
-  )
+  );
 }

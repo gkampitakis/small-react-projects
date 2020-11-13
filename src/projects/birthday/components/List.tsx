@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, ReactElement } from 'react';
+
 
 interface ListProps {
   data: {
@@ -9,7 +10,8 @@ interface ListProps {
   }[];
 }
 
-export default function List ({ data }: ListProps) {
+
+export default function List ({ data }: ListProps): ReactElement {
   return (
     <Fragment>
       {data.map(el => (
@@ -22,5 +24,5 @@ export default function List ({ data }: ListProps) {
         </article>
       ))}
     </Fragment>
-  )
+  );
 }

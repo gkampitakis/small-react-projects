@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+
 
 interface QuestionProps {
   info: string;
   title: string;
 }
 
-export default function Question ({ data }: { data: QuestionProps }) {
+
+export default function Question ({ data }: { data: QuestionProps }): ReactElement {
   const [show, setShow] = useState(false);
 
   return (
@@ -19,5 +21,5 @@ export default function Question ({ data }: { data: QuestionProps }) {
       </header>
       { show && <p>{data.info}</p>}
     </article>
-  )
+  );
 }

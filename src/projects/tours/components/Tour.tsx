@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { ReactElement, useState } from 'react'
 import { TourI } from './interface';
 
-export default function Tour ({ data, removeTour }: { data: TourI; removeTour: () => void }) {
+
+export default function Tour (
+  { data, removeTour }: { data: TourI; removeTour: () => void }
+): ReactElement {
   const [more, setMore] = useState(false);
 
   return (
@@ -19,5 +22,5 @@ export default function Tour ({ data, removeTour }: { data: TourI; removeTour: (
         <button className="delete-btn" onClick={removeTour}>Not interested</button>
       </footer>
     </article>
-  )
+  );
 }

@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, ReactElement } from 'react';
 import MenuItem from './components/MenuItem';
 import Tabs from './components/Tabs';
 import data from './data';
 import './index.css';
 
-export default function Menu () {
+
+export default function Menu (): ReactElement {
   const [tab, setTab] = useState('all');
   const [menuList, setMenuList] = useState(data)
 
@@ -28,5 +29,5 @@ export default function Menu () {
         </div>
       </div>
     </main>
-  )
+  );
 }

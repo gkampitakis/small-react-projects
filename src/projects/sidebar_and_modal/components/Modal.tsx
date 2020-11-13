@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { useGlobalContext } from '../context';
 import { FaTimes } from 'react-icons/fa';
 
-export default function Modal () {
-  const { closeModal, isModalOpen } = useGlobalContext();
 
+export default function Modal (): ReactElement {
+  const { closeModal, isModalOpen } = useGlobalContext();
 
   return (
     <div className={isModalOpen ? "modal-overlay show-modal" : "modal-overlay"}>
@@ -15,5 +15,5 @@ export default function Modal () {
         </button>
       </div>
     </div>
-  )
+  );
 }

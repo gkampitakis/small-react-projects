@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
+
 
 interface TabProps {
   selected: boolean;
@@ -6,8 +7,13 @@ interface TabProps {
   handler: () => void;
 }
 
-export default function Tab ({ selected = false, title, handler }: TabProps) {
+
+export default function Tab (
+  { selected = false, title, handler }: TabProps
+): ReactElement {
   return (
-    <button className={`tab-btn ${selected ? 'selected' : ''}`} onClick={handler}>{title}</button>
-  )
+    <button className={`tab-btn ${selected ? 'selected' : ''}`} onClick={handler}>
+      {title}
+    </button>
+  );
 }

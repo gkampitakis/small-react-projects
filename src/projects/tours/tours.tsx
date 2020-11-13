@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactElement } from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import { TourI } from './components/interface';
 import Loading from './components/Loading';
@@ -6,9 +6,10 @@ import Error from '../../components/Error';
 import Tour from './components/Tour';
 import './index.css';
 
+
 const TOURS_DATA = 'https://course-api.com/react-tours-project';
 
-export default function Tours () {
+export default function Tours (): ReactElement {
   const [data, loading, refetch, error] = useFetch(TOURS_DATA);
   const [tours, setTours] = useState<TourI[]>([]);
 
@@ -42,5 +43,5 @@ export default function Tours () {
         </>
       }
     </main>
-  )
+  );
 }

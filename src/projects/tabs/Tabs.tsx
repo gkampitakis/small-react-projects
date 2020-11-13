@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactElement } from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import './index.css';
 import Details from './components/Details';
 import Tab from './components/Tab';
 import Error from '../../components/Error';
+
 
 const DATA_URL = 'https://course-api.com/react-tabs-project';
 
@@ -16,7 +17,8 @@ type dataSchema = {
   company: string;
 }[];
 
-export default function Tabs () {
+
+export default function Tabs (): ReactElement {
   const [data, loading, _, error] = useFetch<dataSchema>(DATA_URL);
   const [tab, setTab] = useState(0);
 
@@ -44,5 +46,5 @@ export default function Tabs () {
         </section>
       }
     </main>
-  )
+  );
 }

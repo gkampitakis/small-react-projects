@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
+
 
 interface TabsProps {
   selectTab: (tab: string) => void
 }
 
-export default function Tabs ({ selectTab }: TabsProps) {
+
+export default function Tabs ({ selectTab }: TabsProps): ReactElement {
   return (
     <section className="tabs">
       <button onClick={() => selectTab('all')}>All</button>
@@ -12,5 +14,5 @@ export default function Tabs ({ selectTab }: TabsProps) {
       <button onClick={() => selectTab('lunch')}>Lunch</button>
       <button onClick={() => selectTab('shakes')}>Shakes</button>
     </section>
-  )
+  );
 }

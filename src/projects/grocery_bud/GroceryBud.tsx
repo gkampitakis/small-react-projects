@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import List from './components/List';
 import Alert, { AlertI } from './components/Alert';
@@ -6,7 +6,7 @@ import './index.css';
 
 const newId = () => new Date().getTime().toString();
 
-export default function GroceryBud () {
+export default function GroceryBud (): ReactElement {
   const [data, setData] = useLocalStorage<{ id: string; title: string }[]>('groceryList', []);
   const [formValue, setFormValue] = useState('');
   const [alert, setAlert] = useState<AlertI>({ msg: '', type: '' });

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Question from './components/Question';
 import data from './data';
 import './index.css';
 
-export default function Accordion () {
+
+export default function Accordion (): ReactElement {
   return (
     <main>
       <div className="container">
@@ -15,5 +16,5 @@ export default function Accordion () {
         </section>
       </div>
     </main>
-  )
+  );
 }
