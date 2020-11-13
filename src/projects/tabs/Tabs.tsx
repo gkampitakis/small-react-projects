@@ -1,10 +1,9 @@
-import React, { useState, useEffect, ReactElement } from 'react';
+import React, { useState, ReactElement } from 'react';
 import { useFetch } from '../../hooks/useFetch';
-import './index.css';
 import Details from './components/Details';
 import Tab from './components/Tab';
 import Error from '../../components/Error';
-
+import './index.scss';
 
 const DATA_URL = 'https://course-api.com/react-tabs-project';
 

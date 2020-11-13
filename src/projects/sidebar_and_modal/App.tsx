@@ -3,7 +3,7 @@ import Home from './components/Home';
 import Modal from './components/Modal';
 import Sidebar from './components/Sidebar';
 import { AppProvider } from './context';
-import './index.css';
+import './index.scss';
 
 
 export default function App (): ReactElement {

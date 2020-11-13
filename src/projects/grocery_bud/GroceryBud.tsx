@@ -2,7 +2,7 @@ import React, { ReactElement, useState } from 'react';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import List from './components/List';
 import Alert, { AlertI } from './components/Alert';
-import './index.css';
+import './index.scss';
 
 const newId = () => new Date().getTime().toString();
 

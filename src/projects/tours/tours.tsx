@@ -4,7 +4,7 @@ import { TourI } from './components/interface';
 import Loading from './components/Loading';
 import Error from '../../components/Error';
 import Tour from './components/Tour';
-import './index.css';
+import './index.scss';
 
 
 const TOURS_DATA = 'https://course-api.com/react-tours-project';
@@ -23,15 +23,15 @@ export default function Tours (): ReactElement {
 
   return (
     <main>
+      <div className="title">
+        <h2>our tours</h2>
+        <div className="underline"></div>
+      </div>
       {
         loading && <Loading /> ||
         error && <Error message={error} /> ||
         tours &&
         <>
-          <div className="title">
-            <h2>our tours</h2>
-            <div className="underline"></div>
-          </div>
           {tours.map(tour => (
             <Tour key={tour.id} removeTour={() => removeTour(tour.id)} data={tour} />
           ))

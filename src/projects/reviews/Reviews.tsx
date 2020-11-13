@@ -1,7 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import ReviewCard from './components/ReviewCard';
 import seedData from './data';
-import './index.css';
+import './index.scss';
 
 
 export default function Reviews (): ReactElement {

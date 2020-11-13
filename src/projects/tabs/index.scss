@@ -1,0 +1,163 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+@import '../../variables.scss';
+
+$clr-primary-5: #2caeba;
+$clr-primary-9: hsl(185, 94%, 87%);
+$clr-primary-10: hsl(186, 100%, 94%);
+
+/*
+=============== 
+Tabs Styles
+===============
+*/
+
+body {
+  background: $clr-grey-10;
+  color: $clr-grey-1;
+}
+
+.container {
+  width: 90vw;
+  margin: 5rem auto;
+  max-width: $max-width;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 95vw;
+  }
+}
+
+.title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.underline {
+  height: 0.25rem;
+  width: 5rem;
+  margin-bottom: 1.25rem;
+  background: $clr-primary-5;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content {
+  width: 80vw;
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+.tabs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  letter-spacing: $spacing;
+  margin: 0 0.5rem;
+  transition: $transition;
+  padding: 0.25rem 0;
+  line-height: 1;
+  outline-color: $clr-primary-10;
+}
+
+.tab-btn.selected,
+.tab-btn:hover {
+  color: $clr-primary-5;
+  box-shadow: 0 2px $clr-primary-5;
+}
+
+.details {
+  
+  h3 {
+    font-weight: 400;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    color: $clr-grey-5;
+    background: $clr-grey-9;
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    border-radius: $radius;
+  }
+
+  .date {
+    letter-spacing: $spacing;
+  }
+}
+
+.job-desc {
+  grid-template-columns: auto 1fr;
+  display: grid;
+  column-gap: 2rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+
+  p {
+    margin-bottom: 0;
+    color: $clr-grey-3;
+  }
+}
+
+.duty-icon {
+  color: $clr-primary-5;
+}
+
+.loading {
+  text-align: center;
+}
+
+.info-btn {
+  text-transform: uppercase;
+  background: $clr-primary-5;
+  color: $clr-primary-9;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: $spacing;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: $radius;
+  display: block;
+  width: 12rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 992px) {
+  .main-content {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-column-gap: 4rem;
+    column-gap: 4rem;
+  }
+
+  .tab-btn {
+    margin-bottom: 1rem;
+  }
+
+  .tabs-container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .tab-btn.selected,
+  .tab-btn:hover {
+    box-shadow: -2px 0 $clr-primary-5;
+  }
+}

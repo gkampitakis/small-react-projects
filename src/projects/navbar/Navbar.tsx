@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, ReactElement } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { links, social } from './data';
-import './index.css';
+import './index.scss';
 
 
 export default function Navbar (): ReactElement {

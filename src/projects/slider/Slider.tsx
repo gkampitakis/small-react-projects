@@ -2,7 +2,7 @@ import React, { ReactElement, useState } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import people from './data';
 import Review from './components/Review';
-import './index.css';
+import './index.scss';
 
 
 export default function Slider (): ReactElement {

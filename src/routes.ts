@@ -53,4 +53,9 @@ export default
     route: '/tours',
     filePath: '/tours/Tours',
     projectName: 'Tours'
+  },
+  {
+    route: '/slider',
+    filePath: '/slider/Slider',
+    projectName: 'Slider'
   }];

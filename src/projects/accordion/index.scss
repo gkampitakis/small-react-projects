@@ -1,0 +1,85 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+@import '../../variables.scss';
+
+/*
+=============== 
+Accordion Styles
+===============
+*/
+
+body {
+  background: $clr-purple;
+  color: $clr-grey-1;
+}
+
+main {
+  min-height: 100vh;
+  /* using flex because of better browser support */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90vw;
+  margin: 5rem auto;
+  background: $clr-white;
+  border-radius: $radius;
+  padding: 2.5rem 2rem;
+  max-width: $fixed-width;
+  display: grid;
+  gap: 1rem 2rem;
+
+  h3 {
+    line-height: 1.2;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+.question {
+  box-shadow: $light-shadow;
+  border-radius: $radius;
+  border: 2px solid $clr-grey-special;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+
+  h4 {
+    margin-bottom: 0;
+    text-transform: none;
+    line-height: 1.5;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  p {
+    margin: 0.5rem auto;
+  }
+
+  .btn {
+    background: $clr-grey-special;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    color: $clr-red-special;
+    border-radius: 50%;
+  }
+}

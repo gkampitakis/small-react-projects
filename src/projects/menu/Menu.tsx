@@ -2,7 +2,7 @@ import React, { useState, useEffect, ReactElement } from 'react';
 import MenuItem from './components/MenuItem';
 import Tabs from './components/Tabs';
 import data from './data';
-import './index.css';
+import './index.scss';
 
 
 export default function Menu (): ReactElement {

@@ -1,7 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import Card from './components/Card';
 import data from './data';
-import './index.css';
+import './index.scss';
 
 
 export default function Birthday (): ReactElement {

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import Question from './components/Question';
 import data from './data';
-import './index.css';
+import './index.scss';
 
 
 export default function Accordion (): ReactElement {

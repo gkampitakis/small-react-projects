@@ -31,3 +31,6 @@ function closureComponent (component: string) {
     );
   }
 }
+
+//TODO: fix 404 
+//TODO: fix loading component

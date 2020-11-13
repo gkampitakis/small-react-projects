@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 import loremData from './data';
-import './index.css';
+import './index.scss';
 
 
 export default function LoremGenerator (): ReactElement {

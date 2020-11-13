@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import './app.css';
+import './app.scss';
 import Router from './Router';
 
 
