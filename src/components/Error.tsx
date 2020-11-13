@@ -9,14 +9,15 @@ interface ErrorProps {
 
 function Error ({ error, message }: ErrorProps): ReactElement {
   useEffect(() => {
-    console.log(error);
+    if (error)
+      console.log(error);
   }, [error]);
 
   const msg = message ? message : error?.message;
 
   return (
     <main className="error_component">
-      <img src="./images/error.svg" />
+      <img src="./images/error.svg" alt="Error page image" />
       <footer>
         {
           msg && <h2>{msg}</h2>

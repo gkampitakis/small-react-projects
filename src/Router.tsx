@@ -30,7 +30,7 @@ function closureComponent (component: string) {
   return function LazyWrapper () {
     const Component = lazy(() => import(`./projects${component}`));
     return (
-      <Suspense fallback={Loading}><Component /></Suspense >
+      <Suspense fallback={<Loading />}><Component /></Suspense >
     );
   }
 }

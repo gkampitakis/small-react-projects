@@ -21,8 +21,7 @@ describe('Tours', () => {
     expect(loading).toBeTruthy();
   });
 
-  it('Should render error', async () => {
-    const logSpy = jest.spyOn(console, 'log');
+  it('Should render error', (done) => {
     fetchMock.enableMocks();
 
     fetchMock.mockRejectOnce(() => Promise.reject('Mock Error'));
@@ -32,11 +31,10 @@ describe('Tours', () => {
 
     expect(loading).toBeTruthy();
 
-    await waitFor(() => {
-      expect(logSpy).toHaveBeenCalledTimes(1)
+    waitFor(() => {
       const errorMessage = screen.queryByText(/Mock Error/i);
       expect(errorMessage).toBeTruthy();
-
+      done();
     });
   });
 
