@@ -15,7 +15,7 @@ function Error ({ error, message }: ErrorProps): ReactElement {
   const msg = message ? message : error?.message;
 
   return (
-    <section className="errorContainer">
+    <main className="error_component">
       <img src="./images/error.svg" />
       <footer>
         {
@@ -25,7 +25,7 @@ function Error ({ error, message }: ErrorProps): ReactElement {
           error && <p>You can check console for more information</p>
         }
       </footer>
-    </section >
+    </main >
   );
 }
 

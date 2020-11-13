@@ -38,16 +38,21 @@ export default function Tabs (): ReactElement {
       {error && <Error message={error} />}
       {
         data &&
-        <section className="main-content">
-          <section className="tabs-container">
-            {
-              data.map(({ company, id }, idx) => (
-                <Tab key={id} selected={idx === tab} title={company} handler={() => setTab(idx)} />
-              ))
-            }
+        <>
+          <section className="main-content">
+            <section className="tabs-container">
+              {
+                data.map(({ company, id }, idx) => (
+                  <Tab key={id} selected={idx === tab} title={company} handler={() => setTab(idx)} />
+                ))
+              }
+            </section>
+            <Details data={data[tab]} />
           </section>
-          <Details data={data[tab]} />
-        </section>
+          <button className="info-btn">
+            more info
+       </button>
+        </>
       }
     </main>
   );

@@ -30,9 +30,6 @@ export default function Details ({ data }: DetailsProps): ReactElement {
           </div>
         ))
       }
-      <button className="info-btn">
-        more info
-      </button>
     </section>
   );
 }

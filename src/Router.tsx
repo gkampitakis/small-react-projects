@@ -5,6 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 import Home from './components/Home';
+import Loading from './components/Loading';
 import routes from './routes';
 
 
@@ -27,10 +28,9 @@ function closureComponent (component: string) {
   return function LazyWrapper () {
     const Component = lazy(() => import(`./projects${component}`));
     return (
-      <Suspense fallback={<div>Loading ...</div>}><Component /></Suspense >
+      <Suspense fallback={Loading}><Component /></Suspense >
     );
   }
 }
 
 //TODO: fix 404 
-//TODO: fix loading component
