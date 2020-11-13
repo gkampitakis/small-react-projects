@@ -1,4 +1,5 @@
 import React, { useState, ReactElement } from 'react';
+import { useBodyStyles } from '../../hooks/useBodyStyles';
 import { useFetch } from '../../hooks/useFetch';
 import Details from './components/Details';
 import Tab from './components/Tab';
@@ -18,11 +19,15 @@ type dataSchema = {
 
 
 export default function Tabs (): ReactElement {
+  useBodyStyles({
+    background: 'hsl(210, 36%, 96%)',
+    color: 'hsl(209, 61%, 16%)'
+  });
   const [data, loading, _, error] = useFetch<dataSchema>(DATA_URL);
   const [tab, setTab] = useState(0);
 
   return (
-    <main>
+    <main className="tabs_project">
       <div className="container">
         <div className="title">
           <h2>Experience</h2>

@@ -1,10 +1,15 @@
 import React, { ReactElement, useState } from 'react';
+import { useBodyStyles } from '../../hooks/useBodyStyles';
 import ReviewCard from './components/ReviewCard';
 import seedData from './data';
 import './index.scss';
 
 
 export default function Reviews (): ReactElement {
+  useBodyStyles({
+    background: 'hsl(210, 36%, 96%)',
+    color: 'hsl(209, 61%, 16%)'
+  });
   const [index, setIndex] = useState(0);
 
   function next () {
@@ -28,7 +33,7 @@ export default function Reviews (): ReactElement {
   }
 
   return (
-    <main>
+    <main className="reviews_project">
       <section className="container">
         <div className="title">
           <h2>Our Reviews</h2>

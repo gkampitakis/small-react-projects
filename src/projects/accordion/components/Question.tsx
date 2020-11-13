@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from 'react';
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import { FaPlus, FaMinus } from 'react-icons/fa'
 
 
 interface QuestionProps {
@@ -16,7 +16,7 @@ export default function Question ({ data }: { data: QuestionProps }): ReactEleme
       <header>
         <h4>{data.title}</h4>
         <button className="btn" onClick={() => setShow(!show)}>
-          {show ? <AiOutlineMinus /> : <AiOutlinePlus />}
+          {show ? <FaMinus /> : <FaPlus />}
         </button>
       </header>
       { show && <p>{data.info}</p>}

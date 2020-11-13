@@ -1,9 +1,14 @@
 import React, { ReactElement, useState } from 'react';
+import { useBodyStyles } from '../../hooks/useBodyStyles';
 import loremData from './data';
 import './index.scss';
 
 
 export default function LoremGenerator (): ReactElement {
+  useBodyStyles({
+    background: 'hsl(210, 36%, 96%)',
+    color: 'hsl(209, 61%, 16%)'
+  });
   const [count, setCount] = useState('0');
   const [data, setData] = useState<string[]>([]);
 
@@ -22,7 +27,7 @@ export default function LoremGenerator (): ReactElement {
   }
 
   return (
-    <section className="section-center">
+    <main className="lorem_ipsum">
       <h3>Tired of boring Lorem Ipsum</h3>
       <form className="lorem-form" onSubmit={handleSubmit}>
         <label htmlFor="amount">Paragraphs: </label>
@@ -43,6 +48,6 @@ export default function LoremGenerator (): ReactElement {
           )
         }
       </article>
-    </section>
+    </main>
   )
 }

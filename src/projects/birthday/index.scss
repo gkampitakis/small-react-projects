@@ -13,69 +13,65 @@ Birthday Styles
 ===============
 */
 
-body {
-  background: $clr-pink;
-  color: $clr-grey-9;
-}
-
-main {
+.birthday_project {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.container {
-  width: 90vw;
-  margin: 5rem 0;
-  max-width: $fixed-width;
-  background: $clr-white;
-  border-radius: $radius;
-  padding: 1.5rem 2rem;
-  box-shadow: $dark-shadow;
-
-  h3 {
-    font-weight: normal;
-    text-transform: none;
-    margin-bottom: 2rem;
-  }
-
-  button {
-    color: $clr-white;
-    display: block;
-    width: 100%;
-    border-color: transparent;
-    background: $clr-pink;
-    margin: 2rem auto 0 auto;
-    text-transform: capitalize;
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
-    letter-spacing: $spacing;
+  .container {
+    width: 90vw;
+    margin: 5rem 0;
+    max-width: $fixed-width;
+    background: $clr-white;
     border-radius: $radius;
-    outline: 1px solid rgba(242, 138, 178, 0.8);
+    padding: 1.5rem 2rem;
+    box-shadow: $dark-shadow;
+
+    h3 {
+      font-weight: normal;
+      text-transform: none;
+      margin-bottom: 2rem;
+      color: $clr-black;
+    }
+
+    button {
+      color: $clr-white;
+      display: block;
+      width: 100%;
+      border-color: transparent;
+      background: $clr-pink;
+      margin: 2rem auto 0 auto;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      padding: 0.5rem 0;
+      letter-spacing: $spacing;
+      border-radius: $radius;
+      outline: 1px solid rgba(242, 138, 178, 0.8);
+    }
   }
-}
 
-.person {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  align-items: center;
+  .person {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
 
-  img {
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: $light-shadow;
-  }
+    img {
+      width: 75px;
+      height: 75px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: $light-shadow;
+    }
 
-  h4 {
-    margin-bottom: 0.35rem;
-  }
+    h4 {
+      margin-bottom: 0.35rem;
+    }
 
-  p {
-    margin-bottom: 0;
+    p {
+      margin-bottom: 0;
+    }
   }
 }

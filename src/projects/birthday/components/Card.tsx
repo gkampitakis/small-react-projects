@@ -15,7 +15,7 @@ interface CardProps {
 
 export default function Card ({ data, clearFn }: CardProps): ReactElement {
   return (
-    <main>
+    <main className="birthday_project">
       <section className="container">
         <h3>{data.length} Birthdays today</h3>
         <List data={data} />

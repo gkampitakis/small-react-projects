@@ -19,132 +19,127 @@ Reviews Styles
 ===============
 */
 
-body {
-  background: $clr-grey-10;
-  color: $clr-grey-1;
-}
-
-.title {
-  text-align: center;
-  margin-bottom: 4rem;
-
-  .underline {
-    height: 0.25rem;
-    width: 5rem;
-    background: $clr-primary-5;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-main {
-  min-height: 100vh;
+.reviews_project {
+  min-height: 80vh;
   display: grid;
   place-items: center;
-}
 
-.container {
-  width: 80vw;
-  max-width: $fixed-width;
-}
+  .title {
+    text-align: center;
+    margin-bottom: 4rem;
 
-.review-card {
-  background: $clr-white;
-  box-shadow: $light-shadow;
-  padding: 1.5rem 2rem;
-  text-align: center;
-  border-radius: $radius;
-  transition: $transition;
-
-  &:hover {
-    box-shadow: $dark-shadow;
+    .underline {
+      height: 0.25rem;
+      width: 5rem;
+      background: $clr-primary-5;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
-  .info {
-    margin-bottom: 0.75rem;
+  .container {
+    width: 80vw;
+    max-width: $fixed-width;
   }
 
-  .job {
-    color: $clr-primary-5;
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-  }
+  .review-card {
+    background: $clr-white;
+    box-shadow: $light-shadow;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-radius: $radius;
+    transition: $transition;
 
-  .img-container {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto;
-    margin-bottom: 1.5rem;
+    &:hover {
+      box-shadow: $dark-shadow;
+    }
 
-    img {
-      width: 100%;
-      display: block;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
+    .info {
+      margin-bottom: 0.75rem;
+    }
+
+    .job {
+      color: $clr-primary-5;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    .img-container {
       position: relative;
-    }
-
-    &::before {
-      content: '';
-      width: 100%;
-      height: 100%;
-      background: $clr-primary-5;
-      position: absolute;
-      top: -0.25rem;
-      right: -0.5rem;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-    }
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
 
-    .quote-icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: $clr-white;
-      background: $clr-primary-5;
-      width: 2.5rem;
-      height: 2.5rem;
-      place-items: center;
-      display: grid;
-      border-radius: 50%;
-      transform: translateY(25%);
+      img {
+        width: 100%;
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: $clr-primary-5;
+        position: absolute;
+        top: -0.25rem;
+        right: -0.5rem;
+        border-radius: 50%;
+      }
+
+      .quote-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $clr-white;
+        background: $clr-primary-5;
+        width: 2.5rem;
+        height: 2.5rem;
+        place-items: center;
+        display: grid;
+        border-radius: 50%;
+        transform: translateY(25%);
+      }
     }
   }
-}
 
-.author {
-  margin-bottom: 0.25rem;
-}
+  .author {
+    margin-bottom: 0.25rem;
+  }
 
-.prev-btn,
-.next-btn {
-  color: $clr-primary-7;
-  font-size: 1.25rem;
-  background: transparent;
-  transition: $transition;
-  border-color: transparent;
-  margin: 0 0.5rem;
+  .prev-btn,
+  .next-btn {
+    color: $clr-primary-7;
+    font-size: 1.25rem;
+    background: transparent;
+    transition: $transition;
+    border-color: transparent;
+    margin: 0 0.5rem;
 
-  &:hover {
+    &:hover {
+      color: $clr-primary-5;
+    }
+  }
+
+  .random-btn {
+    margin-top: 0.5rem;
+    background: $clr-primary-10;
     color: $clr-primary-5;
-  }
-}
+    padding: 0.25rem 0.5rem;
+    text-transform: capitalize;
+    border-radius: $radius;
+    transition: $transition;
+    border-color: transparent;
 
-.random-btn {
-  margin-top: 0.5rem;
-  background: $clr-primary-10;
-  color: $clr-primary-5;
-  padding: 0.25rem 0.5rem;
-  text-transform: capitalize;
-  border-radius: $radius;
-  transition: $transition;
-  border-color: transparent;
-
-  &:hover {
-    background: $clr-primary-5;
-    color: $clr-primary-1;
+    &:hover {
+      background: $clr-primary-5;
+      color: $clr-primary-1;
+    }
   }
 }

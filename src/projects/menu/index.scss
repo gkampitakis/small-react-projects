@@ -12,122 +12,119 @@ Menu Styles
 ===============
 */
 
-body {
-  background: $clr-grey-10;
-  color: $clr-grey-1;
-}
-
-.container {
-  padding: 5rem 0;
-  width: 90vw;
-  margin: 0 auto;
-  max-width: $max-width;
-
-  .title {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .underline {
-    height: 0.25rem;
-    width: 5rem;
-    background: $clr-gold;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 992px) {
+.menu_project {
   .container {
-    width: 95vw;
-  }
-}
+    padding: 5rem 0;
+    width: 90vw;
+    margin: 0 auto;
+    max-width: $max-width;
 
-.tabs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 4rem;
+    .title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
 
-  button {
-    background: transparent;
-    border-color: transparent;
-    font-size: 1rem;
-    text-transform: capitalize;
-    margin: 0 0.5rem;
-    letter-spacing: 1px;
-    padding: 0.375rem 0.75rem;
-    color: $clr-gold;
-    transition: $transition;
-    border-radius: $radius;
-
-    &:hover {
-      color: $clr-white;
+    .underline {
+      height: 0.25rem;
+      width: 5rem;
       background: $clr-gold;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
-}
 
-.section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-  display: grid;
-  gap: 3rem 2rem;
-  justify-items: center;
-}
-
-.menuItem {
-  display: grid;
-  gap: 1rem 2rem;
-  max-width: 25rem;
-
-  img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    border: 0.25rem solid $clr-gold;
-    border-radius: $radius;
-    display: block;
+  @media screen and (min-width: 992px) {
+    .container {
+      width: 95vw;
+    }
   }
 
-  p {
-    margin-bottom: 0;
-    padding-top: 1rem;
-  }
-
-  h4 {
-    margin-bottom: 0.5rem;
-  }
-
-  .price {
-    color: $clr-gold;
-  }
-
-  header {
+  .tabs {
     display: flex;
-    justify-content: space-between;
-    border-bottom: 0.5px dotted $clr-grey-5;
-  }
-}
+    justify-content: center;
+    margin-bottom: 4rem;
 
-@media screen and (min-width: 768px) {
+    button {
+      background: transparent;
+      border-color: transparent;
+      font-size: 1rem;
+      text-transform: capitalize;
+      margin: 0 0.5rem;
+      letter-spacing: 1px;
+      padding: 0.375rem 0.75rem;
+      color: $clr-gold;
+      transition: $transition;
+      border-radius: $radius;
+
+      &:hover {
+        color: $clr-white;
+        background: $clr-gold;
+      }
+    }
+  }
+
+  .section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    gap: 3rem 2rem;
+    justify-items: center;
+  }
+
   .menuItem {
-    grid-template-columns: 225px 1fr;
-    gap: 0 1.25rem;
-    max-width: 40rem;
+    display: grid;
+    gap: 1rem 2rem;
+    max-width: 25rem;
 
     img {
-      height: 175px;
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      border: 0.25rem solid $clr-gold;
+      border-radius: $radius;
+      display: block;
+    }
+
+    p {
+      margin-bottom: 0;
+      padding-top: 1rem;
+    }
+
+    h4 {
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      color: $clr-gold;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.5px dotted $clr-grey-5;
     }
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .section-center {
-    width: 95vw;
-    grid-template-columns: 1fr 1fr;
+  @media screen and (min-width: 768px) {
+    .menuItem {
+      grid-template-columns: 225px 1fr;
+      gap: 0 1.25rem;
+      max-width: 40rem;
+
+      img {
+        height: 175px;
+      }
+    }
   }
-  .menuItem img {
-    height: 150px;
+
+  @media screen and (min-width: 1200px) {
+    .section-center {
+      width: 95vw;
+      grid-template-columns: 1fr 1fr;
+    }
+    .menuItem img {
+      height: 150px;
+    }
   }
 }

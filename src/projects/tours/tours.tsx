@@ -1,5 +1,6 @@
 import React, { useState, useEffect, ReactElement } from 'react';
 import { useFetch } from '../../hooks/useFetch';
+import { useBodyStyles } from '../../hooks/useBodyStyles';
 import { TourI } from './components/interface';
 import Loading from './components/Loading';
 import Error from '../../components/Error';
@@ -10,6 +11,10 @@ import './index.scss';
 const TOURS_DATA = 'https://course-api.com/react-tours-project';
 
 export default function Tours (): ReactElement {
+  useBodyStyles({
+    background: 'hsl(210, 36%, 96%)',
+    color: 'hsl(209, 61%, 16%)'
+  });
   const [data, loading, refetch, error] = useFetch(TOURS_DATA);
   const [tours, setTours] = useState<TourI[]>([]);
 
@@ -22,7 +27,7 @@ export default function Tours (): ReactElement {
   }, [data])
 
   return (
-    <main>
+    <main className="tours">
       <div className="title">
         <h2>our tours</h2>
         <div className="underline"></div>

@@ -17,111 +17,106 @@ Navbar Styles
 ===============
 */
 
-body {
-  background: $clr-grey-10;
-  color: $clr-grey-1;
-}
-
-nav {
+.navbar_project {
   background: $clr-white;
   box-shadow: $light-shadow;
-}
 
-.nav-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-.nav-toggle {
-  font-size: 1.5rem;
-  color: $clr-primary-5;
-  background: transparent;
-  border-color: transparent;
-  transition: $transition;
-
-  &:hover {
-    color: $clr-primary-1;
-    transform: rotate(90deg);
-  }
-}
-
-.logo {
-  height: 40px;
-}
-
-.links a {
-  color: $clr-grey-3;
-  font-size: 1rem;
-  text-transform: capitalize;
-  letter-spacing: $spacing;
-  display: block;
-  padding: 0.5rem 1rem;
-  transition: $transition;
-
-  &:hover {
-    background: $clr-primary-8;
-    color: $clr-primary-5;
-    padding-left: 1.5rem;
-  }
-}
-
-.social-icons {
-  display: none;
-}
-
-.links-container {
-  height: 0;
-  overflow: hidden;
-  transition: $transition;
-}
-
-.show-container {
-  height: 10rem;
-}
-
-@media screen and (min-width: 800px) {
-  .nav-center {
-    max-width: 1170px;
-    margin: 0 auto;
+  .nav-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
   }
-  .nav-header {
-    padding: 0;
-  }
+
   .nav-toggle {
-    display: none;
-  }
-  .links-container {
-    height: auto !important;
-  }
-  .links {
-    display: flex;
+    font-size: 1.5rem;
+    color: $clr-primary-5;
+    background: transparent;
+    border-color: transparent;
+    transition: $transition;
 
-    a {
-      padding: 0;
-      margin: 0 0.5rem;
+    &:hover {
+      color: $clr-primary-1;
+      transform: rotate(90deg);
+    }
+  }
 
-      &:hover {
-        padding: 0;
-        background: transparent;
-      }
+  .logo {
+    height: 40px;
+  }
+
+  .links a {
+    color: $clr-grey-3;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: $spacing;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: $transition;
+
+    &:hover {
+      background: $clr-primary-8;
+      color: $clr-primary-5;
+      padding-left: 1.5rem;
     }
   }
 
   .social-icons {
-    display: flex;
-    a {
-      margin: 0 0.5rem;
-      color: $clr-primary-5;
-      transition: $transition;
+    display: none;
+  }
 
-      &:hover {
-        color: $clr-primary-7;
+  .links-container {
+    height: 0;
+    overflow: hidden;
+    transition: $transition;
+  }
+
+  .show-container {
+    height: 10rem;
+  }
+
+  @media screen and (min-width: 800px) {
+    .nav-center {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .links-container {
+      height: auto !important;
+    }
+    .links {
+      display: flex;
+
+      a {
+        padding: 0;
+        margin: 0 0.5rem;
+
+        &:hover {
+          padding: 0;
+          background: transparent;
+        }
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      a {
+        margin: 0 0.5rem;
+        color: $clr-primary-5;
+        transition: $transition;
+
+        &:hover {
+          color: $clr-primary-7;
+        }
       }
     }
   }

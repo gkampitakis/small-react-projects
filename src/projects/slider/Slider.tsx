@@ -1,4 +1,5 @@
 import React, { ReactElement, useState } from 'react';
+import { useBodyStyles } from '../../hooks/useBodyStyles';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import people from './data';
 import Review from './components/Review';
@@ -6,6 +7,10 @@ import './index.scss';
 
 
 export default function Slider (): ReactElement {
+  useBodyStyles({
+    background: 'hsl(210, 36%, 96%)',
+    color: 'hsl(209, 61%, 16%)'
+  });
   const [index, setIndex] = useState(0);
 
   function next () {
@@ -23,7 +28,7 @@ export default function Slider (): ReactElement {
   }
 
   return (
-    <section className="section">
+    <main className="slider_project">
       <div className="title">
         <h2>
           <span>/</span>Reviews
@@ -58,6 +63,6 @@ export default function Slider (): ReactElement {
           <FiChevronRight />
         </button>
       </div>
-    </section>
+    </main>
   );
 }

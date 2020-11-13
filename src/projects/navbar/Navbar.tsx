@@ -1,10 +1,15 @@
 import React, { useRef, useState, useEffect, ReactElement } from 'react';
+import { useBodyStyles } from '../../hooks/useBodyStyles';
 import { FaBars } from 'react-icons/fa';
 import { links, social } from './data';
 import './index.scss';
 
 
 export default function Navbar (): ReactElement {
+  useBodyStyles({
+    background: 'hsl(210, 36%, 96%)',
+    color: 'hsl(209, 61%, 16%)'
+  });
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLUListElement>(null);
@@ -19,7 +24,7 @@ export default function Navbar (): ReactElement {
   }, [showLinks])
 
   return (
-    <nav>
+    <nav className="navbar_project">
       <div className="nav-center">
         <div className="nav-header">
           <img className="logo" src="./logo192.png" alt="React Logo" />

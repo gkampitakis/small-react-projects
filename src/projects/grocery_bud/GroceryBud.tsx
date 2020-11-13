@@ -1,12 +1,18 @@
 import React, { ReactElement, useState } from 'react';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { useBodyStyles } from '../../hooks/useBodyStyles';
 import List from './components/List';
 import Alert, { AlertI } from './components/Alert';
 import './index.scss';
 
+
 const newId = () => new Date().getTime().toString();
 
 export default function GroceryBud (): ReactElement {
+  useBodyStyles({
+    background: 'hsl(210, 36%, 96%)',
+    color: 'hsl(209, 61%, 16%)'
+  });
   const [data, setData] = useLocalStorage<{ id: string; title: string }[]>('groceryList', []);
   const [formValue, setFormValue] = useState('');
   const [alert, setAlert] = useState<AlertI>({ msg: '', type: '' });
@@ -50,7 +56,7 @@ export default function GroceryBud (): ReactElement {
   }
 
   return (
-    <section className="section-center">
+    <main className="grocery_bud">
       <form className="grocery-form" onSubmit={handleSubmit}>
         <Alert data={data} msg={alert.msg} type={alert.type} />
         <h3>Grocery Bud</h3>
@@ -69,6 +75,6 @@ export default function GroceryBud (): ReactElement {
       </form>
       <List data={data} editItem={editItem} removeItem={removeItem} />
       {!!data.length && <button className="clear-btn" onClick={clearList}>clear items</button>}
-    </section>
+    </main>
   )
 }

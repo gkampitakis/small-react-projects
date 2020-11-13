@@ -16,12 +16,7 @@ Grocery_bud Styles
 ===============
 */
 
-body {
-  background: $clr-grey-10;
-  color: $clr-grey-1;
-}
-
-.section-center {
+.grocery_bud {
   width: 90vw;
   margin: 0 auto;
   max-width: 35rem;
@@ -35,144 +30,144 @@ body {
   &:hover {
     box-shadow: $dark-shadow;
   }
+
+  .form-control {
+    display: flex;
+    justify-content: center;
+  }
+
+  .grocery-form h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: $clr-primary-1;
+  }
+
+  .grocery {
+    padding: 0.25rem;
+    padding-left: 1rem;
+    background: $clr-grey-10;
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    border-color: transparent;
+    font-size: 1rem;
+    font-size: 1rem;
+    flex: 1 0 auto;
+    color: $clr-grey-5;
+  }
+
+  .submit-btn {
+    letter-spacing: 2px;
+    padding: 0 1rem;
+    border-color: transparent;
+    text-transform: capitalize;
+    background: $clr-primary-8;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    transition: $transition;
+    font-size: 0.85rem;
+
+    &:hover {
+      background: $clr-primary-5;
+      color: $clr-white;
+    }
+  }
+
+  .grocery-container {
+    margin-top: 2rem;
+  }
+
+  .clear-btn {
+    color: $clr-red-light;
+    background: transparent;
+    border-color: transparent;
+    letter-spacing: $spacing;
+    text-transform: capitalize;
+    transition: $transition;
+    margin: 0 auto;
+    width: 10rem;
+    height: 1.5rem;
+    display: grid;
+    font-size: 0.85rem;
+    margin-top: 1.25rem;
+
+    &:hover {
+      color: $clr-red-dark;
+    }
+  }
+
+  .alert {
+    height: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    letter-spacing: $spacing;
+    text-transform: capitalize;
+    font-size: 0.7rem;
+    border-radius: 0.25rem;
+  }
+
+  .alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+  }
+
+  .alert-success {
+    color: #155724;
+    background: #d4edda;
+  }
+
+  .grocery-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    justify-content: space-between;
+    transition: $transition;
+    padding: 0.25rem 1rem;
+    border-radius: $radius;
+    text-transform: capitalize;
+
+    &:hover .title {
+      color: $clr-grey-5;
+    }
+  }
+
+  .title {
+    margin-bottom: 0;
+    color: $clr-grey-1;
+    letter-spacing: 2px;
+    transition: $transition;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    background: transparent;
+    border-color: transparent;
+    font-size: 0.7rem;
+    margin: 0 0.15rem;
+    transition: $transition;
+  }
+
+  .edit-btn {
+    color: $clr-green-light;
+
+    &:hover {
+      color: $clr-green-dark;
+    }
+  }
+
+  .delete-btn {
+    color: $clr-red-light;
+
+    &:hover {
+      color: $clr-red-dark;
+    }
+  }
 }
 
 @media screen and (min-width: 992px) {
-  .section-center {
+  .grocery_bud {
     width: 95vw;
-  }
-}
-
-.form-control {
-  display: flex;
-  justify-content: center;
-}
-
-.grocery-form h3 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: $clr-primary-1;
-}
-
-.grocery {
-  padding: 0.25rem;
-  padding-left: 1rem;
-  background: $clr-grey-10;
-  border-top-left-radius: $radius;
-  border-bottom-left-radius: $radius;
-  border-color: transparent;
-  font-size: 1rem;
-  font-size: 1rem;
-  flex: 1 0 auto;
-  color: $clr-grey-5;
-}
-
-.submit-btn {
-  letter-spacing: 2px;
-  padding: 0 1rem;
-  border-color: transparent;
-  text-transform: capitalize;
-  background: $clr-primary-8;
-  border-top-right-radius: $radius;
-  border-bottom-right-radius: $radius;
-  transition: $transition;
-  font-size: 0.85rem;
-
-  &:hover {
-    background: $clr-primary-5;
-    color: $clr-white;
-  }
-}
-
-.grocery-container {
-  margin-top: 2rem;
-}
-
-.clear-btn {
-  color: $clr-red-light;
-  background: transparent;
-  border-color: transparent;
-  letter-spacing: $spacing;
-  text-transform: capitalize;
-  transition: $transition;
-  margin: 0 auto;
-  width: 10rem;
-  height: 1.5rem;
-  display: grid;
-  font-size: 0.85rem;
-  margin-top: 1.25rem;
-
-  &:hover {
-    color: $clr-red-dark;
-  }
-}
-
-.alert {
-  height: 1.25rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  display: grid;
-  align-items: center;
-  text-align: center;
-  letter-spacing: $spacing;
-  text-transform: capitalize;
-  font-size: 0.7rem;
-  border-radius: 0.25rem;
-}
-
-.alert-danger {
-  color: #721c24;
-  background: #f8d7da;
-}
-
-.alert-success {
-  color: #155724;
-  background: #d4edda;
-}
-
-.grocery-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  justify-content: space-between;
-  transition: $transition;
-  padding: 0.25rem 1rem;
-  border-radius: $radius;
-  text-transform: capitalize;
-
-  &:hover .title {
-    color: $clr-grey-5;
-  }
-}
-
-.title {
-  margin-bottom: 0;
-  color: $clr-grey-1;
-  letter-spacing: 2px;
-  transition: $transition;
-}
-
-.edit-btn,
-.delete-btn {
-  background: transparent;
-  border-color: transparent;
-  font-size: 0.7rem;
-  margin: 0 0.15rem;
-  transition: $transition;
-}
-
-.edit-btn {
-  color: $clr-green-light;
-
-  &:hover {
-    color: $clr-green-dark;
-  }
-}
-
-.delete-btn {
-  color: $clr-red-light;
-
-  &:hover {
-    color: $clr-red-dark;
   }
 }
