@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Birthday Should clear list 1`] = `
+<body
+  style="background: rgb(242, 138, 178); color: rgb(16, 16, 16);"
+>
+  <div>
+    <main
+      class="birthday_project"
+    >
+      <section
+        class="container"
+      >
+        <h3>
+          0
+           Birthdays today
+        </h3>
+        <button>
+          Clear All
+        </button>
+      </section>
+    </main>
+  </div>
+</body>
+`;
+
+exports[`Birthday Should render correctly 1`] = `
+<main
+  className="birthday_project"
+>
+  <section
+    className="container"
+  >
+    <h3>
+      5
+       Birthdays today
+    </h3>
+    <article
+      className="person"
+    >
+      <img
+        alt="Bertie Yates's Avatar"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg"
+      />
+      <div>
+        <h4>
+          Bertie Yates
+        </h4>
+        <p>
+          29
+           years
+        </p>
+      </div>
+    </article>
+    <article
+      className="person"
+    >
+      <img
+        alt="Hester Hogan's Avatar"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-3_rxtqvi.jpg"
+      />
+      <div>
+        <h4>
+          Hester Hogan
+        </h4>
+        <p>
+          32
+           years
+        </p>
+      </div>
+    </article>
+    <article
+      className="person"
+    >
+      <img
+        alt="Larry Little's Avatar"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg"
+      />
+      <div>
+        <h4>
+          Larry Little
+        </h4>
+        <p>
+          36
+           years
+        </p>
+      </div>
+    </article>
+    <article
+      className="person"
+    >
+      <img
+        alt="Sean Walsh's Avatar"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg"
+      />
+      <div>
+        <h4>
+          Sean Walsh
+        </h4>
+        <p>
+          34
+           years
+        </p>
+      </div>
+    </article>
+    <article
+      className="person"
+    >
+      <img
+        alt="Lola Gardner's Avatar"
+        src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg"
+      />
+      <div>
+        <h4>
+          Lola Gardner
+        </h4>
+        <p>
+          29
+           years
+        </p>
+      </div>
+    </article>
+    <button
+      onClick={[Function]}
+    >
+      Clear All
+    </button>
+  </section>
+</main>
+`;

@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 
 
 interface TabProps {
-  selected: boolean;
+  selected?: boolean;
   title: string;
   handler: () => void;
 }

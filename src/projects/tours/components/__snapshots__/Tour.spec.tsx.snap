@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tour Should render correctly 1`] = `
+<body>
+  <div>
+    <article
+      class="single-tour"
+    >
+      <img
+        alt="mockName"
+        src="string"
+      />
+      <footer>
+        <div
+          class="tour-info"
+        >
+          <h4>
+            mockName
+          </h4>
+          <h4
+            class="tour-price"
+          >
+            12345
+          </h4>
+        </div>
+        <p>
+          data...
+          <button>
+            read more
+          </button>
+        </p>
+        <button
+          class="delete-btn"
+        >
+          Not interested
+        </button>
+      </footer>
+    </article>
+  </div>
+</body>
+`;

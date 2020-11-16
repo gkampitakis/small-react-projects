@@ -16,19 +16,9 @@ describe('Tour', () => {
     };
     const removeTour = () => { void (0) };
 
-    render(<Tour data={data} removeTour={removeTour} />);
+    const { baseElement } = render(<Tour data={data} removeTour={removeTour} />);
 
-    const imageElmnt = screen.getByAltText(/mockName/i);
-    const nameElmnt = screen.getByText(/mockName/i);
-    const priceElmnt = screen.getByText(/12345/i);
-    const infoElmnt = screen.getByText(/data/i);
-    const btnElmnt = screen.getByText(/not interested/i);
-
-    expect(imageElmnt).toBeTruthy();
-    expect(nameElmnt).toBeTruthy();
-    expect(priceElmnt).toBeTruthy();
-    expect(infoElmnt).toBeTruthy();
-    expect(btnElmnt).toBeTruthy();
+    expect(baseElement).toMatchSnapshot();
   });
 
   it('Should trim info string if bigger than 200 chars', () => {
@@ -67,7 +57,7 @@ describe('Tour', () => {
     const removeTour = jest.fn();
 
     render(<Tour data={data} removeTour={removeTour} />);
-    
+
     const btnElmnt = screen.getByText(/not interested/i);
     userEvent.click(btnElmnt);
 

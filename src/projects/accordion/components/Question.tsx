@@ -15,7 +15,7 @@ export default function Question ({ data }: { data: QuestionProps }): ReactEleme
     <article className="question">
       <header>
         <h4>{data.title}</h4>
-        <button className="btn" onClick={() => setShow(!show)}>
+        <button className="btn" onClick={() => setShow(!show)} data-testid='show-btn'>
           {show ? <FaMinus /> : <FaPlus />}
         </button>
       </header>
