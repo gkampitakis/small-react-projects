@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 import { useBodyStyles } from '../hooks/useBodyStyles';
 import { Link } from 'react-router-dom';
 import routes from '../routes';
+import '../app.scss';
 
 
 export default function Home (): ReactElement {
@@ -10,9 +11,9 @@ export default function Home (): ReactElement {
     color: 'hsl(209, 61%, 16%)'
   });
   return (
-    <main>
-      <header >
-        Small React Projects
+    <main className="homePage">
+      <header>
+        <h2>Small React Projects</h2>
       </header>
       <section>
         {routes.map(({ projectName, route }, idx) => (
@@ -22,7 +23,7 @@ export default function Home (): ReactElement {
         ))}
       </section>
       <footer>
-        G Kampitakis
+        <span>Author:</span>  gkampitakis
       </footer>
     </main>
   );
