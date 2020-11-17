@@ -1,7 +1,7 @@
 {
   "homepage": "https://gkampitakis.github.io/small-react-projects",
   "name": "small-react-projects",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "node-sass": "^4.14.1",
