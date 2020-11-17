@@ -1,2 +1,0 @@
-(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[47],{35:function(t,s,c){"use strict";c.r(s),c.d(s,"default",(function(){return n}));var e=c(1);c(0);function n(){return Object(e.jsx)("h2",{className:"loading",children:"Loading ..."})}}}]);
-//# sourceMappingURL=47.625092d5.chunk.js.map

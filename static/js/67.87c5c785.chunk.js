@@ -1,2 +1,0 @@
-(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[67],{93:function(s,t,e){"use strict";e.r(t),t.default=e.p+"static/media/Question.spec.tsx.6121585e.snap"}}]);
-//# sourceMappingURL=67.87c5c785.chunk.js.map
