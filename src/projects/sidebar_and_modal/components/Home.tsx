@@ -8,7 +8,7 @@ export default function Home (): ReactElement {
 
   return (
     <main>
-      <button onClick={openSidebar} className="sidebar-toggle">
+      <button onClick={openSidebar} className="sidebar-toggle" data-testid='open-sidebar'>
         <FaBars />
       </button>
       <button onClick={openModal} className="show-btn">

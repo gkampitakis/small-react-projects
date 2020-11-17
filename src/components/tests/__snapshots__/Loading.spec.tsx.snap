@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading Should load correctly 1`] = `
+<main
+  className="loading_component"
+>
+  <div
+    className="loader"
+  >
+    <div
+      className="bar"
+    />
+  </div>
+  <img
+    alt="Loading Logo"
+    className="logo"
+    src="./logo192.png"
+  />
+</main>
+`;

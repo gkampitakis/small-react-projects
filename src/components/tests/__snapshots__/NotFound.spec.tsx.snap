@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound Should render correctly 1`] = `
+<body>
+  <div>
+    <main
+      class="not_found"
+    >
+      <img
+        alt="Not found image"
+        src="./images/404.svg"
+      />
+      <p>
+        The page you requested was not found
+      </p>
+      <div>
+        <a
+          class="return-btn"
+          href="/home"
+        >
+          return home
+        </a>
+      </div>
+    </main>
+  </div>
+</body>
+`;

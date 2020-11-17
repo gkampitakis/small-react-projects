@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Component Should render correctly 1`] = `
+<main
+  className="error_component"
+>
+  <img
+    alt="Error page image"
+    src="./images/error.svg"
+  />
+  <footer>
+    <h2>
+      Mock Message
+    </h2>
+  </footer>
+</main>
+`;
+
+exports[`Error Component Should render error message and print message to console 1`] = `
+<body>
+  <div>
+    <main
+      class="error_component"
+    >
+      <img
+        alt="Error page image"
+        src="./images/error.svg"
+      />
+      <footer>
+        <h2>
+          Mock Error
+        </h2>
+        <p>
+          You can check console for more information
+        </p>
+      </footer>
+    </main>
+  </div>
+</body>
+`;
