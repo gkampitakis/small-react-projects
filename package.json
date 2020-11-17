@@ -1,6 +1,7 @@
 {
+  "homepage": "https://gkampitakis.github.io/small-react-projects",
   "name": "small-react-projects",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "private": true,
   "dependencies": {
     "node-sass": "^4.14.1",
@@ -26,6 +27,7 @@
     "@typescript-eslint/parser": "^4.6.1",
     "eslint": "^7.12.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.1.0",
     "jest-fetch-mock": "^3.0.3",
     "react-test-renderer": "^17.0.1"
   },
@@ -34,7 +36,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
-    "test:update": "react-scripts test --updateSnapshot"
+    "test:update": "react-scripts test --updateSnapshot",
+    "deploy": "npm run build && node deploy.js"
   },
   "eslintConfig": {
     "extends": [
