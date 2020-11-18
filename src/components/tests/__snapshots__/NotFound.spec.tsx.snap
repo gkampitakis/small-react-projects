@@ -16,7 +16,7 @@ exports[`NotFound Should render correctly 1`] = `
       <div>
         <a
           class="return-btn"
-          href="/home"
+          href="/"
         >
           return home
         </a>

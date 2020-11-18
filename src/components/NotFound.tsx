@@ -9,7 +9,7 @@ export default function NotFound (): ReactElement {
       <img src="./images/404.svg" alt="Not found image" />
       <p>The page you requested was not found</p>
       <div>
-        <Link to={getDecoratedRoute("/home")} className="return-btn">return home</Link>
+        <Link to={getDecoratedRoute("/")} className="return-btn">return home</Link>
       </div>
     </main>
   );

@@ -3,6 +3,7 @@
   "name": "small-react-projects",
   "version": "0.3.0",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "node-sass": "^4.14.1",
     "react": "^17.0.1",

@@ -17,7 +17,6 @@ export default function _Router (): ReactElement {
         {routes.map(({ filePath, route }, idx) => (
           <Route key={idx} path={getDecoratedRoute(route)} exact component={closureComponent(filePath)} />
         ))}
-        <Route exact path={getDecoratedRoute('/home')} component={Home} />
         <Route exact path={getDecoratedRoute('/')} component={Home} />
         <Route component={NotFound} />
       </Switch>
@@ -29,7 +28,7 @@ function closureComponent (component: string) {
   return function LazyWrapper () {
     const Component = lazy(() => {
       return import(`./projects${component}`)
-        .catch(e => import('./components/NotFound'));
+        .catch(() => import('./components/NotFound'));
     });
 
     return (
