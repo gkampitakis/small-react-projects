@@ -32,6 +32,7 @@ export default function LoremGenerator (): ReactElement {
       <form className="lorem-form" onSubmit={handleSubmit}>
         <label htmlFor="amount">Paragraphs: </label>
         <input
+          id="amount"
           type="number"
           name="amount"
           value={count}

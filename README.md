@@ -1,5 +1,6 @@
 # Small React Projects
 
+![CI](https://github.com/gkampitakis/small-react-projects/workflows/CI/badge.svg)
 [![Website gkampitakis.github.io/small-react-projects](https://img.shields.io/website-up-down-green-red/https/gkampitakis.github.io/small-react-projects.svg)](https://gkampitakis.github.io/small-react-projects/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 

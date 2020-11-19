@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Should render correctly 1`] = `
+<body
+  style="background: rgb(241, 241, 241); color: rgb(16, 16, 16);"
+>
+  <div>
+    <main
+      class="homePage"
+    >
+      <header>
+        <h2>
+          Small React Projects
+        </h2>
+      </header>
+      <section>
+        <a
+          href="/accordion"
+        >
+          Accordion
+        </a>
+        <a
+          href="/birthday"
+        >
+          Birthday
+        </a>
+        <a
+          href="/cart"
+        >
+          Cart
+        </a>
+        <a
+          href="/grocery-bud"
+        >
+          Grocery Bud
+        </a>
+        <a
+          href="/lorem-ipsum"
+        >
+          Lorem Generator
+        </a>
+        <a
+          href="/menu"
+        >
+          Menu
+        </a>
+        <a
+          href="/navbar"
+        >
+          Navbar
+        </a>
+        <a
+          href="/reviews"
+        >
+          Reviews
+        </a>
+        <a
+          href="/sidebar-modal"
+        >
+          Sidebar and Modal
+        </a>
+        <a
+          href="/tabs"
+        >
+          Tabs
+        </a>
+        <a
+          href="/tours"
+        >
+          Tours
+        </a>
+        <a
+          href="/slider"
+        >
+          Slider
+        </a>
+      </section>
+      <footer>
+        <span>
+          Author:
+        </span>
+          gkampitakis
+      </footer>
+    </main>
+  </div>
+</body>
+`;

@@ -61,6 +61,11 @@
   "jest": {
     "collectCoverageFrom": [
       "src/projects/**/*.{tsx,ts}",
+      "src/hooks/tests/**/*.{tsx,ts}",
+      "src/components/tests/**/*.{tsx,ts}",
+      "!src/App.tsx",
+      "!src/Router.tsx",
+      "!src/**/index.tsx",
       "!<rootDir>/node_modules/"
     ]
   }

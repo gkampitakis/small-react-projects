@@ -22,8 +22,8 @@ function List ({ data, editItem, removeItem }: ListProps) {
             <article className="grocery-item" key={id}>
               <p className="title">{title}</p>
               <div className="btn-container">
-                <button onClick={() => editItem(id)} className="edit-btn"><EditMemo /></button>
-                <button onClick={() => removeItem(id)} className="delete-btn" ><TrashMemo /></button>
+                <button onClick={() => editItem(id)} data-testid={`edit-btn-${id}`} className="edit-btn"><EditMemo /></button>
+                <button onClick={() => removeItem(id)} data-testid={`delete-btn-${id}`} className="delete-btn" ><TrashMemo /></button>
               </div>
             </article>
           ))}
