@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, ReactElement } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from 'react-router-dom';
@@ -15,9 +15,9 @@ export default function _Router (): ReactElement {
     <Router>
       <Switch>
         {routes.map(({ filePath, route }, idx) => (
-          <Route key={idx} path={getDecoratedRoute(route)} exact component={closureComponent(filePath)} />
+          <Route key={idx} path={route} exact component={closureComponent(filePath)} />
         ))}
-        <Route exact path={getDecoratedRoute('/')} component={Home} />
+        <Route exact path={'/'} component={Home} />
         <Route component={NotFound} />
       </Switch>
     </Router>
@@ -35,11 +35,4 @@ function closureComponent (component: string) {
       <Suspense fallback={<Loading />}><Component /></Suspense >
     );
   }
-}
-/*
-This is added for handling routing in Github pages 
-Reference: https://github.com/facebook/create-react-app/issues/1765
-*/
-export function getDecoratedRoute (route: string): string {
-  return `${process.env.PUBLIC_URL}${route}`;
 }

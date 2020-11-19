@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import { useBodyStyles } from '../hooks/useBodyStyles';
 import { Link } from 'react-router-dom';
-import { getDecoratedRoute } from '../Router';
 import routes from '../routes';
 import '../app.scss';
 
@@ -18,7 +17,7 @@ export default function Home (): ReactElement {
       </header>
       <section>
         {routes.map(({ projectName, route }, idx) => (
-          <Link key={idx} to={getDecoratedRoute(route)}>
+          <Link key={idx} to={route}>
             {projectName}
           </Link>
         ))}

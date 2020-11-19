@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
-import { getDecoratedRoute } from '../Router';
 
 
 export default function NotFound (): ReactElement {
@@ -9,7 +8,7 @@ export default function NotFound (): ReactElement {
       <img src="./images/404.svg" alt="Not found image" />
       <p>The page you requested was not found</p>
       <div>
-        <Link to={getDecoratedRoute("/")} className="return-btn">return home</Link>
+        <Link to="/" className="return-btn">return home</Link>
       </div>
     </main>
   );
