@@ -1,2 +1,0 @@
-(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[49],{29:function(t,e,c){"use strict";c.r(e),c.d(e,"default",(function(){return s}));var n=c(1);c(0);function s(t){var e=t.selected,c=void 0!==e&&e,s=t.title,a=t.handler;return Object(n.jsx)("button",{className:"tab-btn ".concat(c?"selected":""),onClick:a,children:s})}}}]);
-//# sourceMappingURL=49.37c38119.chunk.js.map

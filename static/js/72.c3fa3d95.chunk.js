@@ -1,2 +1,0 @@
-(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[72],{100:function(s,t,c){"use strict";c.r(t),t.default=c.p+"static/media/GroceryBud.spec.tsx.22359cdb.snap"}}]);
-//# sourceMappingURL=72.c3fa3d95.chunk.js.map

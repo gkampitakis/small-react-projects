@@ -1,2 +1,0 @@
-(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[40],{49:function(t,c,i){"use strict";i.r(c),i.d(c,"links",(function(){return o})),i.d(c,"social",(function(){return n}));var e=i(1),s=(i(0),i(107)),o=[{id:1,text:"home"},{id:2,text:"about"},{id:3,text:"projects"},{id:4,text:"contact"},{id:5,text:"profile"}],n=[{id:1,icon:Object(e.jsx)(s.h,{})},{id:2,icon:Object(e.jsx)(s.r,{})},{id:3,icon:Object(e.jsx)(s.k,{})},{id:4,icon:Object(e.jsx)(s.c,{})}]}}]);
-//# sourceMappingURL=40.592e7bbd.chunk.js.map

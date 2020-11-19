@@ -1,0 +1,2 @@
+(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[76],{103:function(s,t,a){"use strict";a.r(t),t.default=a.p+"static/media/Tabs.spec.tsx.2b203fdc.snap"}}]);
+//# sourceMappingURL=76.0297eed0.chunk.js.map
