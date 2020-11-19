@@ -28,7 +28,7 @@ export default function Navbar (): ReactElement {
       <div className="nav-center">
         <div className="nav-header">
           <img className="logo" src="./logo192.png" alt="React Logo" />
-          <button className="nav-toggle" onClick={() => setShowLinks(!showLinks)}><FaBars /></button>
+          <button className="nav-toggle" data-testid="open-nvb" onClick={() => setShowLinks(!showLinks)}><FaBars /></button>
         </div>
         <div className="links-container" ref={linksContainerRef}>
           <ul className="links" ref={linksRef}>

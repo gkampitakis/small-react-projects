@@ -2,7 +2,6 @@
   "homepage": "https://gkampitakis.github.io/small-react-projects",
   "name": "small-react-projects",
   "version": "0.4.0",
-  "private": true,
   "license": "MIT",
   "dependencies": {
     "node-sass": "^4.14.1",
@@ -36,16 +35,9 @@
     "lint": "eslint src/**/*.{tsx,ts}",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
-    "test:update": "react-scripts test --updateSnapshot",
+    "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "node deploy.js"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
