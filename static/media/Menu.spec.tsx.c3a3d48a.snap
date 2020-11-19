@@ -1,0 +1,409 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu Should change tab 1`] = `
+<body
+  style="background: rgb(241, 241, 241); color: rgb(16, 16, 16);"
+>
+  <div>
+    <main
+      class="menu_project"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="title"
+        >
+          <h2>
+            Our Menu
+          </h2>
+          <div
+            class="underline"
+          />
+        </div>
+        <section
+          class="tabs"
+        >
+          <button>
+            All
+          </button>
+          <button>
+            Breakfast
+          </button>
+          <button>
+            Lunch
+          </button>
+          <button>
+            Shakes
+          </button>
+        </section>
+        <div
+          class="section-center"
+        >
+          <article
+            class="menuItem"
+          >
+            <img
+              alt="diner double"
+              src="https://assets.smartcanucks.ca/offers/54146/double-leg-rotisserie-jerk-chicken-at-swiss-chalet-1-max.jpg"
+            />
+            <div
+              class="item-info"
+            >
+              <header>
+                <h4>
+                  diner double
+                </h4>
+                <h4
+                  class="price"
+                >
+                  $
+                  13.99
+                </h4>
+              </header>
+              <p>
+                vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats 
+              </p>
+            </div>
+          </article>
+          <article
+            class="menuItem"
+          >
+            <img
+              alt="egg attack"
+              src="https://c.ndtvimg.com/2020-02/60k22nc8_eggs-_625x300_15_February_20.jpg"
+            />
+            <div
+              class="item-info"
+            >
+              <header>
+                <h4>
+                  egg attack
+                </h4>
+                <h4
+                  class="price"
+                >
+                  $
+                  22.99
+                </h4>
+              </header>
+              <p>
+                franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up 
+              </p>
+            </div>
+          </article>
+          <article
+            class="menuItem"
+          >
+            <img
+              alt="american classic"
+              src="https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2017/05/nathans.jpg"
+            />
+            <div
+              class="item-info"
+            >
+              <header>
+                <h4>
+                  american classic
+                </h4>
+                <h4
+                  class="price"
+                >
+                  $
+                  12.99
+                </h4>
+              </header>
+              <p>
+                on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+`;
+
+exports[`Menu Should render correctly 1`] = `
+<main
+  className="menu_project"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="title"
+    >
+      <h2>
+        Our Menu
+      </h2>
+      <div
+        className="underline"
+      />
+    </div>
+    <section
+      className="tabs"
+    >
+      <button
+        onClick={[Function]}
+      >
+        All
+      </button>
+      <button
+        onClick={[Function]}
+      >
+        Breakfast
+      </button>
+      <button
+        onClick={[Function]}
+      >
+        Lunch
+      </button>
+      <button
+        onClick={[Function]}
+      >
+        Shakes
+      </button>
+    </section>
+    <div
+      className="section-center"
+    >
+      <article
+        className="menuItem"
+      >
+        <img
+          alt="buttermilk pancakes"
+          src="https://www.fifteenspatulas.com/wp-content/uploads/2018/09/Buttermilk-Pancakes-Fifteen-Spatulas-8.jpg"
+        />
+        <div
+          className="item-info"
+        >
+          <header>
+            <h4>
+              buttermilk pancakes
+            </h4>
+            <h4
+              className="price"
+            >
+              $
+              15.99
+            </h4>
+          </header>
+          <p>
+            I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed 
+          </p>
+        </div>
+      </article>
+      <article
+        className="menuItem"
+      >
+        <img
+          alt="diner double"
+          src="https://assets.smartcanucks.ca/offers/54146/double-leg-rotisserie-jerk-chicken-at-swiss-chalet-1-max.jpg"
+        />
+        <div
+          className="item-info"
+        >
+          <header>
+            <h4>
+              diner double
+            </h4>
+            <h4
+              className="price"
+            >
+              $
+              13.99
+            </h4>
+          </header>
+          <p>
+            vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats 
+          </p>
+        </div>
+      </article>
+      <article
+        className="menuItem"
+      >
+        <img
+          alt="godzilla milkshake"
+          src="https://cdn.concreteplayground.com/content/uploads/2017/11/Carello-shake.jpg"
+        />
+        <div
+          className="item-info"
+        >
+          <header>
+            <h4>
+              godzilla milkshake
+            </h4>
+            <h4
+              className="price"
+            >
+              $
+              6.99
+            </h4>
+          </header>
+          <p>
+            ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.
+          </p>
+        </div>
+      </article>
+      <article
+        className="menuItem"
+      >
+        <img
+          alt="country delight"
+          src="https://media-cdn.tripadvisor.com/media/photo-s/1a/36/d8/8e/hill-country-delight.jpg"
+        />
+        <div
+          className="item-info"
+        >
+          <header>
+            <h4>
+              country delight
+            </h4>
+            <h4
+              className="price"
+            >
+              $
+              20.99
+            </h4>
+          </header>
+          <p>
+            Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, 
+          </p>
+        </div>
+      </article>
+      <article
+        className="menuItem"
+      >
+        <img
+          alt="egg attack"
+          src="https://c.ndtvimg.com/2020-02/60k22nc8_eggs-_625x300_15_February_20.jpg"
+        />
+        <div
+          className="item-info"
+        >
+          <header>
+            <h4>
+              egg attack
+            </h4>
+            <h4
+              className="price"
+            >
+              $
+              22.99
+            </h4>
+          </header>
+          <p>
+            franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up 
+          </p>
+        </div>
+      </article>
+      <article
+        className="menuItem"
+      >
+        <img
+          alt="oreo dream"
+          src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sns-fb-ig-ad-oreo-1080x1080-14-1-1566573506.png?resize=980:*"
+        />
+        <div
+          className="item-info"
+        >
+          <header>
+            <h4>
+              oreo dream
+            </h4>
+            <h4
+              className="price"
+            >
+              $
+              18.99
+            </h4>
+          </header>
+          <p>
+            Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday
+          </p>
+        </div>
+      </article>
+      <article
+        className="menuItem"
+      >
+        <img
+          alt="bacon overflow"
+          src="https://www.caciqueinc.com/wp-content/uploads/2019/09/BACON-WRAPPED-QUESO-STUFFED-JALAPENOS-By-Chef-Aaro%CC%81n-Sa%CC%81nchez-web.jpg"
+        />
+        <div
+          className="item-info"
+        >
+          <header>
+            <h4>
+              bacon overflow
+            </h4>
+            <h4
+              className="price"
+            >
+              $
+              8.99
+            </h4>
+          </header>
+          <p>
+            carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird 
+          </p>
+        </div>
+      </article>
+      <article
+        className="menuItem"
+      >
+        <img
+          alt="american classic"
+          src="https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2017/05/nathans.jpg"
+        />
+        <div
+          className="item-info"
+        >
+          <header>
+            <h4>
+              american classic
+            </h4>
+            <h4
+              className="price"
+            >
+              $
+              12.99
+            </h4>
+          </header>
+          <p>
+            on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  
+          </p>
+        </div>
+      </article>
+      <article
+        className="menuItem"
+      >
+        <img
+          alt="quarantine buddy"
+          src="https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/123168460_706802093567086_8693038094059217796_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=110&_nc_ohc=0kQxK8RiChMAX_-BDYZ&_nc_tp=15&oh=97c00bcd40f5f98ae9466b67698b35ad&oe=5FD1AF31"
+        />
+        <div
+          className="item-info"
+        >
+          <header>
+            <h4>
+              quarantine buddy
+            </h4>
+            <h4
+              className="price"
+            >
+              $
+              16.99
+            </h4>
+          </header>
+          <p>
+            skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+`;

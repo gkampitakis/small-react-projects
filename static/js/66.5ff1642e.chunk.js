@@ -1,2 +1,0 @@
-(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[66],{94:function(s,t,c){"use strict";c.r(t),t.default=c.p+"static/media/Accordion.spec.tsx.a73d0eb5.snap"}}]);
-//# sourceMappingURL=66.5ff1642e.chunk.js.map
