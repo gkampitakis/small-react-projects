@@ -32,17 +32,17 @@ export default function Navbar (): ReactElement {
         </div>
         <div className="links-container" ref={linksContainerRef}>
           <ul className="links" ref={linksRef}>
-            {links.map(({ id, text, url }) => (
+            {links.map(({ id, text }) => (
               <li key={id}>
-                <a href={url}>{text}</a>
+                <a>{text}</a>
               </li>
             ))}
           </ul>
         </div>
         <ul className="social-icons">
-          {social.map(({ icon, id, url }) => (
+          {social.map(({ icon, id }) => (
             <li key={id}>
-              <a href={url}>{icon}</a>
+              <a>{icon}</a>
             </li>
           ))}
         </ul>

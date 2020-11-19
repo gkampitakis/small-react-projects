@@ -18,6 +18,10 @@ Navbar Styles
 */
 
 .navbar_project {
+  a {
+    cursor: pointer;
+  }
+
   background: $clr-white;
   box-shadow: $light-shadow;
 

@@ -18,10 +18,10 @@ export default function Sidebar (): ReactElement {
         </div>
         <ul className="links">
           {links.map((link) => {
-            const { id, url, text, icon } = link;
+            const { id, text, icon } = link;
             return (
               <li key={id}>
-                <a href={url}>
+                <a>
                   {icon}
                   {text}
                 </a>
@@ -31,10 +31,10 @@ export default function Sidebar (): ReactElement {
         </ul>
         <ul className='social-icons'>
           {social.map((link) => {
-            const { id, url, icon } = link;
+            const { id, icon } = link;
             return (
               <li key={id}>
-                <a href={url}>{icon}</a>
+                <a>{icon}</a>
               </li>
             );
           })}

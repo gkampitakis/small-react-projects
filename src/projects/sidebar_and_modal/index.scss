@@ -18,6 +18,10 @@ Sidebar_and_modal Styles
 */
 
 .sidebar_and_modal {
+  a {
+    cursor: pointer;
+  }
+
   main {
     min-height: 100vh;
     display: flex;

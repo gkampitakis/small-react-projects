@@ -1,7 +1,7 @@
 {
   "homepage": "https://gkampitakis.github.io/small-react-projects",
   "name": "small-react-projects",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "license": "MIT",
   "dependencies": {
@@ -38,7 +38,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
     "test:update": "react-scripts test --updateSnapshot",
-    "deploy": "npm run build && node deploy.js"
+    "predeploy": "npm run build",
+    "deploy": "node deploy.js"
   },
   "eslintConfig": {
     "extends": [
