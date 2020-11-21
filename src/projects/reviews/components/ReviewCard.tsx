@@ -27,10 +27,10 @@ export default function ReviewCard ({ data, controls }:
         {data.text}
       </p>
       <div className="btn-container">
-        <button className="prev-btn" onClick={controls.previous}>
+        <button data-testid='prev-btn' className="prev-btn" onClick={controls.previous}>
           <FaChevronLeft />
         </button>
-        <button className="next-btn" onClick={controls.next}>
+        <button data-testid='next-btn' className="next-btn" onClick={controls.next}>
           <FaChevronRight />
         </button>
       </div>

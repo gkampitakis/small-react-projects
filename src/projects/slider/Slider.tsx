@@ -56,10 +56,10 @@ export default function Slider (): ReactElement {
             )
           })
         }
-        <button className="prev" onClick={previous}>
+        <button data-testid="prev-btn" className="prev" onClick={previous}>
           <FiChevronLeft />
         </button>
-        <button className="next" onClick={next}>
+        <button data-testid="next-btn" className="next" onClick={next}>
           <FiChevronRight />
         </button>
       </div>
