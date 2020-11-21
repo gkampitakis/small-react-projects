@@ -15,6 +15,16 @@ export default
     projectName: 'Cart'
   },
   {
+    route: '/cocktails',
+    filePath: '/cocktails/Cocktails',
+    projectName: 'Cocktails'
+  },
+  {
+    route: '/color-generator',
+    filePath: '/color_generator/ColorGenerator',
+    projectName: 'Color Generator'
+  },
+  {
     route: '/grocery-bud',
     filePath: '/grocery_bud/GroceryBud',
     projectName: 'Grocery Bud'
@@ -45,6 +55,16 @@ export default
     projectName: 'Sidebar and Modal'
   },
   {
+    route: '/slider',
+    filePath: '/slider/Slider',
+    projectName: 'Slider'
+  },
+  {
+    route: '/stripe-menu',
+    filePath: '/stripe_menu/StripeMenu',
+    projectName: 'Stripe Menu'
+  },
+  {
     route: '/tabs',
     filePath: '/tabs/Tabs',
     projectName: 'Tabs'
@@ -53,9 +73,4 @@ export default
     route: '/tours',
     filePath: '/tours/Tours',
     projectName: 'Tours'
-  },
-  {
-    route: '/slider',
-    filePath: '/slider/Slider',
-    projectName: 'Slider'
   }];

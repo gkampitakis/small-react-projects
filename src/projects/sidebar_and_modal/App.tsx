@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { useBodyStyles } from '../../hooks/useBodyStyles';
+import { useBodyStyles, useDocTitle } from '../../hooks';
 import Home from './components/Home';
 import Modal from './components/Modal';
 import Sidebar from './components/Sidebar';
@@ -12,6 +12,7 @@ export default function App (): ReactElement {
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
+  useDocTitle('Sidebar and Modal');
 
   return (
     <AppProvider>

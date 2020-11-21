@@ -1,6 +1,5 @@
 import React, { useState, useEffect, ReactElement } from 'react';
-import { useFetch } from '../../hooks/useFetch';
-import { useBodyStyles } from '../../hooks/useBodyStyles';
+import { useFetch, useBodyStyles, useDocTitle } from '../../hooks';
 import { TourI } from './components/interface';
 import Loading from './components/Loading';
 import Error from '../../components/Error';
@@ -15,6 +14,7 @@ export default function Tours (): ReactElement {
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
+  useDocTitle('Tours');
   const [data, loading, refetch, error] = useFetch(TOURS_DATA);
   const [tours, setTours] = useState<TourI[]>([]);
 

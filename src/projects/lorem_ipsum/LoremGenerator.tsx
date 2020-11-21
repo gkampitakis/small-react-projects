@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from 'react';
-import { useBodyStyles } from '../../hooks/useBodyStyles';
+import { useBodyStyles, useDocTitle } from '../../hooks';
 import loremData from './data';
 import './index.scss';
 
@@ -9,6 +9,7 @@ export default function LoremGenerator (): ReactElement {
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
+  useDocTitle('Lorem Generator');
   const [count, setCount] = useState('0');
   const [data, setData] = useState<string[]>([]);
 

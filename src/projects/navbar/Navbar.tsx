@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect, ReactElement } from 'react';
-import { useBodyStyles } from '../../hooks/useBodyStyles';
+import { useBodyStyles, useDocTitle } from '../../hooks';
 import { FaBars } from 'react-icons/fa';
 import { links, social } from './data';
 import './index.scss';
@@ -10,6 +10,7 @@ export default function Navbar (): ReactElement {
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
+  useDocTitle('Navbar');
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLUListElement>(null);

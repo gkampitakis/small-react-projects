@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from 'react';
-import { useBodyStyles } from '../../hooks/useBodyStyles';
+import { useBodyStyles, useDocTitle } from '../../hooks';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import people from './data';
 import Review from './components/Review';
@@ -11,6 +11,7 @@ export default function Slider (): ReactElement {
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
+  useDocTitle('Slider');
   const [index, setIndex] = useState(0);
 
   function next () {

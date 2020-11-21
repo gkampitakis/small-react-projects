@@ -1,6 +1,5 @@
 import React, { ReactElement, useState } from 'react';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
-import { useBodyStyles } from '../../hooks/useBodyStyles';
+import { useDocTitle, useLocalStorage, useBodyStyles } from '../../hooks';
 import List from './components/List';
 import Alert, { AlertI } from './components/Alert';
 import './index.scss';
@@ -13,6 +12,7 @@ export default function GroceryBud (): ReactElement {
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
+  useDocTitle('Grocery Bud');
   const [data, setData] = useLocalStorage<{ id: string; title: string }[]>('groceryList', []);
   const [formValue, setFormValue] = useState('');
   const [alert, setAlert] = useState<AlertI>({ msg: '', type: '' });

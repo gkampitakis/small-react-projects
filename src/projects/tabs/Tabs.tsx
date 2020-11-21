@@ -1,6 +1,5 @@
 import React, { useState, ReactElement } from 'react';
-import { useBodyStyles } from '../../hooks/useBodyStyles';
-import { useFetch } from '../../hooks/useFetch';
+import { useFetch, useBodyStyles, useDocTitle } from '../../hooks';
 import Details from './components/Details';
 import Tab from './components/Tab';
 import Error from '../../components/Error';
@@ -23,6 +22,7 @@ export default function Tabs (): ReactElement {
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
+  useDocTitle('Tabs');
   const [data, loading, _, error] = useFetch<dataSchema>(DATA_URL);
   const [tab, setTab] = useState(0);
 

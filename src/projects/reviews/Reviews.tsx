@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from 'react';
-import { useBodyStyles } from '../../hooks/useBodyStyles';
+import { useBodyStyles, useDocTitle } from '../../hooks';
 import ReviewCard from './components/ReviewCard';
 import seedData from './data';
 import './index.scss';
@@ -10,6 +10,7 @@ export default function Reviews (): ReactElement {
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
+  useDocTitle('Reviews');
   const [index, setIndex] = useState(0);
 
   function next () {

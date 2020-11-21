@@ -30,6 +30,16 @@ exports[`Home Should render correctly 1`] = `
           Cart
         </a>
         <a
+          href="/cocktails"
+        >
+          Cocktails
+        </a>
+        <a
+          href="/color-generator"
+        >
+          Color Generator
+        </a>
+        <a
           href="/grocery-bud"
         >
           Grocery Bud
@@ -60,6 +70,16 @@ exports[`Home Should render correctly 1`] = `
           Sidebar and Modal
         </a>
         <a
+          href="/slider"
+        >
+          Slider
+        </a>
+        <a
+          href="/stripe-menu"
+        >
+          Stripe Menu
+        </a>
+        <a
           href="/tabs"
         >
           Tabs
@@ -68,11 +88,6 @@ exports[`Home Should render correctly 1`] = `
           href="/tours"
         >
           Tours
-        </a>
-        <a
-          href="/slider"
-        >
-          Slider
         </a>
       </section>
       <footer>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ReactElement } from 'react';
-import { useBodyStyles } from '../../hooks/useBodyStyles';
+import { useBodyStyles, useDocTitle } from '../../hooks';
 import MenuItem from './components/MenuItem';
 import Tabs from './components/Tabs';
 import data from './data';
@@ -11,6 +11,7 @@ export default function Menu (): ReactElement {
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
+  useDocTitle('Menu');
   const [tab, setTab] = useState('all');
   const [menuList, setMenuList] = useState(data)
 
