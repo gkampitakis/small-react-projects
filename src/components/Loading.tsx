@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import LoadingImg from './images/loading.png';
 
 export default function Loading (): ReactElement {
   return (
@@ -6,7 +7,7 @@ export default function Loading (): ReactElement {
       <div className="loader">
         <div className="bar"></div>
       </div>
-      <img className="logo" src="./logo192.png" alt="Loading Logo" />
+      <img className="logo" src={LoadingImg} alt="Loading Logo" />
     </main>
   );
 }

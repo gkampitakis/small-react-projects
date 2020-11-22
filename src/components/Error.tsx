@@ -1,5 +1,5 @@
 import React, { useEffect, ReactElement } from 'react';
-
+import ErrorImg from './images/error.svg';
 
 interface ErrorProps {
   error?: Error;
@@ -17,7 +17,7 @@ function Error ({ error, message }: ErrorProps): ReactElement {
 
   return (
     <main className="error_component">
-      <img src="./images/error.svg" alt="Error page image" />
+      <img src={ErrorImg} alt="Error page image" />
       <footer>
         {
           msg && <h2>{msg}</h2>
