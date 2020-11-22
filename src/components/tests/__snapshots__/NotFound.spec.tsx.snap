@@ -8,7 +8,7 @@ exports[`NotFound Should render correctly 1`] = `
     >
       <img
         alt="Not found image"
-        src="./images/404.svg"
+        src="404.svg"
       />
       <p>
         The page you requested was not found

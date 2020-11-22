@@ -14,7 +14,7 @@ exports[`Loading Should load correctly 1`] = `
   <img
     alt="Loading Logo"
     className="logo"
-    src="./logo192.png"
+    src="loading.png"
   />
 </main>
 `;

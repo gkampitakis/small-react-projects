@@ -398,7 +398,7 @@ exports[`Tabs Tabs Should render error 1`] = `
       >
         <img
           alt="Error page image"
-          src="./images/error.svg"
+          src="error.svg"
         />
         <footer>
           <h2>

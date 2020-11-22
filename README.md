@@ -25,11 +25,16 @@ Run it locally: `npm run start`
 - You can find tests under `*.spec.ts` files.
 - Some commonly used hooks are under `/src/hooks`.
 
-### Resources
+## Resources
 
 While working on this I used: 
+### Learning & Articles
 
 - [React Course](https://www.youtube.com/watch?v=a_7Z7C_JCyo) for project ideas.
-- [Undraw](https://undraw.co/illustrations) for images and illustrations.
 - [Testing Library](https://testing-library.com/) for running tests and 
 [Kent C. Dodds'](https://kentcdodds.com/blog/) blog for testing best practices and tips.
+- [Progressively Loading Images](https://codeburst.io/how-to-progressively-load-images-in-react-using-hooks-80c50fd447cd)  and [React Blurhash](https://github.com/woltapp/react-blurhash) used in [Photo Album](https://gkampitakis.github.io/small-react-projects/photo-album).
+
+### Material
+- [Undraw](https://undraw.co/illustrations) for images and illustrations.
+- [Unsplash](https://unsplash.com/) The internet’s source of freely-usable images.

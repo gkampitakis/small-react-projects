@@ -35,11 +35,6 @@ exports[`Home Should render correctly 1`] = `
           Cocktails
         </a>
         <a
-          href="/color-generator"
-        >
-          Color Generator
-        </a>
-        <a
           href="/grocery-bud"
         >
           Grocery Bud
@@ -58,6 +53,11 @@ exports[`Home Should render correctly 1`] = `
           href="/navbar"
         >
           Navbar
+        </a>
+        <a
+          href="/photo-album"
+        >
+          Photo Album
         </a>
         <a
           href="/reviews"
