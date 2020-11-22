@@ -20,11 +20,6 @@ export default
     projectName: 'Cocktails'
   },
   {
-    route: '/color-generator',
-    filePath: '/color_generator/ColorGenerator',
-    projectName: 'Color Generator'
-  },
-  {
     route: '/grocery-bud',
     filePath: '/grocery_bud/GroceryBud',
     projectName: 'Grocery Bud'
@@ -45,6 +40,11 @@ export default
     projectName: 'Navbar'
   },
   {
+    route: '/photo-album',
+    filePath: '/photo_album/PhotoAlbum',
+    projectName: 'Photo Album'
+  },
+  {
     route: '/reviews',
     filePath: '/reviews/Reviews',
     projectName: 'Reviews'
@@ -61,7 +61,7 @@ export default
   },
   {
     route: '/stripe-menu',
-    filePath: '/stripe_menu/StripeMenu',
+    filePath: '/stripe_menu/App',
     projectName: 'Stripe Menu'
   },
   {

@@ -1,0 +1,112 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+@import '../../variables.scss';
+
+/*
+=============== 
+Photo Album Styles
+===============
+*/
+
+.photo_album {
+  margin: 0 auto;
+  margin-top: 3rem;
+  width: 90vw;
+  height: 100vh;
+  max-width: $max-width;
+
+  .loading {
+    margin-top: 5rem;
+    text-align: center;
+    height: 75vh;
+  }
+
+  .search {
+    form {
+      transition: $transition;
+      width: 45vw;
+      max-width: $max-width;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+      border-bottom: 2px solid black;
+    }
+
+    input {
+      height: 50px;
+      width: 100%;
+      border-color: transparent;
+      font-size: 1.5rem;
+      padding: 0.5rem 0rem;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    button {
+      background: transparent;
+      border-color: transparent;
+      font-size: 1rem;
+      margin-left: 1rem;
+    }
+
+    .clear-btn {
+      line-height: 0;
+      font-size: 1.5rem;
+      color: $clr-grey-6;
+    }
+  }
+
+  .photos {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: grid;
+    gap: 2rem;
+
+    .photo {
+      height: 20rem;
+
+      img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    div {
+      line-height: 3rem;
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .search {
+      input {
+        font-size: 1.2rem;
+        height: 40px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    .photos {
+      grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+    }
+  }
+}
