@@ -18,7 +18,9 @@ export interface PhotoProps {
   };
 }
 
-export default function Photo (props: PhotoProps): ReactElement { //TODO: add decorations
+export default function Photo (props: PhotoProps): ReactElement {
+  const { user: { name, portfolio_url, profile_image: { medium } }, likes } = props;
+
   return (
     <article className="photo">
       <ImageLoad
@@ -26,6 +28,15 @@ export default function Photo (props: PhotoProps): ReactElement { //TODO: add de
         placeholder={props.blur_hash}
         regular={props.urls.regular}
       />
+      <div className="info">
+        <div>
+          <h4>{name}</h4>
+          <p>{likes} likes</p>
+        </div>
+        <a href={portfolio_url} target="_blank" rel="noreferrer">
+          <img src={medium} alt='User Avatar' className='user-img' />
+        </a>
+      </div>
     </article>
   );
 }

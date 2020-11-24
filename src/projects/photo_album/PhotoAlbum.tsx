@@ -1,51 +1,49 @@
 import React, { ReactElement, useEffect, useState } from 'react';
-import { useFetch, useDocTitle } from '../../hooks'
+import { useFetch, useDocTitle, useBodyStyles } from '../../hooks'
 import Photo, { PhotoProps } from './components/Photo';
 import Search from './components/Search';
 import Footer from './components/Footer';
 import ErrorComponent from '../../components/Error';
 import './index.scss';
 
-//TODO: handle the api_key seeding
-//TODO: pagination 
-
-// process.env.REACT_APP_UNSPLASH_KEY = 'l0oa03jNvtVdyafIBXFyC1v5k13SivrIsKxn0T_j5cg';
 
 type Data = PhotoProps & { id: string }[];
 interface SearchData {
   results: PhotoProps & { id: string }[];
 }
 
-const FETCH_API = 'https://api.unsplash.com/photos/';
-const SEARCH_API = 'https://api.unsplash.com/search/photos/';
-const CLIENT_ID = `?client_id=${'l0oa03jNvtVdyafIBXFyC1v5k13SivrIsKxn0T_j5cg'}`;
+const CLIENT_ID = '?client_id=l0oa03jNvtVdyafIBXFyC1v5k13SivrIsKxn0T_j5cg',
+  RESULTS = 21,
+  SEARCH_API = `https://api.unsplash.com/search/photos/${CLIENT_ID}&per_page=${RESULTS}`,
+  FETCH_API = `https://api.unsplash.com/photos/${CLIENT_ID}&per_page=${RESULTS}`;
 
 export default function PhotoAlbum (): ReactElement {
+  useBodyStyles({
+    background: 'white',
+    color: 'black'
+  });
   useDocTitle('Photo Album');
-  const [page, setPage] = useState(0);
-  const _url = `${FETCH_API}${CLIENT_ID}&page=${page}`
-  const [url, setUrl] = useState(_url);
+  const [url, setUrl] = useState(FETCH_API);
   const [data, loading, _, error] = useFetch<Data | SearchData>(url);
   const [results, setResults] = useState<Data>();
 
   useEffect(() => {
-    if (data) {
-      if ('length' in data) {
+    const _data: any = data;
+    if (_data) {
+      if (_data.length) {
         setResults(data as Data);
       } else {
-        setResults(data.results as Data);
+        setResults(_data.results as Data);
       }
     }
   }, [data]);
 
   function search (query: string) {
-    setPage(0);
     setResults(undefined);
-    const searchUrl = `${SEARCH_API}${CLIENT_ID}&page=${page}&query=${query}`;
+    const searchUrl = `${SEARCH_API}&query=${query}`;
 
     setUrl(searchUrl);
   }
-
 
   return (
     <main className="photo_album">
@@ -74,6 +72,3 @@ export default function PhotoAlbum (): ReactElement {
     </main>
   );
 }
-//NOTE: add pages 
-
-//TODO: add link for visiting image or something like portfolio

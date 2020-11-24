@@ -26,8 +26,8 @@ export default function Search ({ search }: SearchProps): ReactElement {
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        {value && <button className="clear-btn" onClick={() => setValue('')}><FaTimesMemo /></button>}
-        <button><FaSearchMemo /></button>
+        {value && <button type="button" className="clear-btn" onClick={() => setValue('')}><FaTimesMemo /></button>}
+        <button type="submit"><FaSearchMemo /></button>
       </form>
     </section>
   );

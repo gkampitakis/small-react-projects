@@ -36,7 +36,7 @@
   "scripts": {
     "lint": "eslint src/**/*.{tsx,ts}",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build && rm -rf build/**/*.snap",
     "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "node deploy.js"
