@@ -1,4 +1,5 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useRef } from 'react';
+import { useOnClickOutside } from '../../../hooks';
 import { FaTimes } from 'react-icons/fa';
 import { useGlobalContext } from '../context';
 import { social, links } from '../data';
@@ -6,9 +7,11 @@ import { social, links } from '../data';
 
 export default function Sidebar (): ReactElement {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
+  const sideRef = useRef<HTMLDivElement>(null);
+  useOnClickOutside(sideRef, closeSidebar);
 
   return (
-    <aside>
+    <aside ref={sideRef}>
       <div className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
         <div className="sidebar-header">
           <img src="./logo192.png" alt="Logo" className="logo" />
