@@ -1,0 +1,1 @@
+(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[84],{112:function(s,t,c){"use strict";c.r(t),t.default=c.p+"static/media/Accordion.spec.tsx.a73d0eb5.snap"}}]);

@@ -1,0 +1,1 @@
+(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[95],{107:function(s,t,a){"use strict";a.r(t),t.default=a.p+"static/media/logo.6ad422bb.svg"}}]);

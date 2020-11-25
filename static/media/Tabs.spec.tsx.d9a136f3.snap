@@ -1,0 +1,412 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs Details Should render correctly 1`] = `
+<section
+  className="details"
+>
+  <header>
+    <h3>
+      mockTitle
+    </h3>
+    <h4>
+      mockCompany
+    </h4>
+    <p
+      className="date"
+    >
+      mockDate
+    </p>
+  </header>
+  <div
+    className="job-desc"
+  >
+    <svg
+      className="duty-icon"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 448 512"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+      />
+    </svg>
+    <p>
+      1
+    </p>
+  </div>
+  <div
+    className="job-desc"
+  >
+    <svg
+      className="duty-icon"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 448 512"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+      />
+    </svg>
+    <p>
+      2
+    </p>
+  </div>
+  <div
+    className="job-desc"
+  >
+    <svg
+      className="duty-icon"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 448 512"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+      />
+    </svg>
+    <p>
+      3
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Tabs Tab Should render a selected Tab 1`] = `
+<button
+  className="tab-btn selected"
+  onClick={[Function]}
+>
+  mockTitle
+</button>
+`;
+
+exports[`Tabs Tab Should render an unselected Tab 1`] = `
+<button
+  className="tab-btn "
+  onClick={[Function]}
+>
+  mockTitle
+</button>
+`;
+
+exports[`Tabs Tabs Should change tab 1`] = `
+<body
+  style="color: rgb(16, 16, 16); background: rgb(241, 241, 241);"
+>
+  <div>
+    <main
+      class="tabs_project"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="title"
+        >
+          <h2>
+            Experience
+          </h2>
+          <div
+            class="underline"
+          />
+        </div>
+      </div>
+      <section
+        class="main-content"
+      >
+        <section
+          class="tabs-container"
+        >
+          <button
+            class="tab-btn "
+          >
+            mockCompany
+          </button>
+          <button
+            class="tab-btn selected"
+          >
+            mockCompany2
+          </button>
+        </section>
+        <section
+          class="details"
+        >
+          <header>
+            <h3>
+              mockTitle2
+            </h3>
+            <h4>
+              mockCompany2
+            </h4>
+            <p
+              class="date"
+            >
+              mockDate2
+            </p>
+          </header>
+          <div
+            class="job-desc"
+          >
+            <svg
+              class="duty-icon"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+              />
+            </svg>
+            <p>
+              11
+            </p>
+          </div>
+          <div
+            class="job-desc"
+          >
+            <svg
+              class="duty-icon"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+              />
+            </svg>
+            <p>
+              22
+            </p>
+          </div>
+          <div
+            class="job-desc"
+          >
+            <svg
+              class="duty-icon"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+              />
+            </svg>
+            <p>
+              33
+            </p>
+          </div>
+        </section>
+      </section>
+      <button
+        class="info-btn"
+      >
+        more info
+      </button>
+    </main>
+  </div>
+</body>
+`;
+
+exports[`Tabs Tabs Should render correctly 1`] = `
+<body
+  style="background: rgb(241, 241, 241); color: rgb(16, 16, 16);"
+>
+  <div>
+    <main
+      class="tabs_project"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="title"
+        >
+          <h2>
+            Experience
+          </h2>
+          <div
+            class="underline"
+          />
+        </div>
+      </div>
+      <section
+        class="main-content"
+      >
+        <section
+          class="tabs-container"
+        >
+          <button
+            class="tab-btn selected"
+          >
+            mockCompany
+          </button>
+        </section>
+        <section
+          class="details"
+        >
+          <header>
+            <h3>
+              mockTitle
+            </h3>
+            <h4>
+              mockCompany
+            </h4>
+            <p
+              class="date"
+            >
+              mockDate
+            </p>
+          </header>
+          <div
+            class="job-desc"
+          >
+            <svg
+              class="duty-icon"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+              />
+            </svg>
+            <p>
+              1
+            </p>
+          </div>
+          <div
+            class="job-desc"
+          >
+            <svg
+              class="duty-icon"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+              />
+            </svg>
+            <p>
+              2
+            </p>
+          </div>
+          <div
+            class="job-desc"
+          >
+            <svg
+              class="duty-icon"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+              />
+            </svg>
+            <p>
+              3
+            </p>
+          </div>
+        </section>
+      </section>
+      <button
+        class="info-btn"
+      >
+        more info
+      </button>
+    </main>
+  </div>
+</body>
+`;
+
+exports[`Tabs Tabs Should render error 1`] = `
+<body
+  style="color: rgb(16, 16, 16); background: rgb(241, 241, 241);"
+>
+  <div>
+    <main
+      class="tabs_project"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="title"
+        >
+          <h2>
+            Experience
+          </h2>
+          <div
+            class="underline"
+          />
+        </div>
+      </div>
+      <main
+        class="error_component"
+      >
+        <img
+          alt="Error page image"
+          src="error.svg"
+        />
+        <footer>
+          <h2>
+            Mock Error
+          </h2>
+        </footer>
+      </main>
+    </main>
+  </div>
+</body>
+`;
