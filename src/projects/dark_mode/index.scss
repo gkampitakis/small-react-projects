@@ -1,0 +1,89 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+@import '../../variables.scss';
+
+:root {
+  --clr-bcg: #fff;
+  --clr-font: #282c35;
+  --clr-primary: #d23669;
+}
+
+.dark_theme {
+  --clr-bcg: #282c35;
+  --clr-font: #fff;
+  --clr-primary: #ffa7c4;
+}
+
+.light_theme {
+  --clr-bcg: #fff;
+  --clr-font: #282c35;
+  --clr-primary: #d23669;
+}
+
+/*
+=============== 
+Dark Mode Styles
+===============
+*/
+
+.dark_mode_project {
+  header {
+    div {
+      display: flex;
+      width: 90vw;
+      max-width: 600px;
+      margin: 0 auto;
+      justify-content: space-between;
+      padding: 2rem 0;
+      align-items: center;
+
+      h1 {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+      }
+
+      button {
+        background: var(--clr-primary);
+        color: var(--clr-bcg);
+        padding: 0.25rem 0.5rem;
+        border-radius: 5px;
+        border-color: transparent;
+        text-transform: capitalize;
+        transition: all 0.3s linear;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .articles {
+    margin: 0 auto;
+    padding: 5rem 0;
+    max-width: 600px;
+    width: 90vw;
+
+    .post {
+      margin-bottom: 3rem;
+      h2 {
+        color: var(--clr-primary);
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        font-size: 1.75rem;
+      }
+
+      .info {
+        margin-bottom: 0.75rem;
+        font-style: italic;
+
+        span {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}

@@ -20,6 +20,11 @@ export default
     projectName: 'Cocktails'
   },
   {
+    route: '/dark-mode',
+    filePath: '/dark_mode/App',
+    projectName: 'Dark Mode'
+  },
+  {
     route: '/grocery-bud',
     filePath: '/grocery_bud/GroceryBud',
     projectName: 'Grocery Bud'
@@ -58,11 +63,6 @@ export default
     route: '/slider',
     filePath: '/slider/Slider',
     projectName: 'Slider'
-  },
-  {
-    route: '/stripe-menu',
-    filePath: '/stripe_menu/App',
-    projectName: 'Stripe Menu'
   },
   {
     route: '/tabs',

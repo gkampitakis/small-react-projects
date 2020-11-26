@@ -35,6 +35,11 @@ exports[`Home Should render correctly 1`] = `
           Cocktails
         </a>
         <a
+          href="/dark-mode"
+        >
+          Dark Mode
+        </a>
+        <a
           href="/grocery-bud"
         >
           Grocery Bud
@@ -73,11 +78,6 @@ exports[`Home Should render correctly 1`] = `
           href="/slider"
         >
           Slider
-        </a>
-        <a
-          href="/stripe-menu"
-        >
-          Stripe Menu
         </a>
         <a
           href="/tabs"

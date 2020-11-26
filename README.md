@@ -5,7 +5,7 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 
-This is a repository for learning and practising concepts in React such `Hooks` and `Testing`.
+This is a repository for learning and practising concepts in React such as `Hooks` and `Testing`.
 
 It follows this [React Course](https://www.youtube.com/watch?v=a_7Z7C_JCyo) and extends functionality in some projects.
 
@@ -34,6 +34,8 @@ While working on this I used:
 - [Testing Library](https://testing-library.com/) for running tests and 
 [Kent C. Dodds'](https://kentcdodds.com/blog/) blog for testing best practices and tips.
 - [Progressively Loading Images](https://codeburst.io/how-to-progressively-load-images-in-react-using-hooks-80c50fd447cd)  and [React Blurhash](https://github.com/woltapp/react-blurhash) used in [Photo Album](https://gkampitakis.github.io/small-react-projects/photo-album).
+- Implementations of useful react hooks https://usehooks.com/ and typescript https://usehooks-typescript.com/.
+- Dark Theme in React by Kent C. Dodds, [css-variables](https://epicreact.dev/css-variables/).
 
 ### Material
 - [Undraw](https://undraw.co/illustrations) for images and illustrations.
