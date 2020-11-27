@@ -1,4 +1,4 @@
-import React, { ReactElement, useState, useEffect, memo } from 'react';
+import React, { ReactElement, useState, useEffect, memo, Component } from 'react';
 import { Blurhash } from 'react-blurhash';
 
 
@@ -20,7 +20,7 @@ function ImageLoad ({ alt, regular, placeholder }: ImageLoadProps): ReactElement
   }, [regular]);
 
   return (
-    <>
+    <ErrorBoundary alt={alt} src={regular}>
       <Blurhash
         hash={placeholder}
         width={'100%'}
@@ -41,8 +41,31 @@ function ImageLoad ({ alt, regular, placeholder }: ImageLoadProps): ReactElement
           transition: 'opacity 0.5s'
         }}
       />
-    </>
+    </ErrorBoundary>
   );
 }
 
 export default memo(ImageLoad);
+
+class ErrorBoundary extends Component<{ src: string; alt: string; }, { hasError: boolean }> {
+  constructor (props: { src: string; alt: string; }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError (): { hasError: boolean } {
+    return { hasError: true };
+  }
+
+  componentDidCatch (error: any, errorInfo: any): void {
+    console.log(error, errorInfo);
+  }
+
+  render () {
+    if (this.state.hasError) {
+      return <img src={this.props.src} alt={this.props.alt} />
+    } else {
+      return this.props.children;
+    }
+  }
+}

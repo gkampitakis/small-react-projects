@@ -43,7 +43,9 @@ export default function Tours (): ReactElement {
           }
           {
             tours.length === 0 &&
-            <button className="refetch-btn" onClick={refetch}>Refresh</button>
+            <div className="refetch-container">
+              <button onClick={refetch}>Refresh</button>
+            </div>
           }
         </>
       }
