@@ -1,0 +1,191 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+@import '../../variables.scss';
+
+$clr-primary: #2680c0;
+$clr-primary-light: hsl(205, 84%, 74%);
+
+/*
+=============== 
+Cart Project Styles
+===============
+*/
+
+.cart_project {
+  .loading {
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  nav {
+    background: $clr-primary;
+    padding: 1.25rem 2rem;
+
+    .container {
+      max-width: 50rem;
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        color: white;
+        margin-bottom: 0;
+        font-size: 2rem;
+      }
+
+      .amount-container {
+        position: relative;
+        svg {
+          width: 2rem;
+          fill: white;
+        }
+
+        .amount {
+          position: absolute;
+          top: -0.85rem;
+          right: -0.85rem;
+          width: 1.75rem;
+          height: 1.75rem;
+          border-radius: 50%;
+          background: $clr-primary-light;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            color: white;
+            margin-bottom: 0;
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  .cart-container {
+    min-height: calc(100vh - 120px);
+    width: 90vh;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    margin-top: 40px;
+
+    hr {
+      background: $clr-grey-5;
+      border-color: transparent;
+      border-width: 0.25px;
+    }
+
+    header h2 {
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 3rem;
+      letter-spacing: 3px;
+    }
+
+    .empty-cart {
+      text-transform: lowercase;
+      letter-spacing: 3px;
+      color: $clr-grey-5;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      .cart-total h4 {
+        display: flex;
+        text-transform: capitalize;
+        justify-content: space-between;
+        margin-top: 1rem;
+      }
+
+      button {
+        background: transparent;
+        padding: 0.5rem 1rem;
+        color: $clr-red-dark;
+        border: 1px solid $clr-red-dark;
+        margin-top: 2.25rem;
+        border-radius: $radius;
+        transition: $transition;
+        text-transform: uppercase;
+        letter-spacing: $spacing;
+        font-size: 0.875rem;
+        font-weight: 700;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+          background: $clr-red-light;
+          color: $clr-red-dark;
+          border-color: $clr-red-light;
+        }
+      }
+    }
+
+    .cart-item {
+      display: grid;
+      align-items: center;
+      grid-template-columns: auto 1fr auto;
+      column-gap: 1.5rem;
+      margin: 1.5rem 0;
+
+      img {
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+      }
+
+      h4 {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        &.item-price {
+          color: $clr-grey-5;
+        }
+      }
+
+      .remove-btn {
+        color: $clr-primary;
+        letter-spacing: $spacing;
+        cursor: pointer;
+        font-size: 0.85rem;
+        background: transparent;
+        border: none;
+        margin-top: 0.375rem;
+        transition: $transition;
+
+        &:hover {
+          color: $clr-primary-light;
+        }
+      }
+
+      .amount {
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+
+      .amount-btn {
+        width: 1.5rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        svg {
+          fill: $clr-primary;
+
+          &:hover {
+            fill: $clr-primary-light;
+          }
+        }
+      }
+    }
+  }
+}

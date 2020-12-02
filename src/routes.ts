@@ -11,7 +11,7 @@ export default
   },
   {
     route: '/cart',
-    filePath: '/cart/Cart',
+    filePath: '/cart/Wrapper.tsx',
     projectName: 'Cart'
   },
   {
