@@ -140,6 +140,10 @@ Home Page
       text-align: center;
       padding: 15%;
       color: #222;
+      img {
+        width: 100px; //TODO: work on css
+        height: 100px;
+      }
     }
 
     a:hover {
