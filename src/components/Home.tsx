@@ -18,10 +18,12 @@ export default function Home (): ReactElement {
       </header>
       <section>
         {routes.map(({ projectName, route, imgPath }, idx) => (
-          <Link key={idx} to={route}>
+          <div className="project" key={idx}>
             <ImageLoader imgPath={imgPath} projectName={projectName} />
-            {projectName}
-          </Link>
+            <Link to={route}>
+              {projectName}
+            </Link>
+          </div>
         ))}
       </section>
       <footer>
