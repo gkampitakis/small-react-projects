@@ -1,7 +1,7 @@
 {
   "homepage": "https://gkampitakis.github.io/small-react-projects",
   "name": "small-react-projects",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "license": "MIT",
   "dependencies": {
     "blurhash": "^1.1.3",

@@ -14,81 +14,216 @@ exports[`Home Should render correctly 1`] = `
         </h2>
       </header>
       <section>
-        <a
-          href="/accordion"
+        <div
+          class="project"
         >
-          Accordion
-        </a>
-        <a
-          href="/birthday"
+          <picture>
+            <source />
+            <img
+              alt="Accordion Project"
+            />
+          </picture>
+          <a
+            href="/accordion"
+          >
+            Accordion
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Birthday
-        </a>
-        <a
-          href="/cart"
+          <picture>
+            <source />
+            <img
+              alt="Birthday Project"
+            />
+          </picture>
+          <a
+            href="/birthday"
+          >
+            Birthday
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Cart
-        </a>
-        <a
-          href="/cocktails"
+          <picture>
+            <source />
+            <img
+              alt="Cart Project"
+            />
+          </picture>
+          <a
+            href="/cart"
+          >
+            Cart
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Cocktails
-        </a>
-        <a
-          href="/dark-mode"
+          <picture>
+            <source />
+            <img
+              alt="Dark Mode Project"
+            />
+          </picture>
+          <a
+            href="/dark-mode"
+          >
+            Dark Mode
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Dark Mode
-        </a>
-        <a
-          href="/grocery-bud"
+          <picture>
+            <source />
+            <img
+              alt="Grocery Bud Project"
+            />
+          </picture>
+          <a
+            href="/grocery-bud"
+          >
+            Grocery Bud
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Grocery Bud
-        </a>
-        <a
-          href="/lorem-ipsum"
+          <picture>
+            <source />
+            <img
+              alt="Lorem Generator Project"
+            />
+          </picture>
+          <a
+            href="/lorem-ipsum"
+          >
+            Lorem Generator
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Lorem Generator
-        </a>
-        <a
-          href="/menu"
+          <picture>
+            <source />
+            <img
+              alt="Menu Project"
+            />
+          </picture>
+          <a
+            href="/menu"
+          >
+            Menu
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Menu
-        </a>
-        <a
-          href="/navbar"
+          <picture>
+            <source />
+            <img
+              alt="Navbar Project"
+            />
+          </picture>
+          <a
+            href="/navbar"
+          >
+            Navbar
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Navbar
-        </a>
-        <a
-          href="/photo-album"
+          <picture>
+            <source />
+            <img
+              alt="Photo Album Project"
+            />
+          </picture>
+          <a
+            href="/photo-album"
+          >
+            Photo Album
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Photo Album
-        </a>
-        <a
-          href="/reviews"
+          <picture>
+            <source />
+            <img
+              alt="Reviews Project"
+            />
+          </picture>
+          <a
+            href="/reviews"
+          >
+            Reviews
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Reviews
-        </a>
-        <a
-          href="/sidebar-modal"
+          <picture>
+            <source />
+            <img
+              alt="Sidebar and Modal Project"
+            />
+          </picture>
+          <a
+            href="/sidebar-modal"
+          >
+            Sidebar and Modal
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Sidebar and Modal
-        </a>
-        <a
-          href="/slider"
+          <picture>
+            <source />
+            <img
+              alt="Slider Project"
+            />
+          </picture>
+          <a
+            href="/slider"
+          >
+            Slider
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Slider
-        </a>
-        <a
-          href="/tabs"
+          <picture>
+            <source />
+            <img
+              alt="Tabs Project"
+            />
+          </picture>
+          <a
+            href="/tabs"
+          >
+            Tabs
+          </a>
+        </div>
+        <div
+          class="project"
         >
-          Tabs
-        </a>
-        <a
-          href="/tours"
-        >
-          Tours
-        </a>
+          <picture>
+            <source />
+            <img
+              alt="Tours Project"
+            />
+          </picture>
+          <a
+            href="/tours"
+          >
+            Tours
+          </a>
+        </div>
       </section>
       <footer>
         <span>

@@ -89,6 +89,7 @@ Home Page
 */
 
 .homePage {
+  overflow-x: hidden;
   width: 100%;
   justify-items: center;
   display: grid;
@@ -129,7 +130,7 @@ Home Page
     grid-template-columns: repeat(3, auto);
     gap: 3em;
 
-    a {
+    .project {
       min-height: 150px;
       min-width: 300px;
       transition: all 0.3s linear;
@@ -138,20 +139,31 @@ Home Page
       font-weight: 700;
       letter-spacing: 0.2rem;
       text-align: center;
-      padding: 15%;
       color: #222;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #dadada;
+
       img {
-        width: 100px; //TODO: work on css
-        height: 100px;
+        width: 350px;
+        height: 200px;
+        object-fit: cover;
+        object-position: 40% 0;
+      }
+
+      a {
+        padding: 0.5rem;
+        color: hsl(210, 22%, 49%);
+        letter-spacing: 0.1rem;
+        &:visited {
+          color: hsl(210, 22%, 49%);
+        }
       }
     }
 
-    a:hover {
+    .project:hover {
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    a:visited {
-      color: inherit;
+      transform: scale(1.15);
     }
   }
 }
