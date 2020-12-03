@@ -5,7 +5,6 @@ import Cart from './components/Cart';
 
 export default function App (): ReactElement {
   const { loading } = useGlobalContext();
-  console.log(loading);
 
   return (<main className="cart_project">
     {loading &&

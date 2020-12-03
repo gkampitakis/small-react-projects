@@ -1,4 +1,4 @@
-import React, { useContext, useReducer, useEffect, createContext, ReactElement, ReducerAction } from 'react';
+import React, { useContext, useReducer, useEffect, createContext, ReactElement } from 'react';
 
 const URL = 'https://course-api.com/react-useReducer-cart-project';
 const AppContext = createContext<DispatchActions & CartState>({} as any);
@@ -44,9 +44,6 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
 
   async function fetchData () {
     dispatch({ type: 'LOADING' });
-
-    console.log('fetching data');
-
 
     const response = await fetch(URL);
     const data = await response.json();
