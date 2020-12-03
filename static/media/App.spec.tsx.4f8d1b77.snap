@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dark Mode Should render correctly 1`] = `
+<main
+  className="dark_mode_project"
+>
+  <header>
+    <div>
+      <h1>
+        overreacted
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        toggle
+      </button>
+    </div>
+  </header>
+  <section
+    className="articles"
+  >
+    <article
+      className="post"
+    >
+      <h2>
+        the WET Codbase
+      </h2>
+      <div
+        className="info"
+      >
+        <span>
+          Sun Oct 04 2020
+        </span>
+        <span>
+          11
+           min read
+        </span>
+      </div>
+      <p>
+        Come waste your time with me
+      </p>
+    </article>
+    <article
+      className="post"
+    >
+      <h2>
+        goodby, clean code
+      </h2>
+      <div
+        className="info"
+      >
+        <span>
+          Fri Nov 22 2019
+        </span>
+        <span>
+          5
+           min read
+        </span>
+      </div>
+      <p>
+        Let clean code guide you. Then let it go.
+      </p>
+    </article>
+    <article
+      className="post"
+    >
+      <h2>
+        my decade in review
+      </h2>
+      <div
+        className="info"
+      >
+        <span>
+          Sat Aug 11 2018
+        </span>
+        <span>
+          5
+           min read
+        </span>
+      </div>
+      <p>
+        A personal reflection.
+      </p>
+    </article>
+    <article
+      className="post"
+    >
+      <h2>
+        what are the react team principles
+      </h2>
+      <div
+        className="info"
+      >
+        <span>
+          Thu Jun 04 2015
+        </span>
+        <span>
+          5
+           min read
+        </span>
+      </div>
+      <p>
+        UI Before API.
+      </p>
+    </article>
+  </section>
+</main>
+`;

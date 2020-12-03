@@ -1,0 +1,1 @@
+(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[94],{152:function(s,t,c){"use strict";c.r(t),t.default=c.p+"static/media/GroceryBud.spec.tsx.22359cdb.snap"}}]);

@@ -1,0 +1,1 @@
+(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[95],{153:function(s,t,e){"use strict";e.r(t),t.default=e.p+"static/media/LoremGenerator.spec.tsx.29da4459.snap"}}]);

@@ -1,1 +1,0 @@
-(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[93],{121:function(s,t,a){"use strict";a.r(t),t.default=a.p+"static/media/Slider.spec.tsx.1d05d5ad.snap"}}]);
