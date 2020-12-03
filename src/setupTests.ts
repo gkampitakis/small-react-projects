@@ -5,4 +5,6 @@
 import '@testing-library/jest-dom';
 import fetchMock from 'jest-fetch-mock';
 
+process.env.TZ = 'UTC';
+
 fetchMock.enableMocks();

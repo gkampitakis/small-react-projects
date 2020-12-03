@@ -29,7 +29,7 @@ exports[`Dark Mode Should render correctly 1`] = `
         className="info"
       >
         <span>
-          04/10/2020
+          Sun Oct 04 2020
         </span>
         <span>
           11
@@ -50,7 +50,7 @@ exports[`Dark Mode Should render correctly 1`] = `
         className="info"
       >
         <span>
-          22/11/2019
+          Fri Nov 22 2019
         </span>
         <span>
           5
@@ -71,7 +71,7 @@ exports[`Dark Mode Should render correctly 1`] = `
         className="info"
       >
         <span>
-          11/08/2018
+          Sat Aug 11 2018
         </span>
         <span>
           5
@@ -92,7 +92,7 @@ exports[`Dark Mode Should render correctly 1`] = `
         className="info"
       >
         <span>
-          04/06/2015
+          Thu Jun 04 2015
         </span>
         <span>
           5

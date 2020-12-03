@@ -16,7 +16,7 @@ export default function Article (
     <article className="post">
       <h2>{title}</h2>
       <div className="info">
-        <span>{date.toLocaleDateString()}</span>
+        <span>{date.toDateString()}</span>
         <span>{length} min read</span>
       </div>
       <p>{snippet}</p>
