@@ -27,19 +27,24 @@
     "@types/react-router-dom": "^5.1.6",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
+    "bundlesize": "^0.18.0",
     "eslint": "^7.14.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "gh-pages": "^3.1.0",
     "jest-fetch-mock": "^3.0.3",
-    "react-test-renderer": "^17.0.1"
+    "react-app-rewired": "^2.1.7",
+    "react-test-renderer": "^17.0.1",
+    "source-map-explorer": "^2.5.1"
   },
   "scripts": {
     "lint": "eslint src/**/*.{tsx,ts}",
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build && rm -rf build/**/*.snap",
-    "test": "react-scripts test",
+    "build": "GENERATE_SOURCEMAP=false react-app-rewired build && rm -rf build/**/*.snap",
+    "build:map": "react-app-rewired build && rm -rf build/**/*.snap",
+    "test": "bundlesize && react-scripts test",
     "predeploy": "npm run build",
-    "deploy": "node deploy.js"
+    "deploy": "node deploy.js",
+    "analyze": "npm run build:map && source-map-explorer build/static/js/*.chunk.js"
   },
   "browserslist": {
     "production": [
@@ -63,5 +68,11 @@
       "!src/**/index.tsx",
       "!<rootDir>/node_modules/"
     ]
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "build/static/js/*.chunk.js",
+      "maxSize": "50kb"
+    }
+  ]
 }
