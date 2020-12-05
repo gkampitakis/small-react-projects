@@ -110,6 +110,21 @@ exports[`Home Should render correctly 1`] = `
           <picture>
             <source />
             <img
+              alt="Markdown Preview Project"
+            />
+          </picture>
+          <a
+            href="/markdown-preview"
+          >
+            Markdown Preview
+          </a>
+        </div>
+        <div
+          class="project"
+        >
+          <picture>
+            <source />
+            <img
               alt="Menu Project"
             />
           </picture>

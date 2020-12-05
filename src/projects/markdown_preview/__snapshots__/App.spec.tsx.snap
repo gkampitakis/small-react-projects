@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Markdown Preview Should render correctly 1`] = `
+<main
+  className="markdown_preview"
+>
+  <section>
+    <textarea
+      onChange={[Function]}
+      value="# markdown preview"
+    />
+    <article>
+      <div
+        className="markdown-body"
+      >
+        <h1>
+          markdown preview
+        </h1>
+      </div>
+    </article>
+  </section>
+</main>
+`;

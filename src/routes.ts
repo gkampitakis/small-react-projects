@@ -44,6 +44,12 @@ export default
     imgPath: `${IMAGE_PATH}/LoremGenerator`
   },
   {
+    route: '/markdown-preview',
+    filePath: '/markdown_preview/App.tsx',
+    projectName: 'Markdown Preview',
+    imgPath: `${IMAGE_PATH}/MarkdownPreview`
+  },
+  {
     route: '/menu',
     filePath: '/menu/Menu',
     projectName: 'Menu',

@@ -1,0 +1,56 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+@import '../../variables.scss';
+
+/*
+=============== 
+Markdown Preview Project Styles
+===============
+*/
+
+.markdown_preview {
+  width: 100vw;
+  height: 100vh;
+
+  section {
+    padding: 4rem;
+    display: grid;
+    row-gap: 4rem;
+  }
+
+  textarea {
+    resize: none;
+    border-radius: $radius;
+    border-color: transparent;
+    border-radius: $radius;
+    font-size: 1.2rem;
+    line-height: 2;
+    box-shadow: $dark-shadow;
+    min-height: 30vh;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  article {
+    width: 50vw;
+  }
+
+  article,
+  textarea {
+    padding: 1rem 2rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    section {
+      min-height: 100vh;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 4rem;
+    }
+  }
+}
