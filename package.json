@@ -7,7 +7,7 @@
     "lint": "eslint src/**/*.{tsx,ts}",
     "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-app-rewired build && rm -rf build/**/*.snap",
-    "build:map": "react-app-rewired build && rm -rf build/**/*.snap",
+    "build:map": "CI=false react-app-rewired build && rm -rf build/**/*.snap",
     "test": "bundlesize && react-scripts test",
     "predeploy": "npm run build",
     "deploy": "node deploy.js",

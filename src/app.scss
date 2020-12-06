@@ -168,6 +168,31 @@ Home Page
   }
 }
 
+@media screen and (max-width: 1750px) {
+  .homePage {
+    section {
+      width: 60vw;
+
+      .project {
+        min-height: 150px;
+        min-width: 280px;
+        img {
+          width: 280px;
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .homePage {
+    section {
+      width: 90vw;
+    }
+  }
+}
+
 @media screen and (max-width: 992px) {
   .homePage {
     section {
@@ -182,7 +207,26 @@ Home Page
     section {
       margin: 2em;
       display: flex;
+      align-items: center;
       flex-direction: column;
+
+      .project {
+        border: 1px solid #dadada;
+
+        img {
+          width: 280px;
+          height: 150px;
+        }
+
+        a {
+          padding: 0.5rem;
+          color: hsl(210, 22%, 49%);
+          letter-spacing: 0.1rem;
+          &:visited {
+            color: hsl(210, 22%, 49%);
+          }
+        }
+      }
     }
   }
 }
