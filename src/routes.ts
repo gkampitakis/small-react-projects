@@ -19,12 +19,13 @@ export default
     projectName: 'Cart',
     imgPath: `${IMAGE_PATH}/Cart`
   },
-  // {
-  //   route: '/cocktails',
-  //   filePath: '/cocktails/Cocktails',
-  //   projectName: 'Cocktails',
-  //   // imgPath: `${IMAGE_PATH}/Accordion`
-  // },
+  {
+    route: '/cocktails',
+    filePath: '/cocktails/App.tsx',
+    projectName: 'Cocktails',
+    imgPath: `${IMAGE_PATH}/Accordion`, // FIXME: add image here
+    exact: false // NOTE: we don't want exact here as we have nested routes inside
+  },
   {
     route: '/dark-mode',
     filePath: '/dark_mode/App',

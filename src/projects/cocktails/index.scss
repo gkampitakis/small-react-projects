@@ -1,0 +1,64 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+@import '../../variables.scss';
+$clr-primary: #476a2e;
+$l-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+
+/*
+=============== 
+Cocktails Project Styles
+===============
+*/
+
+.cocktails_project {
+  nav {
+    background: white;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid $clr-primary;
+    box-shadow: $l-shadow;
+
+    .nav-center {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 85vw;
+      margin: 0 auto;
+      max-width: $max-width;
+
+      img {
+        width: 12rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      a {
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 0.5rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+        padding: 0.25rem 0.5rem;
+        transition: $transition;
+        cursor: pointer;
+
+        &:hover {
+          color: $clr-primary;
+        }
+
+        &:visited {
+          color: unset;
+        }
+      }
+    }
+  }
+}

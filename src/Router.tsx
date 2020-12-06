@@ -14,22 +14,20 @@ export default function _Router (): ReactElement {
   return (
     <Router>
       <Switch>
-        {routes.map(({ filePath, route }, idx) => (
-          <Route key={idx} path={route} exact component={closureComponent(filePath)} />
+        {routes.map(({ filePath, route, exact = true }, idx) => (
+          <Route key={idx} path={route} exact={exact} component={LazyComponent(filePath)} />
         ))}
-        <Route exact path={'/'} component={Home} />
+        <Route exact path='/' component={Home} />
         <Route component={NotFound} />
       </Switch>
     </Router>
   );
 }
 
-function closureComponent (component: string) {
-  return function LazyWrapper () {
-    const Component = lazy(() => {
-      return import(`./projects${component}`)
-        .catch(() => import('./components/NotFound'));
-    });
+function LazyComponent (component: string) {
+  return function Wrapper () {
+    const Component = lazy(() => import(`./projects${component}`)
+      .catch(() => import('./components/NotFound')));
 
     return (
       <Suspense fallback={<Loading />}><Component /></Suspense >
