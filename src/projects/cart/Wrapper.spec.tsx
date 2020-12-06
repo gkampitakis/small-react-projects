@@ -1,16 +1,43 @@
 import React from 'react';
 import { FetchMock } from 'jest-fetch-mock/types';
 import { screen, render, waitForElementToBeRemoved } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 import userEvent from '@testing-library/user-event';
 import Wrapper from './Wrapper';
 
 
 const fetchMock = (fetch as FetchMock);
 
+const mockData = [
+  {
+    id: 0,
+    img: 'mockImg0',
+    title: 'mockTitle0',
+    price: 100,
+    amount: 2
+  },
+  {
+    id: 1,
+    img: 'mockImg1',
+    title: 'mockTitle1',
+    price: 170,
+    amount: 1
+  }
+  , {
+    id: 2,
+    img: 'mockImg2',
+    title: 'mockTitle2',
+    price: 150,
+    amount: 1
+  }
+];
+
 describe('Cart', () => {
 
-  beforeEach(fetchMock.disableMocks);
+  beforeAll(fetchMock.enableMocks);
+  beforeEach(() => {
+    fetchMock.resetMocks();
+    fetchMock.mockResponseOnce(JSON.stringify(mockData));
+  });
 
   it('Should render correctly loading', () => {
     const { baseElement } = render(<Wrapper />);

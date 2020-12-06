@@ -49,17 +49,17 @@ exports[`Cart Should change amount and cart total 1`] = `
             class="cart-item"
           >
             <img
-              alt="Samsung Galaxy S8"
-              src="https://dl.airtable.com/.attachments/64b266ad865098befbda3c3577a773c9/24497852/yedjpkwxljtb75t3tezl.png"
+              alt="mockTitle0"
+              src="mockImg0"
             />
             <div>
               <h4>
-                Samsung Galaxy S8
+                mockTitle0
               </h4>
               <h4
                 class="item-price"
               >
-                399.99
+                100
               </h4>
               <button
                 aria-label="remove"
@@ -85,64 +85,7 @@ exports[`Cart Should change amount and cart total 1`] = `
               <p
                 class="amount"
               >
-                2
-              </p>
-              <button
-                aria-label="decrease"
-                class="amount-btn"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </article>
-          <article
-            class="cart-item"
-          >
-            <img
-              alt="Samsung Galaxy S7"
-              src="https://dl.airtable.com/.attachments/91ee456448cef47deec553a2ea3fa8ad/b08bec68/phone-2_ohtt5s.png"
-            />
-            <div>
-              <h4>
-                Samsung Galaxy S7
-              </h4>
-              <h4
-                class="item-price"
-              >
-                599.99 
-              </h4>
-              <button
-                aria-label="remove"
-                class="remove-btn"
-              >
-                remove
-              </button>
-            </div>
-            <div>
-              <button
-                aria-label="increase"
-                class="amount-btn"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z"
-                  />
-                </svg>
-              </button>
-              <p
-                class="amount"
-              >
-                1
+                3
               </p>
               <button
                 aria-label="decrease"
@@ -169,7 +112,7 @@ exports[`Cart Should change amount and cart total 1`] = `
               total 
               <span>
                 $
-                1399.97
+                300.00
               </span>
             </h4>
           </div>
@@ -287,17 +230,74 @@ exports[`Cart Should render correctly after loaded 1`] = `
             class="cart-item"
           >
             <img
-              alt="Samsung Galaxy S8"
-              src="https://dl.airtable.com/.attachments/64b266ad865098befbda3c3577a773c9/24497852/yedjpkwxljtb75t3tezl.png"
+              alt="mockTitle0"
+              src="mockImg0"
             />
             <div>
               <h4>
-                Samsung Galaxy S8
+                mockTitle0
               </h4>
               <h4
                 class="item-price"
               >
-                399.99
+                100
+              </h4>
+              <button
+                aria-label="remove"
+                class="remove-btn"
+              >
+                remove
+              </button>
+            </div>
+            <div>
+              <button
+                aria-label="increase"
+                class="amount-btn"
+              >
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z"
+                  />
+                </svg>
+              </button>
+              <p
+                class="amount"
+              >
+                2
+              </p>
+              <button
+                aria-label="decrease"
+                class="amount-btn"
+              >
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article
+            class="cart-item"
+          >
+            <img
+              alt="mockTitle1"
+              src="mockImg1"
+            />
+            <div>
+              <h4>
+                mockTitle1
+              </h4>
+              <h4
+                class="item-price"
+              >
+                170
               </h4>
               <button
                 aria-label="remove"
@@ -344,131 +344,17 @@ exports[`Cart Should render correctly after loaded 1`] = `
             class="cart-item"
           >
             <img
-              alt="google pixel"
-              src="https://dl.airtable.com/.attachments/91c88ae8c1580e2b762ecb3f73ed1eed/a633139a/phone-1_gvesln.png"
+              alt="mockTitle2"
+              src="mockImg2"
             />
             <div>
               <h4>
-                google pixel
+                mockTitle2
               </h4>
               <h4
                 class="item-price"
               >
-                499.99
-              </h4>
-              <button
-                aria-label="remove"
-                class="remove-btn"
-              >
-                remove
-              </button>
-            </div>
-            <div>
-              <button
-                aria-label="increase"
-                class="amount-btn"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z"
-                  />
-                </svg>
-              </button>
-              <p
-                class="amount"
-              >
-                1
-              </p>
-              <button
-                aria-label="decrease"
-                class="amount-btn"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </article>
-          <article
-            class="cart-item"
-          >
-            <img
-              alt="Xiaomi Redmi Note 2"
-              src="https://dl.airtable.com/.attachments/bae9208dc34f35128749ecda5b999e84/337c285d/phone-3_h2s6fo.png"
-            />
-            <div>
-              <h4>
-                Xiaomi Redmi Note 2
-              </h4>
-              <h4
-                class="item-price"
-              >
-                699.99
-              </h4>
-              <button
-                aria-label="remove"
-                class="remove-btn"
-              >
-                remove
-              </button>
-            </div>
-            <div>
-              <button
-                aria-label="increase"
-                class="amount-btn"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z"
-                  />
-                </svg>
-              </button>
-              <p
-                class="amount"
-              >
-                1
-              </p>
-              <button
-                aria-label="decrease"
-                class="amount-btn"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </article>
-          <article
-            class="cart-item"
-          >
-            <img
-              alt="Samsung Galaxy S7"
-              src="https://dl.airtable.com/.attachments/91ee456448cef47deec553a2ea3fa8ad/b08bec68/phone-2_ohtt5s.png"
-            />
-            <div>
-              <h4>
-                Samsung Galaxy S7
-              </h4>
-              <h4
-                class="item-price"
-              >
-                599.99 
+                150
               </h4>
               <button
                 aria-label="remove"
@@ -521,7 +407,7 @@ exports[`Cart Should render correctly after loaded 1`] = `
               total 
               <span>
                 $
-                2199.96
+                520.00
               </span>
             </h4>
           </div>
