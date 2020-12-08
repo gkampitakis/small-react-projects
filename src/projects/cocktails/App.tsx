@@ -1,12 +1,17 @@
 import React, { ReactElement, lazy, Suspense } from 'react';
 import { Route, Switch, } from 'react-router-dom';
+import { useBodyStyles } from '../../hooks';
+import { AppProvider } from './context';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
-import { AppProvider } from './context';
 import './index.scss';
 
 
 export default function App (): ReactElement {
+  useBodyStyles({
+    background: '#f1f5f8'
+  });
+
   return (
     <AppProvider>
       <main className="cocktails_project">
