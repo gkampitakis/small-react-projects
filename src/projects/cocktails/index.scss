@@ -6,6 +6,7 @@ Variables
 
 @import '../../variables.scss';
 $clr-primary: #476a2e;
+$clr-primary-light: #d4e6a5;
 $l-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
 
 /*
@@ -117,7 +118,157 @@ Cocktails Project Styles
         }
       }
     }
-    
+  }
+
+  .title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: $spacing;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+  }
+
+  .cocktail-list {
+    .cocktails-center {
+      width: 85vw;
+      margin: 0 auto;
+      max-width: 1170px;
+      display: grid;
+      row-gap: 2rem;
+      column-gap: 2rem;
+    }
+
+    .cocktail {
+      background: white;
+      margin-bottom: 2rem;
+      box-shadow: $l-shadow;
+      transition: $transition;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      border-radius: $radius;
+
+      &:hover {
+        box-shadow: $dark-shadow;
+      }
+
+      .img-container {
+        img {
+          width: 100%;
+          height: 20rem;
+          object-fit: cover;
+          border-top-left-radius: $radius;
+          border-top-right-radius: $radius;
+        }
+      }
+
+      .cocktail-footer {
+        padding: 1.5rem;
+        h3,
+        h4,
+        p {
+          margin-bottom: 0.3rem;
+          letter-spacing: 0.2rem;
+        }
+
+        p {
+          color: #afafaf;
+          margin-bottom: 0.5rem;
+        }
+
+        h3 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .cocktail-section {
+    text-align: center;
+    padding: 5rem 0;
+
+    .drink {
+      width: 85vw;
+      max-width: 1170px;
+      margin: 0 auto;
+      text-align: left;
+
+      img {
+        width: 100%;
+        display: block;
+        border-radius: $radius;
+      }
+
+      p {
+        color:black;
+        font-weight: bold;
+        text-transform: capitalize;
+        line-height: 1.8;
+      }
+
+      span {
+        margin-right: 0.5rem;
+      }
+
+      .drink-data {
+        background: $clr-primary-light;
+        padding: 0.25rem 0.5rem;
+        border-radius: $radius;
+        color: $clr-primary;
+      }
+
+      .details {
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  .btn {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 0.45rem 0.8rem;
+    transition: $transition;
+    font-size: 0.8rem;
+    background: transparent;
+    border-radius: $radius;
+    display: inline-block;
+    background: $clr-primary;
+    color: white;
+
+    &:hover {
+      background: $clr-primary-light;
+    }
+  }
+
+  section.about-section {
+    width: 85vw;
+    max-width: 40rem;
+    padding: 5rem 0;
+    margin: 0 auto;
+    p {
+      color: black;
+      line-height: 2rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .drink {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .details {
+      padding-top: 0;
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    .cocktails-center {
+      grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+    }
   }
 
   @keyframes loader-animation {

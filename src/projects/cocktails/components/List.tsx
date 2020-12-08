@@ -9,13 +9,13 @@ interface ListProps {
 export default function List ({ items }: ListProps): ReactElement {
   if (!items.length) {
     return (
-      <h2 className="section-title">no cocktails match your search</h2>
+      <h2 className="title">no cocktails match your search</h2>
     );
   }
 
   return (
-    <section className="section">
-      <h2 className="section-title">Cocktails</h2>
+    <section className="cocktail-list">
+      <h2 className="title">Cocktails</h2>
       <div className="cocktails-center">
         {items.map((c) =>
           <Cocktail key={c.id} {...c} />
@@ -35,7 +35,7 @@ function Cocktail ({ glass, id, image, info, name }: CocktailI): ReactElement {
         <h3>{name}</h3>
         <h4>{glass}</h4>
         <p>{info}</p>
-        <Link to={`/cocktails/details/${id}`}>
+        <Link to={`/cocktails/details/${id}`} className="btn">
           details
         </Link>
       </div>

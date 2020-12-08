@@ -272,7 +272,7 @@ Loading Component
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
 
   .logo {
     animation: bounce 2s ease-in-out infinite;
@@ -282,13 +282,13 @@ Loading Component
   .loader {
     position: absolute;
     top: 0;
-    height: 6px;
+    height: 4px;
     width: 100%;
 
     .bar {
-      width: 100%;
+      width: 50%;
       position: absolute;
-      height: 6px;
+      height: 4px;
       background-color: #61dafb;
       animation-name: loader-animation;
       animation-duration: 4s;

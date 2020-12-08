@@ -2,7 +2,8 @@ import React, { ReactElement } from 'react';
 import { useGlobalContext } from '../context';
 import Search from '../components/Search';
 import List from '../components/List';
-
+import ErrorCmp from '../../../components/Error';
+import Loading from '../../../components/Loading';
 
 export default function Home (): ReactElement {
   const { loading, cocktailList, error } = useGlobalContext();
@@ -12,11 +13,8 @@ export default function Home (): ReactElement {
     <>
       <Search />
       {!show && !error && <List items={cocktailList} />}
-      {show && <h2>Loading</h2>}
-      {error && <h2>An error occurred</h2>}
+      {loading && <Loading />}
+      {error && <ErrorCmp message={error} />}
     </>
   );
 }
-
-
-// FIXME: components here

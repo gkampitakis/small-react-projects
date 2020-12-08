@@ -2,6 +2,7 @@ import React, { ReactElement, lazy, Suspense } from 'react';
 import { Route, Switch, } from 'react-router-dom';
 import { useBodyStyles } from '../../hooks';
 import { AppProvider } from './context';
+import Loading from '../../components/Loading';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import './index.scss';
@@ -30,6 +31,6 @@ const LazyDetails = (page: string) => {
   const Component = lazy(() => import(`./pages/${page}`));
 
   return (
-    <Suspense fallback={'Loading ...'}><Component /></Suspense >
+    <Suspense fallback={<Loading />}><Component /></Suspense >
   );
 }

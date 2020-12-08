@@ -1,6 +1,8 @@
 import React, { ReactElement, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useFetch } from '../../../hooks';
+import ErrorCmp from '../../../components/Error';
+import Loading from '../../../components/Loading';
 
 
 const URL = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
@@ -17,9 +19,8 @@ interface CocktailDetails {
 
 export default function Details (): ReactElement {
   const { id } = useParams<{ id: string }>();
-  const [cocktail, setCocktail] = useState<CocktailDetails | undefined>(undefined);
+  const [cocktail, setCocktail] = useState<CocktailDetails>({} as any);
   const [data, loading, _, error] = useFetch<any>(`${URL}${id}`);
-  //FIXME: handle error
 
   useEffect(() => {
     if (data?.drinks[0]) {
@@ -55,44 +56,48 @@ export default function Details (): ReactElement {
     }
   }, [data]);
 
-  if (loading) { //FIXME:
-    return <h2>Loading</h2>;
+  if (loading) {
+    return <Loading />;
   }
 
-  if (!cocktail) { //FIXME:
-    return <h2>Cocktail details not found</h2>;
+  if (error) {
+    return <ErrorCmp message={'Error occurred'} />;
   }
 
   return (
     <section className="cocktail-section">
-      <Link to="/cocktails">Back Home</Link>
-      <h2 className="title">{cocktail.name}</h2>
-      <div className="drink">
-        <img src={cocktail.image} alt={cocktail.image} />
-        <div className="details">
-          <p>
-            <span className='drink-data'>name :</span> {cocktail.name}
-          </p>
-          <p>
-            <span className='drink-data'>category :</span> {cocktail.category}
-          </p>
-          <p>
-            <span className='drink-data'>info :</span> {cocktail.info}
-          </p>
-          <p>
-            <span className='drink-data'>glass :</span> {cocktail.glass}
-          </p>
-          <p>
-            <span className='drink-data'>instructions :</span> {cocktail.instructions}
-          </p>
-          <p>
-            <span className='drink-data'>ingredients :</span>
-            {cocktail.ingredients.map((item, index) => {
-              return item ? <span key={index}> {item}</span> : null
-            })}
-          </p>
+      <Link to="/cocktails" className="btn">Back Home</Link>
+      {!cocktail && <h2>Cocktail details not found</h2>}
+      {cocktail && <>
+        <h2 className="title">{cocktail.name}</h2>
+        <div className="drink">
+          <img src={cocktail.image} alt={cocktail.image} />
+          <div className="details">
+            <p>
+              <span className='drink-data'>name :</span> {cocktail.name}
+            </p>
+            <p>
+              <span className='drink-data'>category :</span> {cocktail.category}
+            </p>
+            <p>
+              <span className='drink-data'>info :</span> {cocktail.info}
+            </p>
+            <p>
+              <span className='drink-data'>glass :</span> {cocktail.glass}
+            </p>
+            <p>
+              <span className='drink-data'>instructions :</span> {cocktail.instructions}
+            </p>
+            <p>
+              <span className='drink-data'>ingredients :</span>
+              {cocktail.ingredients.map((item, index) => {
+                return item ? <span key={index}> {item}</span> : null
+              })}
+            </p>
+          </div>
         </div>
-      </div>
+      </>
+      }
     </section>
   );
 }
