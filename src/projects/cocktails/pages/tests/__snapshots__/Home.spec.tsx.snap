@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Should not render loading prompt 1`] = `
+<body>
+  <div>
+    <section
+      class="search_bar"
+    >
+      <form>
+        <label
+          for="search"
+        >
+          Search your favorite cocktail
+        </label>
+        <div>
+          <input
+            id="search"
+            name="search"
+            placeholder="e.g. Sex on the beach"
+            type="text"
+            value=""
+          />
+          
+        </div>
+        <div
+          class="loader undefined"
+        >
+          <div
+            class="bar"
+          />
+        </div>
+      </form>
+    </section>
+    <section
+      class="cocktail-list"
+    >
+      <h2
+        class="title"
+      >
+        Cocktails
+      </h2>
+      <div
+        class="cocktails-center"
+      >
+        <article
+          class="cocktail"
+        >
+          <div
+            class="img-container"
+          >
+            <img
+              alt="mockCocktail"
+              src="mockImg"
+            />
+          </div>
+          <div
+            class="cocktail-footer"
+          >
+            <h3>
+              mockCocktail
+            </h3>
+            <h4>
+              mockGlass
+            </h4>
+            <p>
+              mockInfo
+            </p>
+            <a
+              class="btn"
+              href="/cocktails/details/0"
+            >
+              details
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+</body>
+`;
+
+exports[`Home Should render correctly 1`] = `
+Array [
+  <section
+    className="search_bar"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        htmlFor="search"
+      >
+        Search your favorite cocktail
+      </label>
+      <div>
+        <input
+          id="search"
+          name="search"
+          onChange={[Function]}
+          placeholder="e.g. Sex on the beach"
+          type="text"
+          value=""
+        />
+        
+      </div>
+      <div
+        className="loader undefined"
+      >
+        <div
+          className="bar"
+        />
+      </div>
+    </form>
+  </section>,
+  <h2
+    className="title"
+  >
+    no cocktails match your search
+  </h2>,
+]
+`;
+
+exports[`Home Should render error prompt 1`] = `
+<body>
+  <div>
+    <section
+      class="search_bar"
+    >
+      <form>
+        <label
+          for="search"
+        >
+          Search your favorite cocktail
+        </label>
+        <div>
+          <input
+            id="search"
+            name="search"
+            placeholder="e.g. Sex on the beach"
+            type="text"
+            value=""
+          />
+          
+        </div>
+        <div
+          class="loader undefined"
+        >
+          <div
+            class="bar"
+          />
+        </div>
+      </form>
+    </section>
+    <main
+      class="error_component"
+    >
+      <img
+        alt="Error page image"
+        src="error.svg"
+      />
+      <footer>
+        <h2>
+          MockError
+        </h2>
+      </footer>
+    </main>
+  </div>
+</body>
+`;
+
+exports[`Home Should render loading prompt 1`] = `
+<body>
+  <div>
+    <section
+      class="search_bar"
+    >
+      <form>
+        <label
+          for="search"
+        >
+          Search your favorite cocktail
+        </label>
+        <div>
+          <input
+            id="search"
+            name="search"
+            placeholder="e.g. Sex on the beach"
+            type="text"
+            value=""
+          />
+          
+        </div>
+        <div
+          class="loader undefined"
+        >
+          <div
+            class="bar"
+          />
+        </div>
+      </form>
+    </section>
+    <main
+      class="loading_component"
+    >
+      <div
+        class="loader"
+      >
+        <div
+          class="bar"
+        />
+      </div>
+      <img
+        alt="Loading Logo"
+        class="logo"
+        src="loading.png"
+      />
+    </main>
+  </div>
+</body>
+`;

@@ -64,11 +64,12 @@ export default function Details (): ReactElement {
     return <ErrorCmp message={'Error occurred'} />;
   }
 
+
   return (
     <section className="cocktail-section">
       <Link to="/cocktails" className="btn">Back Home</Link>
-      {!cocktail && <h2>Cocktail details not found</h2>}
-      {cocktail && <>
+      {!cocktail.name && <h2>Cocktail details not found</h2>}
+      {cocktail.name && <>
         <h2 className="title">{cocktail.name}</h2>
         <div className="drink">
           <img src={cocktail.image} alt={cocktail.image} />
@@ -90,9 +91,7 @@ export default function Details (): ReactElement {
             </p>
             <p>
               <span className='drink-data'>ingredients :</span>
-              {cocktail.ingredients.map((item, index) => {
-                return item ? <span key={index}> {item}</span> : null
-              })}
+              {cocktail?.ingredients?.map((item, index) => <span key={index}> {item}</span>)}
             </p>
           </div>
         </div>

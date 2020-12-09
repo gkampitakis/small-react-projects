@@ -65,6 +65,21 @@ exports[`Home Should render correctly 1`] = `
           <picture>
             <source />
             <img
+              alt="Cocktails Project"
+            />
+          </picture>
+          <a
+            href="/cocktails"
+          >
+            Cocktails
+          </a>
+        </div>
+        <div
+          class="project"
+        >
+          <picture>
+            <source />
+            <img
               alt="Dark Mode Project"
             />
           </picture>

@@ -14,7 +14,7 @@ export default function Home (): ReactElement {
     <>
       <Search />
       {!show && !error && <List items={cocktailList} />}
-      {loading && <Loading />}
+      {show && <Loading />}
       {error && <ErrorCmp message={error} />}
     </>
   );
