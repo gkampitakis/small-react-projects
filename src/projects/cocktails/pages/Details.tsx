@@ -22,37 +22,37 @@ export default function Details (): ReactElement {
   const [cocktail, setCocktail] = useState<CocktailDetails>({} as any);
   const [data, loading, _, error] = useFetch<any>(`${URL}${id}`);
 
+  function extractDetails (data: any): CocktailDetails {
+    const {
+      strDrink,
+      strDrinkThumb,
+      strAlcoholic,
+      strCategory,
+      strGlass,
+      strInstructions,
+    } = data.drinks[0];
+    const ingredients: string[] = [];
+
+    for (let i = 1; i < 16; i++) {
+      const ingredient = data.drinks[0][`strIngredient${i}`];
+      if (!ingredient) break;
+      ingredients.push(ingredient);
+    }
+
+    return {
+      name: strDrink,
+      image: strDrinkThumb,
+      info: strAlcoholic,
+      category: strCategory,
+      glass: strGlass,
+      instructions: strInstructions,
+      ingredients
+    };
+  }
+
   useEffect(() => {
     if (data?.drinks[0]) {
-      const { // FIXME: this naive waive of pulling ingredients from here
-        strDrink,
-        strDrinkThumb,
-        strAlcoholic,
-        strCategory,
-        strGlass,
-        strInstructions,
-        strIngredient1,
-        strIngredient2,
-        strIngredient3,
-        strIngredient4,
-        strIngredient5,
-      } = data.drinks[0];
-
-      setCocktail({
-        name: strDrink,
-        image: strDrinkThumb,
-        info: strAlcoholic,
-        category: strCategory,
-        glass: strGlass,
-        instructions: strInstructions,
-        ingredients: [
-          strIngredient1,
-          strIngredient2,
-          strIngredient3,
-          strIngredient4,
-          strIngredient5
-        ]
-      });
+      setCocktail(extractDetails(data));
     }
   }, [data]);
 

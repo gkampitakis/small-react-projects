@@ -64,6 +64,7 @@ Cocktails Project Styles
   }
 
   section.search_bar {
+    padding: 5rem 0;
     margin-top: 1rem;
     form {
       width: 85vw;
@@ -115,6 +116,22 @@ Cocktails Project Styles
           animation-duration: 3s;
           animation-iteration-count: infinite;
           animation-timing-function: ease-in-out;
+        }
+      }
+
+      div {
+        position: relative;
+        .clear-btn {
+          background: transparent;
+          border-color: transparent;
+          font-size: 1rem;
+          margin-left: 1rem;
+          line-height: 2;
+          font-size: 1.5rem;
+          color: $clr-grey-6;
+          position: absolute;
+          right: 0;
+          margin-right: 10px;
         }
       }
     }
@@ -200,7 +217,7 @@ Cocktails Project Styles
       }
 
       p {
-        color:black;
+        color: black;
         font-weight: bold;
         text-transform: capitalize;
         line-height: 1.8;

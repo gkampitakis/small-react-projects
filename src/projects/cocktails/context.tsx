@@ -61,7 +61,7 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
 
   useEffect(() => {
     setCocktailList(filterResults(data?.drinks));
-  }, [data])
+  }, [data]);
 
   return (
     <AppContext.Provider
