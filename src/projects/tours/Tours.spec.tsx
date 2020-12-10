@@ -1,7 +1,7 @@
 import React from 'react';
 import { FetchMock } from 'jest-fetch-mock/types';
 import userEvent from '@testing-library/user-event';
-import { render, screen, cleanup, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
+import { render, screen, cleanup, waitFor, waitForElementToBeRemoved, act } from '@testing-library/react';
 import Tours from './Tours';
 
 
@@ -12,13 +12,25 @@ describe('Tours', () => {
   afterEach(cleanup);
   beforeEach(fetchMock.resetMocks);
 
-  it('Should start with loading', () => {
-    fetchMock.disableMocks();
-    render(<Tours />);
+  it('Should start with loading', async () => {
+    fetchMock.enableMocks();
+    fetchMock.mockResponseOnce(JSON.stringify(
+      [{
+        id: "rec6d6T3q5EBIdCfD",
+        name: "Best of Paris in 7 Days Tour",
+        info: "mockInfo",
+        image: "https://dl.airtable.com/.attachments/a0cd0702c443f31526267f38ea5314a1/2447eb7a/paris.jpg",
+        price: "1,995"
+      }]
+    ));
 
-    const loading = screen.getByText(/Loading/i);
+    await act(async () => {
+      render(<Tours />);
 
-    expect(loading).toBeTruthy();
+      const loading = screen.getByText(/Loading/i);
+
+      expect(loading).toBeTruthy();
+    });
   });
 
   it('Should render error', (done) => {
