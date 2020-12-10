@@ -1,1 +1,0 @@
-(this["webpackJsonpsmall-react-projects"]=this["webpackJsonpsmall-react-projects"]||[]).push([[92],{150:function(s,t,a){"use strict";a.r(t),t.default=a.p+"static/media/Wrapper.spec.tsx.436fa30b.snap"}}]);
