@@ -131,6 +131,7 @@ Home Page
     gap: 3em;
 
     .project {
+      border-radius: 5px;
       min-height: 150px;
       min-width: 300px;
       transition: all 0.3s linear;
@@ -149,6 +150,8 @@ Home Page
         height: 200px;
         object-fit: cover;
         object-position: 40% 0;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
       }
 
       a {
