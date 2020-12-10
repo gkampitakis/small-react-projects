@@ -1,11 +1,12 @@
 import React, { ReactElement, useEffect } from 'react';
-import { useBodyStyles, useLocalStorage } from '../../hooks';
+import { useBodyStyles, useDocTitle, useLocalStorage } from '../../hooks';
 import Article from './Article';
 import data from './data';
 import './index.scss';
 
 
 export default function App (): ReactElement {
+  useDocTitle('Dark Mode');
   useBodyStyles({
     color: 'var(--clr-font)',
     background: 'var(--clr-bcg)'

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FetchMock } from 'jest-fetch-mock/types';
-import { screen, render, waitForElementToBeRemoved } from '@testing-library/react';
+import { screen, render, waitForElementToBeRemoved, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Wrapper from './Wrapper';
 
@@ -39,10 +39,12 @@ describe('Cart', () => {
     fetchMock.mockResponseOnce(JSON.stringify(mockData));
   });
 
-  it('Should render correctly loading', () => {
-    const { baseElement } = render(<Wrapper />);
+  it('Should render correctly loading', async () => {
+    await act(async () => {
+      const { baseElement } = render(<Wrapper />);
 
-    expect(baseElement).toMatchSnapshot();
+      expect(baseElement).toMatchSnapshot();
+    });
   });
 
   it('Should render correctly after loaded', async () => {

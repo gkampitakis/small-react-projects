@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cocktail Should render correctly 1`] = `
+<body>
+  <div>
+    <main
+      class="cocktails_project"
+    >
+      <nav>
+        <div
+          class="nav-center"
+        >
+          <a
+            href="/cocktails"
+          >
+            <img
+              alt="Cocktail Logo"
+              src="logo.svg"
+            />
+          </a>
+          <ul>
+            <li>
+              <a
+                href="/cocktails"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/cocktails/about"
+              >
+                About
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </main>
+  </div>
+</body>
+`;

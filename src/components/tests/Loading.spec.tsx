@@ -1,14 +1,14 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render, act } from '@testing-library/react';
 import Loading from '../Loading';
 
 
 describe('Loading', () => {
-  it('Should load correctly', () => {
-    const tree = renderer
-      .create(<Loading />)
-      .toJSON();
+  it('Should load correctly', async () => {
+    await act(async () => {
+      const { baseElement } = render(<Loading />);
 
-    expect(tree).toMatchSnapshot();
+      expect(baseElement).toMatchSnapshot();
+    });
   });
 });

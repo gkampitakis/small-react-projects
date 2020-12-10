@@ -23,7 +23,7 @@ export default
     route: '/cocktails',
     filePath: '/cocktails/App.tsx',
     projectName: 'Cocktails',
-    imgPath: `${IMAGE_PATH}/Accordion`, // FIXME: add image here
+    imgPath: `${IMAGE_PATH}/Cocktails`,
     exact: false // NOTE: we don't want exact here as we have nested routes inside
   },
   {

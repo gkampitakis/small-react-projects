@@ -1,20 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Loading Should load correctly 1`] = `
-<main
-  className="loading_component"
->
-  <div
-    className="loader"
-  >
-    <div
-      className="bar"
-    />
+<body>
+  <div>
+    <main
+      class="loading_component"
+    >
+      <div
+        class="loader"
+      >
+        <div
+          class="bar"
+        />
+      </div>
+      <img
+        alt="Loading Logo"
+        class="logo"
+        src="loading.png"
+      />
+    </main>
   </div>
-  <img
-    alt="Loading Logo"
-    className="logo"
-    src="loading.png"
-  />
-</main>
+</body>
 `;
