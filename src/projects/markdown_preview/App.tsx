@@ -1,10 +1,11 @@
 import React, { ReactElement, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { useBodyStyles } from '../../hooks';
+import { useBodyStyles, useDocTitle } from '../../hooks';
 import 'github-markdown-css';
 import './index.scss'
 
 export default function App (): ReactElement {
+  useDocTitle('Markdown Preview');
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)'
   });

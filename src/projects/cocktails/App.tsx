@@ -1,6 +1,6 @@
 import React, { ReactElement, lazy, Suspense } from 'react';
 import { Route, Switch, } from 'react-router-dom';
-import { useBodyStyles } from '../../hooks';
+import { useBodyStyles, useDocTitle } from '../../hooks';
 import { AppProvider } from './context';
 import Loading from '../../components/Loading';
 import Home from './pages/Home';
@@ -9,6 +9,7 @@ import './index.scss';
 
 
 export default function App (): ReactElement {
+  useDocTitle('Cocktails');
   useBodyStyles({
     background: '#f1f5f8'
   });
