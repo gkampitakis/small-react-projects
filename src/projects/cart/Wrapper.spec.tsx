@@ -21,8 +21,8 @@ const mockData = [
     title: 'mockTitle1',
     price: 170,
     amount: 1
-  }
-  , {
+  },
+  {
     id: 2,
     img: 'mockImg2',
     title: 'mockTitle2',

@@ -1,0 +1,119 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+@import '../../variables.scss';
+
+/*
+=============== 
+Random User Project Styles
+===============
+*/
+
+.random_user_project {
+  .block {
+    min-height: 50vh;
+  }
+
+  .bck-black {
+    background: #2c2e31;
+  }
+
+  .container {
+    width: 90vw;
+    max-width: 730px;
+    background: $clr-white;
+    margin: 0 auto;
+    margin-top: -200px;
+    border-radius: $radius;
+    position: relative;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: $dark-shadow;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 130px;
+      background: $clr-grey-10;
+      border-top-left-radius: $radius;
+      border-top-right-radius: $radius;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    }
+
+    img {
+      transition: 0.2s all linear;
+      width: 150px;
+      height: 150px;
+      position: relative;
+      border-radius: 50%;
+      padding: 5px;
+      background: $clr-white;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      margin-bottom: 2rem;
+      box-shadow: $dark-shadow;
+
+      &.loading {
+        filter: blur(0.2rem);
+      }
+    }
+
+    .user-title {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    .user-value {
+      color: $clr-grey-1;
+      font-size: 28px;
+    }
+
+    .values-list {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      justify-content: center;
+    }
+
+    .icon {
+      background: transparent;
+      border: transparent;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: $clr-grey-5;
+      transition: $transition;
+      &:hover {
+        color: hsl(205, 78%, 60%);
+      }
+    }
+
+    .btn {
+      text-transform: uppercase;
+      background: hsl(205, 78%, 60%);
+      color: $clr-white;
+      padding: 0.375rem 0.75rem;
+      letter-spacing: $spacing;
+      display: block;
+      transition: $transition;
+      font-size: 0.875rem;
+      border: 2px solid hsl(205, 78%, 60%);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      border-radius: $radius;
+      margin: 0 auto;
+      margin-top: 1.5rem;
+    }
+
+    @media screen and (min-width: 800px) {
+      .user-value {
+        font-size: 38px;
+      }
+      .icon {
+        font-size: 2rem;
+      }
+    }
+  }
+}

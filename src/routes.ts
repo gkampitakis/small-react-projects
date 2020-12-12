@@ -69,6 +69,12 @@ export default
     imgPath: `${IMAGE_PATH}/PhotoAlbum`
   },
   {
+    route: '/random-user',
+    filePath: '/random_user/RandomUser',
+    projectName: 'Random User',
+    imgPath: `${IMAGE_PATH}/RandomUser`
+  },
+  {
     route: '/reviews',
     filePath: '/reviews/Reviews',
     projectName: 'Reviews',
