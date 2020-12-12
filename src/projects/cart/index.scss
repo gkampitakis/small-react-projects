@@ -70,7 +70,6 @@ Cart Project Styles
 
   .cart-container {
     min-height: calc(100vh - 120px);
-    width: 90vh;
     max-width: 50rem;
     margin: 0 auto;
     padding: 2.5rem 0;
@@ -186,6 +185,12 @@ Cart Project Styles
           }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .cart-container {
+      padding: 2.5rem 2rem;
     }
   }
 }
