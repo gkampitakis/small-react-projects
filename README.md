@@ -41,3 +41,10 @@ While working on this I used:
 
 -   [Undraw](https://undraw.co/illustrations) for images and illustrations.
 -   [Unsplash](https://unsplash.com/) The internet’s source of freely-usable images.
+
+
+### Notes: 
+
+- Project Cocktails
+
+  On this project a context is used in order to inject data between components and share functions. Also there are some nested routes for navigating to `/cocktails/details` and `/cocktails/about`. One issue that was noticed is that the context gets re-rendered on every navigation. Not sure if this intended or can be resolved, the only solution I found is moving the context provider wrapping outside of the Router. 
