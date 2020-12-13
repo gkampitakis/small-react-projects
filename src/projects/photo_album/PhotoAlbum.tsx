@@ -39,6 +39,7 @@ export default function PhotoAlbum (): ReactElement {
   }, [data]);
 
   function search (query: string) {
+    if (!query) return;
     setResults(undefined);
     const searchUrl = `${SEARCH_API}&query=${query}`;
 

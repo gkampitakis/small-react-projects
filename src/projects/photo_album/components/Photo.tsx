@@ -4,7 +4,7 @@ import ImageLoad from './ImageLoad';
 
 export interface PhotoProps {
   urls: {
-    regular: string;
+    raw: string;
   };
   blur_hash: string;
   alt_description: string;
@@ -26,7 +26,7 @@ export default function Photo (props: PhotoProps): ReactElement {
       <ImageLoad
         alt={props.alt_description}
         placeholder={props.blur_hash}
-        regular={props.urls.regular}
+        regular={props.urls.raw + '&w=370&h=320'}
       />
       <div className="info">
         <div>
