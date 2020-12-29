@@ -1,5 +1,6 @@
 import React, { useContext, useReducer, useEffect, createContext, ReactElement } from 'react';
 
+
 const URL = 'https://course-api.com/react-useReducer-cart-project';
 const AppContext = createContext<DispatchActions & CartState>({} as any);
 
@@ -90,7 +91,7 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
 
 export const useGlobalContext = (): DispatchActions & CartState => useContext(AppContext);
 
-export { AppContext, AppProvider };
+export { AppProvider };
 
 function reducer (state: CartState, action: Action): CartState {
   switch (action.type) {

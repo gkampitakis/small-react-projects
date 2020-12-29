@@ -5,6 +5,7 @@ import Tab from './components/Tab';
 import Error from '../../components/Error';
 import './index.scss';
 
+
 const DATA_URL = 'https://course-api.com/react-tabs-project';
 
 type dataSchema = {

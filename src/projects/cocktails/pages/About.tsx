@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 
+
 export default function About (): ReactElement {
   return (
     <section className="about-section">

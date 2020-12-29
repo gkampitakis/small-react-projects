@@ -46,9 +46,13 @@ export default function PhotoAlbum (): ReactElement {
     setUrl(searchUrl);
   }
 
+  function clear () {
+    setUrl(FETCH_API);
+  }
+
   return (
     <main className="photo_album">
-      <Search search={search} />
+      <Search search={search} clear={clear} />
       {loading && <h2 className="loading">Loading ...</h2>}
       {error && <ErrorComponent error={new Error(error)} />}
       {

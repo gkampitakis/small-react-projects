@@ -76,5 +76,5 @@ export default function GroceryBud (): ReactElement {
       <List data={data} editItem={editItem} removeItem={removeItem} />
       {!!data.length && <button className="clear-btn" onClick={clearList}>clear items</button>}
     </main>
-  )
+  );
 }
