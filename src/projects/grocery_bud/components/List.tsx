@@ -30,7 +30,7 @@ function List ({ data, editItem, removeItem }: ListProps) {
         </div>
       }
     </>
-  )
+  );
 }
 
 export default memo(List);

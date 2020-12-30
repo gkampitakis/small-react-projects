@@ -2,7 +2,8 @@ import React, { ReactElement, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useBodyStyles, useDocTitle } from '../../hooks';
 import 'github-markdown-css';
-import './index.scss'
+import './index.scss';
+
 
 export default function App (): ReactElement {
   useDocTitle('Markdown Preview');

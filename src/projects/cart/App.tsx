@@ -3,6 +3,7 @@ import { useGlobalContext } from './context';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
 
+
 export default function App (): ReactElement {
   const { loading } = useGlobalContext();
 

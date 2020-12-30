@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 
-
 interface ArticleProps {
   title: string;
   date: Date;

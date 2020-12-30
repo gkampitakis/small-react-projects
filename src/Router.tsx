@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, ReactElement } from 'react';
 import {
-  HashRouter as Router,
+  HashRouter,
   Switch,
   Route
 } from 'react-router-dom';
@@ -10,9 +10,9 @@ import NotFound from './components/NotFound';
 import routes from './routes';
 
 
-export default function _Router (): ReactElement {
+export default function Router (): ReactElement {
   return (
-    <Router>
+    <HashRouter>
       <Switch>
         {routes.map(({ filePath, route, exact = true }, idx) => (
           <Route key={idx} path={route} exact={exact} component={LazyComponent(filePath)} />
@@ -20,7 +20,7 @@ export default function _Router (): ReactElement {
         <Route exact path='/' component={Home} />
         <Route component={NotFound} />
       </Switch>
-    </Router>
+    </HashRouter>
   );
 }
 

@@ -25,7 +25,7 @@ export default function Alert ({ msg, type, data }: AlertProps): ReactElement {
     return () => {
       clearTimeout(timeout);
     }
-  }, [data]);
+  }, [data, msg]);
 
   return (
     <>
