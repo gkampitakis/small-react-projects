@@ -69,6 +69,12 @@ export default
     imgPath: `${IMAGE_PATH}/PhotoAlbum`
   },
   {
+    route: '/quiz',
+    filePath: '/quiz/App.tsx',
+    projectName: 'Quiz',
+    imgPath: `${IMAGE_PATH}/Quiz`
+  },
+  {
     route: '/random-user',
     filePath: '/random_user/RandomUser',
     projectName: 'Random User',
