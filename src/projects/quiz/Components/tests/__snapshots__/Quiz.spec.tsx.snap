@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quiz Setup Form Should show error message 1`] = `
+<body>
+  <div>
+    <main
+      class="quiz_project"
+    >
+      <form
+        class="quiz setup_form"
+      >
+        <h2>
+          Setup Quiz
+        </h2>
+        <div
+          class="form-control"
+        >
+          <label
+            for="amount"
+          >
+            Number of questions
+          </label>
+          <input
+            autocomplete="off"
+            class="form-input"
+            id="amount"
+            max="50"
+            min="1"
+            name="amount"
+            type="number"
+            value="10"
+          />
+        </div>
+        <div
+          class="form-control"
+        >
+          <label
+            for="category"
+          >
+            category
+          </label>
+          <select
+            class="form-input"
+            id="category"
+            name="category"
+          >
+            <option
+              value="sports"
+            >
+              sports
+            </option>
+            <option
+              value="history"
+            >
+              history
+            </option>
+            <option
+              value="politics"
+            >
+              politics
+            </option>
+          </select>
+        </div>
+        <div
+          class="form-control"
+        >
+          <label
+            for="difficulty"
+          >
+            Select Difficulty
+          </label>
+          <select
+            class="form-input"
+            id="difficulty"
+            name="difficulty"
+          >
+            <option
+              value="easy"
+            >
+              easy
+            </option>
+            <option
+              value="medium"
+            >
+              medium
+            </option>
+            <option
+              value="hard"
+            >
+              hard
+            </option>
+          </select>
+        </div>
+        <p
+          class="error"
+        >
+          Can‘t generate questions, please try different options
+        </p>
+        <button
+          type="submit"
+        >
+          Start
+        </button>
+      </form>
+    </main>
+  </div>
+</body>
+`;
+
+exports[`Quiz Should render correctly 1`] = `
+<main
+  className="quiz_project"
+>
+  <div
+    className="modal-container"
+  >
+    <div
+      className="modal-content"
+    >
+      <h2>
+        congrats!
+      </h2>
+      <p>
+        You answered 
+        0
+        % of questions correctly
+      </p>
+      <button
+        className="close-btn"
+      >
+        play again
+      </button>
+    </div>
+  </div>
+  <section
+    className="quiz"
+  >
+    <p
+      className="correct-answers"
+    >
+      correct answers : 
+      0
+      /
+      0
+    </p>
+    <h2>
+      question
+    </h2>
+    <div
+      className="btn-container"
+    >
+      <button
+        className="answer-btn"
+        onClick={[Function]}
+      >
+        a
+      </button>
+      <button
+        className="answer-btn"
+        onClick={[Function]}
+      >
+        a
+      </button>
+      <button
+        className="answer-btn"
+        onClick={[Function]}
+      >
+        a
+      </button>
+      <button
+        className="answer-btn"
+        onClick={[Function]}
+      >
+        a
+      </button>
+    </div>
+    <button
+      className="next-question"
+      onClick={[MockFunction]}
+    >
+      next question
+    </button>
+  </section>
+</main>
+`;
+
+exports[`Quiz Should show loading 1`] = `
+<body>
+  <div>
+    <main
+      class="loading_component"
+    >
+      <div
+        class="loader"
+      >
+        <div
+          class="bar"
+        />
+      </div>
+      <img
+        alt="Loading Logo"
+        class="logo"
+        src="loading.png"
+      />
+    </main>
+  </div>
+</body>
+`;

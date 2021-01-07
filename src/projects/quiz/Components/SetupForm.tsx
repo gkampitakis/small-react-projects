@@ -23,7 +23,7 @@ export default function SetupForm (): ReactElement {
           />
         </div>
         <div className="form-control">
-          <label htmlFor="">category</label>
+          <label htmlFor="category">category</label>
           <select name="category" id="category" className="form-input" value={quiz.category} onChange={setupFormOnChange}>
             <option value="sports">sports</option>
             <option value="history">history</option>

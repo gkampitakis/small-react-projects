@@ -18,7 +18,7 @@ export default function Quiz (): ReactElement {
 
   const answers = [...incorrect_answers];
 
-  const tempIndex = Math.floor(Math.random() * 4)
+  const tempIndex = Math.floor(Math.random() * 4);
   if (tempIndex === 3) {
     answers.push(correct_answer)
   } else {
