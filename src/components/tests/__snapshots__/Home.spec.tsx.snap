@@ -185,6 +185,21 @@ exports[`Home Should render correctly 1`] = `
           <picture>
             <source />
             <img
+              alt="Quiz Project"
+            />
+          </picture>
+          <a
+            href="/quiz"
+          >
+            Quiz
+          </a>
+        </div>
+        <div
+          class="project"
+        >
+          <picture>
+            <source />
+            <img
               alt="Random User Project"
             />
           </picture>

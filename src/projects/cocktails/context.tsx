@@ -80,4 +80,4 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
 }
 
 export const useGlobalContext = () => useContext(AppContext);
-export { AppProvider, AppContext };
+export { AppProvider };

@@ -1,0 +1,201 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+@import '../../variables.scss';
+
+$clr-primary-5: hsl(205, 78%, 60%);
+$clr-primary-7: hsl(205, 90%, 76%);
+
+/*
+=============== 
+Quiz Project Styles
+===============
+*/
+
+.quiz_project {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .quiz {
+    width: 90vw;
+    max-width: $max-width;
+    margin: 4rem auto;
+    background: $clr-white;
+    border-radius: $radius;
+    padding: 3rem;
+
+    h2 {
+      margin-bottom: 2rem;
+      text-align: center;
+      line-height: 1.5;
+      text-transform: none;
+    }
+
+    .correct-answers {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      text-align: right;
+      text-transform: capitalize;
+      letter-spacing: $spacing;
+      color: $clr-green-dark;
+    }
+
+    .answer-btn {
+      display: block;
+      width: 100%;
+      margin: 0.75rem auto;
+      background: $clr-primary-7;
+      border-radius: $radius;
+      border-color: transparent;
+      color: $clr-black;
+      letter-spacing: $spacing;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      transition: $transition;
+
+      &:hover {
+        background: $clr-primary-5;
+        color: $clr-white;
+      }
+    }
+
+    .next-question {
+      border-radius: $radius;
+      padding: 0.25rem 0.5rem;
+      border-color: transparent;
+      width: 35%;
+      margin-left: auto;
+      margin-top: 2rem;
+      text-transform: capitalize;
+      font-weight: 700;
+      letter-spacing: $spacing;
+      font-size: 1rem;
+      background: #ffb100;
+      color: $clr-black;
+      display: block;
+
+      &:hover {
+        background: #805900;
+        color: #ffb100;
+      }
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    .quiz .answer-btn {
+      max-width: 60%;
+    }
+  }
+
+  .setup_form {
+    max-width: 500px;
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .form-control {
+      margin-bottom: 2rem;
+
+      label {
+        display: block;
+        text-transform: capitalize;
+        font-weight: 500;
+        color: $clr-grey-3;
+        margin-bottom: 0.5rem;
+      }
+
+      .form-input {
+        border: none;
+        background: $clr-grey-10;
+        font-size: 1rem;
+        padding: 0.25rem 0.5rem;
+        width: 100%;
+        border-radius: $radius;
+      }
+    }
+
+    .error {
+      color: $clr-red-dark;
+      text-transform: capitalize;
+    }
+
+    button[type='submit'] {
+      border-radius: $radius;
+      padding: 0.25rem 0.5rem;
+      border-color: transparent;
+      width: 35%;
+      margin-left: auto;
+      margin-top: 2rem;
+      text-transform: capitalize;
+      font-weight: 700;
+      letter-spacing: var(--spacing);
+      font-size: 1rem;
+      background: #ffb100;
+      color: $clr-black;
+      transition: $transition;
+      width: 100%;
+      margin-top: 3rem;
+    }
+  }
+
+  .modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: $transition;
+    z-index: -1;
+
+    &.isOpen {
+      opacity: 1;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background: $clr-white;
+      width: 90vw;
+      max-width: 620px;
+      padding: 3rem;
+      border-radius: $radius;
+      text-align: center;
+      position: relative;
+
+      p {
+        font-size: 1.5rem;
+        text-transform: none;
+      }
+
+      .close-btn {
+        margin: 2rem auto 0 auto;
+        border-radius: $radius;
+        padding: 0.25rem 0.5rem;
+        border-color: transparent;
+        width: 35%;
+        text-transform: capitalize;
+        font-weight: 700;
+        letter-spacing: $spacing;
+        font-size: 1rem;
+        background: #ffb100;
+        color: $clr-black;
+        display: block;
+
+        &:hover {
+          background: #805900;
+          color: #ffb100;
+        }
+      }
+    }
+  }
+}
