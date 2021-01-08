@@ -1,7 +1,7 @@
 {
   "homepage": "https://gkampitakis.github.io/small-react-projects",
   "name": "small-react-projects",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "lint": "eslint src/**/*.{tsx,ts}",
