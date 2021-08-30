@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 
-function getItem (item: string, defaultValue?: unknown) {
+function getItem(item: string, defaultValue?: unknown) {
   const storedItem = localStorage.getItem(item);
 
   if (!storedItem) {
@@ -14,7 +14,7 @@ function getItem (item: string, defaultValue?: unknown) {
 }
 
 
-export function useLocalStorage<T> (item: string, defaultValue?: T): [T, (data: T | ((data: T) => T)) => void, () => void] {
+export function useLocalStorage<T>(item: string, defaultValue?: T): [T, (data: T | ((data: T) => T)) => void, () => void] {
   const [data, setData] = useState<T>(getItem(item, defaultValue));
 
   const sync = useCallback(() => {
@@ -25,14 +25,15 @@ export function useLocalStorage<T> (item: string, defaultValue?: T): [T, (data: 
     sync();
   }, [sync]);
 
-  function setItems (value: T | ((value: T) => T)) {
+  function setItems(value: T | ((value: T) => T)) {
     try {
       const newValue = value instanceof Function ? value(data) : value;
 
       localStorage.setItem(item, JSON.stringify(newValue));
       setData(value);
     } catch (error) {
-      console.warn(`Error setting localStorage key "${item}": ${error.message}`);
+      if (error instanceof Error)
+        console.warn(`Error setting localStorage key "${item}": ${error.message}`);
     }
   }
 
