@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "blurhash": "^1.1.4",
-    "github-markdown-css": "^4.0.0",
+    "github-markdown-css": "^5.0.0",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-blurhash": "^0.1.3",
