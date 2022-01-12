@@ -1,11 +1,15 @@
 import React from 'react';
-import { render, act, screen, waitForElementToBeRemoved } from '@testing-library/react';
+import {
+  render,
+  act,
+  screen,
+  waitForElementToBeRemoved
+} from '@testing-library/react';
 import Details from '../Details';
 import { MemoryRouter } from 'react-router-dom';
 import { FetchMock } from 'jest-fetch-mock/types';
 
-
-const fetchMock = (fetch as FetchMock);
+const fetchMock = fetch as FetchMock;
 const mockData = {
   drinks: [
     {
@@ -18,7 +22,7 @@ const mockData = {
       strIngredient1: 'mockIngredient1',
       strIngredient2: 'mockIngredient2',
       strIngredient3: 'mockIngredient3',
-      strIngredient4: 'mockIngredient4',
+      strIngredient4: 'mockIngredient4'
     }
   ]
 };
@@ -30,8 +34,7 @@ describe('Details', () => {
   it('Should load correctly', async () => {
     fetchMock.mockResponseOnce(JSON.stringify(mockData));
     await act(async () => {
-      const { baseElement } = render(<Details />,
-        { wrapper: MemoryRouter });
+      const { baseElement } = render(<Details />, { wrapper: MemoryRouter });
 
       expect(baseElement).toMatchSnapshot();
     });
@@ -39,8 +42,7 @@ describe('Details', () => {
 
   it('Should load data after loading', async () => {
     fetchMock.mockResponseOnce(JSON.stringify(mockData));
-    const { baseElement } = render(<Details />,
-      { wrapper: MemoryRouter });
+    const { baseElement } = render(<Details />, { wrapper: MemoryRouter });
 
     await waitForElementToBeRemoved(screen.getByAltText(/Loading/i));
 
@@ -49,8 +51,7 @@ describe('Details', () => {
 
   it('Should show message if no cocktails found', async () => {
     fetchMock.mockResponseOnce(JSON.stringify({ drinks: [] }));
-    const { baseElement } = render(<Details />,
-      { wrapper: MemoryRouter });
+    const { baseElement } = render(<Details />, { wrapper: MemoryRouter });
 
     await waitForElementToBeRemoved(screen.getByAltText(/Loading/i));
 
@@ -60,8 +61,7 @@ describe('Details', () => {
   it('Should show error', async () => {
     fetchMock.mockRejectOnce(() => Promise.reject('Mock Error'));
 
-    const { baseElement } = render(<Details />,
-      { wrapper: MemoryRouter });
+    const { baseElement } = render(<Details />, { wrapper: MemoryRouter });
 
     await waitForElementToBeRemoved(screen.getByAltText(/Loading/i));
 

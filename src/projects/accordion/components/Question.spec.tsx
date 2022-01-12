@@ -4,7 +4,6 @@ import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
 import Question from './Question';
 
-
 describe('Question', () => {
   it('should render correctly', () => {
     const tree = renderer
@@ -15,7 +14,9 @@ describe('Question', () => {
   });
 
   it('Should show info', () => {
-    const { baseElement } = render(<Question data={{ info: 'mockInfo', title: 'mockTitle' }} />);
+    const { baseElement } = render(
+      <Question data={{ info: 'mockInfo', title: 'mockTitle' }} />
+    );
 
     userEvent.click(screen.getByTestId('show-btn'));
 

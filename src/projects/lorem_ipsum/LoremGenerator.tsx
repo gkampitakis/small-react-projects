@@ -3,8 +3,7 @@ import { useBodyStyles, useDocTitle } from '../../hooks';
 import loremData from './data';
 import './index.scss';
 
-
-export default function LoremGenerator (): ReactElement {
+export default function LoremGenerator(): ReactElement {
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
@@ -13,7 +12,7 @@ export default function LoremGenerator (): ReactElement {
   const [count, setCount] = useState('0');
   const [data, setData] = useState<string[]>([]);
 
-  function handleSubmit (e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     const countInt = parseInt(count);
     e.preventDefault();
 
@@ -37,18 +36,14 @@ export default function LoremGenerator (): ReactElement {
           type="number"
           name="amount"
           value={count}
-          onChange={(e) => setCount(e.target.value)}
+          onChange={e => setCount(e.target.value)}
         />
         <button className="btn">generate</button>
       </form>
       <article className="lorem-text">
-        {
-          data.map((item, idx) =>
-            (
-              <p key={idx}>{item}</p>
-            )
-          )
-        }
+        {data.map((item, idx) => (
+          <p key={idx}>{item}</p>
+        ))}
       </article>
     </main>
   );

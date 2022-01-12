@@ -8,10 +8,12 @@
     "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-app-rewired build && rm -rf build/**/*.snap",
     "build:map": "CI=false react-app-rewired build && rm -rf build/**/*.snap",
-    "test": "bundlesize && react-scripts test",
+    "test:ci": "bundlesize && react-scripts test",
+    "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "node deploy.js",
-    "analyze": "npm run build:map && source-map-explorer build/static/js/*.chunk.js"
+    "analyze": "npm run build:map && source-map-explorer build/static/js/*.chunk.js",
+    "format": "prettier --write '**/*.{ts,tsx}'"
   },
   "dependencies": {
     "blurhash": "^1.1.4",
@@ -23,8 +25,8 @@
     "react-icons": "^4.3.1",
     "react-markdown": "6.0.3",
     "react-router-dom": "^5.3.0",
-    "typescript": "4.4.4",
     "react-scripts": "4.0.3",
+    "typescript": "4.4.4",
     "web-vitals": "^2.1.2"
   },
   "devDependencies": {
@@ -41,9 +43,12 @@
     "@typescript-eslint/parser": "^4.33.0",
     "bundlesize": "^0.18.1",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "gh-pages": "^3.2.3",
     "jest-fetch-mock": "^3.0.3",
+    "prettier": "^2.5.1",
     "react-app-rewired": "^2.1.8",
     "react-test-renderer": "^17.0.2",
     "source-map-explorer": "^2.5.2"

@@ -4,9 +4,7 @@ import About from '../About';
 
 describe('About', () => {
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<About />)
-      .toJSON();
+    const tree = renderer.create(<About />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

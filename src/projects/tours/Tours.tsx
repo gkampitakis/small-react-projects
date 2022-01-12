@@ -6,10 +6,9 @@ import Error from '../../components/Error';
 import Tour from './components/Tour';
 import './index.scss';
 
-
 const TOURS_DATA = 'https://course-api.com/react-tours-project';
 
-export default function Tours (): ReactElement {
+export default function Tours(): ReactElement {
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
@@ -18,13 +17,13 @@ export default function Tours (): ReactElement {
   const [data, loading, refetch, error] = useFetch(TOURS_DATA);
   const [tours, setTours] = useState<TourI[]>([]);
 
-  function removeTour (id: string): void {
-    setTours((tours) => tours.filter(tour => tour.id !== id));
+  function removeTour(id: string): void {
+    setTours(tours => tours.filter(tour => tour.id !== id));
   }
 
   useEffect(() => {
     setTours(data as TourI[]);
-  }, [data])
+  }, [data]);
 
   return (
     <main className="tours">
@@ -32,23 +31,24 @@ export default function Tours (): ReactElement {
         <h2>our tours</h2>
         <div className="underline"></div>
       </div>
-      {
-        loading && <Loading /> ||
-        error && <Error message={error} /> ||
-        tours &&
-        <>
-          {tours.map(tour => (
-            <Tour key={tour.id} removeTour={() => removeTour(tour.id)} data={tour} />
-          ))
-          }
-          {
-            tours.length === 0 &&
-            <div className="refetch-container">
-              <button onClick={refetch}>Refresh</button>
-            </div>
-          }
-        </>
-      }
+      {(loading && <Loading />) ||
+        (error && <Error message={error} />) ||
+        (tours && (
+          <>
+            {tours.map(tour => (
+              <Tour
+                key={tour.id}
+                removeTour={() => removeTour(tour.id)}
+                data={tour}
+              />
+            ))}
+            {tours.length === 0 && (
+              <div className="refetch-container">
+                <button onClick={refetch}>Refresh</button>
+              </div>
+            )}
+          </>
+        ))}
     </main>
   );
 }

@@ -5,8 +5,7 @@ import people from './data';
 import Review from './components/Review';
 import './index.scss';
 
-
-export default function Slider (): ReactElement {
+export default function Slider(): ReactElement {
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
@@ -14,14 +13,14 @@ export default function Slider (): ReactElement {
   useDocTitle('Slider');
   const [index, setIndex] = useState(0);
 
-  function next () {
+  function next() {
     if (index + 1 >= people.length) {
       return setIndex(0);
     }
     setIndex(i => i + 1);
   }
 
-  function previous () {
+  function previous() {
     if (index - 1 < 0) {
       return setIndex(people.length - 1);
     }
@@ -36,27 +35,19 @@ export default function Slider (): ReactElement {
         </h2>
       </div>
       <div className="section-center">
-        {
-          people.map((data, idx) => {
+        {people.map((data, idx) => {
+          const { id, ...rest } = data;
 
-            const { id, ...rest } = data;
+          let position = 'nextSlide';
+          if (idx === index) {
+            position = 'activeSlide';
+          }
+          if (idx === index - 1 || (index === 0 && idx === people.length - 1)) {
+            position = 'lastSlide';
+          }
 
-            let position = 'nextSlide';
-            if (idx === index) {
-              position = 'activeSlide';
-            }
-            if (
-              idx === index - 1 ||
-              (index === 0 && idx === people.length - 1)
-            ) {
-              position = 'lastSlide';
-            }
-
-            return (
-              <Review key={id} data={rest} className={position} />
-            )
-          })
-        }
+          return <Review key={id} data={rest} className={position} />;
+        })}
         <button data-testid="prev-btn" className="prev" onClick={previous}>
           <FiChevronLeft />
         </button>

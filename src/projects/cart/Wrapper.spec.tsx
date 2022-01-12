@@ -1,11 +1,15 @@
 import React from 'react';
 import { FetchMock } from 'jest-fetch-mock/types';
-import { screen, render, waitForElementToBeRemoved, act } from '@testing-library/react';
+import {
+  screen,
+  render,
+  waitForElementToBeRemoved,
+  act
+} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Wrapper from './Wrapper';
 
-
-const fetchMock = (fetch as FetchMock);
+const fetchMock = fetch as FetchMock;
 
 const mockData = [
   {
@@ -32,7 +36,6 @@ const mockData = [
 ];
 
 describe('Cart', () => {
-
   beforeAll(fetchMock.enableMocks);
   beforeEach(() => {
     fetchMock.resetMocks();

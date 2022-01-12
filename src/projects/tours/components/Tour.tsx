@@ -1,10 +1,13 @@
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement, useState } from 'react';
 import { TourI } from './interface';
 
-
-export default function Tour (
-  { data, removeTour }: { data: TourI; removeTour: () => void }
-): ReactElement {
+export default function Tour({
+  data,
+  removeTour
+}: {
+  data: TourI;
+  removeTour: () => void;
+}): ReactElement {
   const [more, setMore] = useState(false);
 
   return (
@@ -17,9 +20,13 @@ export default function Tour (
         </div>
         <p>
           {more ? data.info : `${data.info.substring(0, 200)}...`}
-          <button onClick={() => setMore(!more)}>{more ? 'show less' : 'read more'}</button>
+          <button onClick={() => setMore(!more)}>
+            {more ? 'show less' : 'read more'}
+          </button>
         </p>
-        <button className="delete-btn" onClick={removeTour}>Not interested</button>
+        <button className="delete-btn" onClick={removeTour}>
+          Not interested
+        </button>
       </footer>
     </article>
   );

@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
-import { FaAngleDoubleRight } from 'react-icons/fa'
-
+import { FaAngleDoubleRight } from 'react-icons/fa';
 
 interface DetailsProps {
   data: {
@@ -10,11 +9,10 @@ interface DetailsProps {
     dates: string;
     duties: string[];
     company: string;
-  }
+  };
 }
 
-
-export default function Details ({ data }: DetailsProps): ReactElement {
+export default function Details({ data }: DetailsProps): ReactElement {
   return (
     <section className="details">
       <header>
@@ -22,14 +20,12 @@ export default function Details ({ data }: DetailsProps): ReactElement {
         <h4>{data.company}</h4>
         <p className="date">{data.dates}</p>
       </header>
-      {
-        data.duties.map((d, idx) => (
-          <div className="job-desc" key={idx}>
-            <FaAngleDoubleRight className="duty-icon" />
-            <p>{d}</p>
-          </div>
-        ))
-      }
+      {data.duties.map((d, idx) => (
+        <div className="job-desc" key={idx}>
+          <FaAngleDoubleRight className="duty-icon" />
+          <p>{d}</p>
+        </div>
+      ))}
     </section>
   );
 }

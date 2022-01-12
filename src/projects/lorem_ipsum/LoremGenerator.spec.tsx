@@ -4,12 +4,9 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import LoremGenerator from './LoremGenerator';
 
-
 describe('LoremGenerator', () => {
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<LoremGenerator />)
-      .toJSON();
+    const tree = renderer.create(<LoremGenerator />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

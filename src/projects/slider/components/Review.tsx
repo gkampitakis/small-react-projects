@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import { FaQuoteRight } from 'react-icons/fa';
 
-
 interface ReviewProps {
   className: string;
   data: {
@@ -12,8 +11,7 @@ interface ReviewProps {
   };
 }
 
-
-export default function Review ({ data, className }: ReviewProps): ReactElement {
+export default function Review({ data, className }: ReviewProps): ReactElement {
   return (
     <article className={className}>
       <img className="person-img" src={data.image} alt={data.name} />

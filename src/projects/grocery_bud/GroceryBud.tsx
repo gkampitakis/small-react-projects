@@ -4,30 +4,34 @@ import List from './components/List';
 import Alert, { AlertI } from './components/Alert';
 import './index.scss';
 
-
 const newId = () => new Date().getTime().toString();
 
-export default function GroceryBud (): ReactElement {
+export default function GroceryBud(): ReactElement {
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
   useDocTitle('Grocery Bud');
-  const [data, setData] = useLocalStorage<{ id: string; title: string }[]>('groceryList', []);
+  const [data, setData] = useLocalStorage<{ id: string; title: string }[]>(
+    'groceryList',
+    []
+  );
   const [formValue, setFormValue] = useState('');
   const [alert, setAlert] = useState<AlertI>({ msg: '', type: '' });
   const [editId, setEditId] = useState('');
 
-  function handleSubmit (e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     if (!formValue) return;
 
     if (editId) {
-      setData((data) => data.map(d => {
-        if (d.id === editId) return { ...d, title: formValue }
-        return d;
-      }));
+      setData(data =>
+        data.map(d => {
+          if (d.id === editId) return { ...d, title: formValue };
+          return d;
+        })
+      );
 
       setAlert({ type: 'success', msg: 'Item updated' });
       setFormValue('');
@@ -35,22 +39,24 @@ export default function GroceryBud (): ReactElement {
       return;
     }
 
-    setData((data) => ([...data, { title: formValue, id: newId() }]));
+    setData(data => [...data, { title: formValue, id: newId() }]);
     setAlert({ type: 'success', msg: 'Item added to the list' });
     setFormValue('');
   }
 
-  function removeItem (id: string) {
+  function removeItem(id: string) {
     setData(data => data.filter(d => d.id !== id));
   }
 
-  function editItem (id: string) {
+  function editItem(id: string) {
     const element = data.find(item => item.id === id);
-    setFormValue(element!.title);
-    setEditId(id);
+    if (element) {
+      setFormValue(element.title);
+      setEditId(id);
+    }
   }
 
-  function clearList () {
+  function clearList() {
     setAlert({ type: 'danger', msg: 'Empty List' });
     setData([]);
   }
@@ -65,8 +71,8 @@ export default function GroceryBud (): ReactElement {
             type="text"
             className="grocery"
             value={formValue}
-            onChange={(e) => setFormValue(e.target.value)}
-            placeholder='e.g. eggs'
+            onChange={e => setFormValue(e.target.value)}
+            placeholder="e.g. eggs"
           />
           <button type="submit" className="submit-btn">
             {editId !== '' ? 'edit' : 'submit'}
@@ -74,7 +80,11 @@ export default function GroceryBud (): ReactElement {
         </div>
       </form>
       <List data={data} editItem={editItem} removeItem={removeItem} />
-      {!!data.length && <button className="clear-btn" onClick={clearList}>clear items</button>}
+      {!!data.length && (
+        <button className="clear-btn" onClick={clearList}>
+          clear items
+        </button>
+      )}
     </main>
   );
 }

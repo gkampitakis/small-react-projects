@@ -6,11 +6,9 @@ interface ErrorProps {
   message?: string;
 }
 
-
-function Error ({ error, message }: ErrorProps): ReactElement {
+function Error({ error, message }: ErrorProps): ReactElement {
   useEffect(() => {
-    if (error)
-      console.log(error);
+    if (error) console.log(error);
   }, [error]);
 
   const msg = message ? message : error?.message;
@@ -19,14 +17,10 @@ function Error ({ error, message }: ErrorProps): ReactElement {
     <main className="error_component">
       <img src={ErrorImg} alt="Error page image" />
       <footer>
-        {
-          msg && <h2>{msg}</h2>
-        }
-        {
-          error && <p>You can check console for more information</p>
-        }
+        {msg && <h2>{msg}</h2>}
+        {error && <p>You can check console for more information</p>}
       </footer>
-    </main >
+    </main>
   );
 }
 

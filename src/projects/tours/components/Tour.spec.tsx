@@ -3,9 +3,7 @@ import { render, screen } from '@testing-library/react';
 import Tour from './Tour';
 import userEvent from '@testing-library/user-event';
 
-
 describe('Tour', () => {
-
   it('Should render correctly', () => {
     const data = {
       id: '1',
@@ -14,9 +12,13 @@ describe('Tour', () => {
       info: 'data',
       price: '12345'
     };
-    const removeTour = () => { void (0) };
+    const removeTour = () => {
+      void 0;
+    };
 
-    const { baseElement } = render(<Tour data={data} removeTour={removeTour} />);
+    const { baseElement } = render(
+      <Tour data={data} removeTour={removeTour} />
+    );
 
     expect(baseElement).toMatchSnapshot();
   });
@@ -26,13 +28,14 @@ describe('Tour', () => {
       id: '1',
       image: 'string',
       name: 'mockName',
-      info:
-        `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac blandit augue, in auctor dolor. 
+      info: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac blandit augue, in auctor dolor. 
       Integer tempor, libero eu pellentesque rutrum, lorem ante varius elit, eu aliquam magna massa sit amet metus. In hac habitasse platea dictumst. Ut purus orci, sollicitudin et efficitur pretium, viverra suscipit velit. 
       Ut vehicula vulputate ex, aliquam venenatis felis.`,
       price: '12345'
     };
-    const removeTour = () => { void (0) };
+    const removeTour = () => {
+      void 0;
+    };
 
     render(<Tour data={data} removeTour={removeTour} />);
 
@@ -63,5 +66,4 @@ describe('Tour', () => {
 
     expect(removeTour).toHaveBeenCalledTimes(1);
   });
-})
-
+});

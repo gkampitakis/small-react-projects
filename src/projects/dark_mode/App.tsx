@@ -4,8 +4,7 @@ import Article from './Article';
 import data from './data';
 import './index.scss';
 
-
-export default function App (): ReactElement {
+export default function App(): ReactElement {
   useDocTitle('Dark Mode');
   useBodyStyles({
     color: 'var(--clr-font)',
@@ -17,10 +16,10 @@ export default function App (): ReactElement {
     document.documentElement.className = theme;
   }, [theme]);
 
-  function toggleTheme () {
+  function toggleTheme() {
     const themes: Record<string, string> = {
       dark_theme: 'light_theme',
-      light_theme: 'dark_theme',
+      light_theme: 'dark_theme'
     };
 
     setTheme(themes[theme]);
@@ -31,15 +30,13 @@ export default function App (): ReactElement {
       <header>
         <div>
           <h1>overreacted</h1>
-          <button onClick={toggleTheme}>
-            toggle
-          </button>
+          <button onClick={toggleTheme}>toggle</button>
         </div>
       </header>
       <section className="articles">
-        {
-          data.map(({ id, ...rest }) => <Article key={id} {...rest} />)
-        }
+        {data.map(({ id, ...rest }) => (
+          <Article key={id} {...rest} />
+        ))}
       </section>
     </main>
   );

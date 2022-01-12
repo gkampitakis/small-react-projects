@@ -1,17 +1,15 @@
 import React, { useState, useEffect, ReactElement } from 'react';
 
-
 export interface AlertI {
   msg: string;
-  type: 'success' | 'danger' | ''
+  type: 'success' | 'danger' | '';
 }
 
 type AlertProps = AlertI & {
-  data: { title: string; id: string }[]
-}
+  data: { title: string; id: string }[];
+};
 
-
-export default function Alert ({ msg, type, data }: AlertProps): ReactElement {
+export default function Alert({ msg, type, data }: AlertProps): ReactElement {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -24,12 +22,8 @@ export default function Alert ({ msg, type, data }: AlertProps): ReactElement {
 
     return () => {
       clearTimeout(timeout);
-    }
+    };
   }, [data, msg]);
 
-  return (
-    <>
-      {show && <p className={`alert alert-${type}`}>{msg}</p>}
-    </>
-  );
+  return <>{show && <p className={`alert alert-${type}`}>{msg}</p>}</>;
 }

@@ -1,11 +1,10 @@
 import React, { ReactElement, useEffect, useState } from 'react';
-import { useFetch, useDocTitle, useBodyStyles } from '../../hooks'
+import { useFetch, useDocTitle, useBodyStyles } from '../../hooks';
 import Photo, { PhotoProps } from './components/Photo';
 import Search from './components/Search';
 import Footer from './components/Footer';
 import ErrorComponent from '../../components/Error';
 import './index.scss';
-
 
 type Data = PhotoProps & { id: string }[];
 interface SearchData {
@@ -17,14 +16,14 @@ const CLIENT_ID = '?client_id=l0oa03jNvtVdyafIBXFyC1v5k13SivrIsKxn0T_j5cg',
   SEARCH_API = `https://api.unsplash.com/search/photos/${CLIENT_ID}&per_page=${RESULTS}`,
   FETCH_API = `https://api.unsplash.com/photos/${CLIENT_ID}&per_page=${RESULTS}`;
 
-export default function PhotoAlbum (): ReactElement {
+export default function PhotoAlbum(): ReactElement {
   useBodyStyles({
     background: 'white',
     color: 'black'
   });
   useDocTitle('Photo Album');
   const [url, setUrl] = useState(FETCH_API);
-  const [data, loading, _, error] = useFetch<Data | SearchData>(url);
+  const [data, loading, , error] = useFetch<Data | SearchData>(url);
   const [results, setResults] = useState<Data>();
 
   useEffect(() => {
@@ -38,7 +37,7 @@ export default function PhotoAlbum (): ReactElement {
     }
   }, [data]);
 
-  function search (query: string) {
+  function search(query: string) {
     if (!query) return;
     setResults(undefined);
     const searchUrl = `${SEARCH_API}&query=${query}`;
@@ -46,7 +45,7 @@ export default function PhotoAlbum (): ReactElement {
     setUrl(searchUrl);
   }
 
-  function clear () {
+  function clear() {
     setUrl(FETCH_API);
   }
 
@@ -55,8 +54,7 @@ export default function PhotoAlbum (): ReactElement {
       <Search search={search} clear={clear} />
       {loading && <h2 className="loading">Loading ...</h2>}
       {error && <ErrorComponent error={new Error(error)} />}
-      {
-        results &&
+      {results && (
         <section className="photos">
           {results.map((d: any) => {
             const { alt_description, likes, urls, user, id, blur_hash } = d;
@@ -72,7 +70,7 @@ export default function PhotoAlbum (): ReactElement {
             );
           })}
         </section>
-      }
+      )}
       <Footer />
     </main>
   );

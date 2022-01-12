@@ -1,11 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 
-
 function getItem(item: string, defaultValue?: unknown) {
   const storedItem = localStorage.getItem(item);
 
   if (!storedItem) {
-    defaultValue && localStorage.setItem(item, JSON.stringify(defaultValue))
+    defaultValue && localStorage.setItem(item, JSON.stringify(defaultValue));
 
     return defaultValue;
   }
@@ -13,8 +12,10 @@ function getItem(item: string, defaultValue?: unknown) {
   return JSON.parse(storedItem);
 }
 
-
-export function useLocalStorage<T>(item: string, defaultValue?: T): [T, (data: T | ((data: T) => T)) => void, () => void] {
+export function useLocalStorage<T>(
+  item: string,
+  defaultValue?: T
+): [T, (data: T | ((data: T) => T)) => void, () => void] {
   const [data, setData] = useState<T>(getItem(item, defaultValue));
 
   const sync = useCallback(() => {
@@ -33,7 +34,9 @@ export function useLocalStorage<T>(item: string, defaultValue?: T): [T, (data: T
       setData(value);
     } catch (error) {
       if (error instanceof Error)
-        console.warn(`Error setting localStorage key "${item}": ${error.message}`);
+        console.warn(
+          `Error setting localStorage key "${item}": ${error.message}`
+        );
     }
   }
 

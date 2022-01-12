@@ -4,19 +4,19 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import GroceryBud from './GroceryBud';
 
-
-function setMockStorageData () {
-  localStorage.setItem('groceryList', JSON.stringify([
-    { title: 'mockItem1', id: 1 },
-    { title: 'mockItem2', id: 2 }
-  ]));
+function setMockStorageData() {
+  localStorage.setItem(
+    'groceryList',
+    JSON.stringify([
+      { title: 'mockItem1', id: 1 },
+      { title: 'mockItem2', id: 2 }
+    ])
+  );
 }
 
 describe('GroceryBud', () => {
   it('Should load correctly', () => {
-    const tree = renderer
-      .create(<GroceryBud />)
-      .toJSON();
+    const tree = renderer.create(<GroceryBud />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -24,10 +24,7 @@ describe('GroceryBud', () => {
   it('Should render data from localstorage', () => {
     setMockStorageData();
 
-    const tree = renderer
-      .create(<GroceryBud />)
-      .toJSON();
-
+    const tree = renderer.create(<GroceryBud />).toJSON();
 
     expect(tree).toMatchSnapshot();
     localStorage.clear();
@@ -68,9 +65,12 @@ describe('GroceryBud', () => {
   });
 
   it('Should add one item', () => {
-    jest.spyOn(global, 'Date').mockImplementation(() => ({
-      getTime: () => ({ toString: () => '1' })
-    } as unknown as string));
+    jest.spyOn(global, 'Date').mockImplementation(
+      () =>
+        ({
+          getTime: () => ({ toString: () => '1' })
+        } as unknown as string)
+    );
 
     const { baseElement } = render(<GroceryBud />);
 
@@ -88,4 +88,4 @@ describe('GroceryBud', () => {
     userEvent.click(screen.getByText('submit'));
     expect(baseElement).toMatchSnapshot();
   });
-})
+});

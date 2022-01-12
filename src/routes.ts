@@ -1,7 +1,7 @@
 const IMAGE_PATH = './images/HomeComponents';
 
-export default
-  [{
+export default [
+  {
     route: '/accordion',
     filePath: '/accordion/Accordion',
     projectName: 'Accordion',
@@ -109,4 +109,5 @@ export default
     filePath: '/tours/Tours',
     projectName: 'Tours',
     imgPath: `${IMAGE_PATH}/Tours`
-  }];
+  }
+];

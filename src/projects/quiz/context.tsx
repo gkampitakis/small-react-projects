@@ -1,5 +1,10 @@
-import React, { createContext, ReactElement, useContext, useState, ChangeEvent, Dispatch, SetStateAction } from 'react';
-
+import React, {
+  createContext,
+  ReactElement,
+  useContext,
+  useState,
+  ChangeEvent
+} from 'react';
 
 interface QuizSettings {
   amount: number;
@@ -14,7 +19,7 @@ type Question = {
   question: string;
   correct_answer: string;
   incorrect_answers: string[];
-}
+};
 
 enum CategoryCodes {
   sports = 21,
@@ -22,7 +27,7 @@ enum CategoryCodes {
   politics
 }
 
-const API_ENDPOINT = 'https://opentdb.com/api.php?'
+const API_ENDPOINT = 'https://opentdb.com/api.php?';
 const AppContext = createContext<{
   waiting: boolean;
   error: Error | null;
@@ -36,11 +41,19 @@ const AppContext = createContext<{
   checkAnswer: (value: any) => void;
   nextQuestion: () => void;
   closeModal: () => void;
-  setupFormOnChange: (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
-  setupFormOnSubmit: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  setupFormOnChange: (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => void;
+  setupFormOnSubmit: (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => void;
 }>({} as any);
 
-const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }): ReactElement => {
+const AppProvider = ({
+  children
+}: {
+  children: ReactElement | ReactElement[];
+}): ReactElement => {
   const [waiting, setWaiting] = useState(true);
   const [loading, setLoading] = useState(false);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -54,36 +67,38 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
     difficulty: 'easy'
   });
 
-  function setupFormOnChange (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
+  function setupFormOnChange(
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) {
     const { value, name } = e.target;
 
     setQuiz({ ...quiz, [name]: value });
   }
 
-  function openModal () {
+  function openModal() {
     setIsModalOpen(true);
   }
 
-  function closeModal () {
+  function closeModal() {
     setWaiting(true);
     setCorrect(0);
     setIsModalOpen(false);
   }
 
-  function checkAnswer (value: boolean) {
+  function checkAnswer(value: boolean) {
     if (value) {
-      setCorrect((oldState) => oldState + 1);
+      setCorrect(oldState => oldState + 1);
     }
     nextQuestion();
   }
 
-  function nextQuestion () {
-    setCurrentQ((i) => {
-      const index = i + 1
+  function nextQuestion() {
+    setCurrentQ(i => {
+      const index = i + 1;
       if (index > questions.length - 1) {
         console.log('open');
 
-        openModal()
+        openModal();
         return 0;
       } else {
         return index;
@@ -91,7 +106,9 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
     });
   }
 
-  function setupFormOnSubmit (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  function setupFormOnSubmit(
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) {
     e.preventDefault();
 
     const { amount, category, difficulty } = quiz;
@@ -102,8 +119,14 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
 
     fetch(url)
       .then(d => d.json())
-      .then(d => { setQuestions(d.results); console.log(d.results) })
-      .catch(e => { setError(e); setWaiting(true); })
+      .then(d => {
+        setQuestions(d.results);
+        console.log(d.results);
+      })
+      .catch(e => {
+        setError(e);
+        setWaiting(true);
+      })
       .finally(() => setLoading(false));
   }
 
@@ -124,15 +147,13 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
         openModal,
         setupFormOnChange,
         setupFormOnSubmit
-      }}>
-      { children}
+      }}
+    >
+      {children}
     </AppContext.Provider>
   );
-}
+};
 
 const useGlobalContext = () => useContext(AppContext);
 
-export {
-  useGlobalContext,
-  AppProvider
-};
+export { useGlobalContext, AppProvider };

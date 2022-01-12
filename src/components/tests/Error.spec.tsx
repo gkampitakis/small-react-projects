@@ -3,7 +3,6 @@ import renderer from 'react-test-renderer';
 import { render } from '@testing-library/react';
 import ErrorComponent from '../Error';
 
-
 describe('Error Component', () => {
   it('Should render correctly', () => {
     const tree = renderer
@@ -14,8 +13,10 @@ describe('Error Component', () => {
   });
 
   it('Should render error message and print message to console', () => {
-    const logSpy = jest.spyOn(console, 'log').mockImplementation(() => { void (0) });
-    const error = Error('Mock Error')
+    const logSpy = jest.spyOn(console, 'log').mockImplementation(() => {
+      void 0;
+    });
+    const error = Error('Mock Error');
     const { baseElement } = render(<ErrorComponent error={error} />);
 
     expect(baseElement).toMatchSnapshot();

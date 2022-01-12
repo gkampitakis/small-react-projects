@@ -9,17 +9,17 @@ interface SearchProps {
   clear: () => void;
 }
 
-export default function Search ({ search, clear }: SearchProps): ReactElement {
+export default function Search({ search, clear }: SearchProps): ReactElement {
   const [value, setValue] = useState('');
 
-  function handleSubmit (e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     search(value);
   }
 
-  function clearInput () {
-    setValue('')
+  function clearInput() {
+    setValue('');
     clear();
   }
 
@@ -30,10 +30,16 @@ export default function Search ({ search, clear }: SearchProps): ReactElement {
           placeholder="Search"
           type="text"
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={e => setValue(e.target.value)}
         />
-        {value && <button type="button" className="clear-btn" onClick={clearInput}><FaTimesMemo /></button>}
-        <button type="submit"><FaSearchMemo /></button>
+        {value && (
+          <button type="button" className="clear-btn" onClick={clearInput}>
+            <FaTimesMemo />
+          </button>
+        )}
+        <button type="submit">
+          <FaSearchMemo />
+        </button>
       </form>
     </section>
   );

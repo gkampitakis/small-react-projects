@@ -9,57 +9,56 @@ import {
   FaUserFriends,
   FaFolderOpen,
   FaCalendarAlt,
-  FaWpforms,
+  FaWpforms
 } from 'react-icons/fa';
-
 
 export const links = [
   {
     id: 1,
     text: 'home',
-    icon: <FaHome />,
+    icon: <FaHome />
   },
   {
     id: 2,
     text: 'team',
-    icon: <FaUserFriends />,
+    icon: <FaUserFriends />
   },
   {
     id: 3,
     text: 'projects',
-    icon: <FaFolderOpen />,
+    icon: <FaFolderOpen />
   },
   {
     id: 4,
     text: 'calendar',
-    icon: <FaCalendarAlt />,
+    icon: <FaCalendarAlt />
   },
   {
     id: 5,
     text: 'documents',
-    icon: <FaWpforms />,
-  },
+    icon: <FaWpforms />
+  }
 ];
 
 export const social = [
   {
     id: 1,
-    icon: <FaFacebook />,
+    icon: <FaFacebook />
   },
   {
     id: 2,
-    icon: <FaTwitter />,
+    icon: <FaTwitter />
   },
   {
     id: 3,
-    icon: <FaLinkedin />,
+    icon: <FaLinkedin />
   },
   {
     id: 4,
-    icon: <FaBehance />,
+    icon: <FaBehance />
   },
   {
     id: 5,
-    icon: <FaSketch />,
-  },
+    icon: <FaSketch />
+  }
 ];

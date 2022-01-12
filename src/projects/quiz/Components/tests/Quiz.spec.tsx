@@ -27,26 +27,36 @@ jest.mock('../../context', () => {
       },
       nextQuestion: nextSpy,
       setupFormOnChange: setUpFormOnChangeSpy,
-      setupFormOnSubmit: (e: any) => { e.preventDefault(); setupFormOnSubmitSpy(); },
+      setupFormOnSubmit: (e: Event) => {
+        e.preventDefault();
+        setupFormOnSubmitSpy();
+      },
       checkAnswer: () => true,
-      questions: [{
-        incorrect_answers: ['a', 'a', 'a'],
-        correct_answer: 'a',
-        question: 'question'
-      }]
+      questions: [
+        {
+          incorrect_answers: ['a', 'a', 'a'],
+          correct_answer: 'a',
+          question: 'question'
+        }
+      ]
     }),
-    mockWaiting: (value: boolean) => isWaiting = value,
-    mockLoading: (value: boolean) => isLoading = value,
+    mockWaiting: (value: boolean) => (isWaiting = value),
+    mockLoading: (value: boolean) => (isLoading = value),
     nextSpy,
     setupFormOnSubmitSpy,
     setUpFormOnChangeSpy,
-    mockError: (value: boolean) => mockError = value,
+    mockError: (value: boolean) => (mockError = value)
   };
 });
 
 describe('Quiz', () => {
-
-  const { setUpFormOnChangeSpy, setupFormOnSubmitSpy, mockWaiting, mockLoading, mockError } = jest.requireMock('../../context');
+  const {
+    setUpFormOnChangeSpy,
+    setupFormOnSubmitSpy,
+    mockWaiting,
+    mockLoading,
+    mockError
+  } = jest.requireMock('../../context');
 
   beforeEach(() => {
     setUpFormOnChangeSpy.mockClear();
@@ -57,15 +67,12 @@ describe('Quiz', () => {
   });
 
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<Quiz />)
-      .toJSON();
+    const tree = renderer.create(<Quiz />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   describe('Setup Form', () => {
-
     beforeEach(() => {
       mockWaiting(true);
     });

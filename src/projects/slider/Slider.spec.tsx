@@ -5,12 +5,9 @@ import userEvent from '@testing-library/user-event';
 import Slider from './Slider';
 import data from './data';
 
-
 describe('Slider', () => {
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<Slider />)
-      .toJSON();
+    const tree = renderer.create(<Slider />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -45,5 +42,4 @@ describe('Slider', () => {
 
     expect(baseElement).toMatchSnapshot();
   });
-
 });

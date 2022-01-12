@@ -5,8 +5,7 @@ import ImageLoader from './ImageLoader';
 import routes from '../routes';
 import '../app.scss';
 
-
-export default function Home (): ReactElement {
+export default function Home(): ReactElement {
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
@@ -21,15 +20,17 @@ export default function Home (): ReactElement {
       <section>
         {routes.map(({ projectName, route, imgPath }, idx) => (
           <div className="project" key={idx}>
-            <ImageLoader onClick={() => history.push(route)} imgPath={imgPath} projectName={projectName} />
-            <Link to={route}>
-              {projectName}
-            </Link>
+            <ImageLoader
+              onClick={() => history.push(route)}
+              imgPath={imgPath}
+              projectName={projectName}
+            />
+            <Link to={route}>{projectName}</Link>
           </div>
         ))}
       </section>
       <footer>
-        <span>Author:</span>  gkampitakis
+        <span>Author:</span> gkampitakis
       </footer>
     </main>
   );

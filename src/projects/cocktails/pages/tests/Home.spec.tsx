@@ -3,7 +3,6 @@ import { render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import Home from '../Home';
 
-
 jest.mock('../../context', () => ({
   useGlobalContext: jest.fn()
 }));
@@ -13,7 +12,6 @@ import { MemoryRouter } from 'react-router-dom';
 const useGlobalContextMock = useGlobalContext as jest.Mock;
 
 describe('Home', () => {
-
   beforeEach(jest.resetAllMocks);
 
   it('Should render correctly', () => {
@@ -23,9 +21,7 @@ describe('Home', () => {
       cocktailList: []
     }));
 
-    const tree = renderer
-      .create(<Home />)
-      .toJSON();
+    const tree = renderer.create(<Home />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -46,13 +42,15 @@ describe('Home', () => {
     useGlobalContextMock.mockImplementation(() => ({
       loading: true,
       error: false,
-      cocktailList: [{
-        id: 0,
-        name: 'mockCocktail',
-        info: 'mockInfo',
-        glass: 'mockGlass',
-        image: 'mockImg'
-      }]
+      cocktailList: [
+        {
+          id: 0,
+          name: 'mockCocktail',
+          info: 'mockInfo',
+          glass: 'mockGlass',
+          image: 'mockImg'
+        }
+      ]
     }));
     const { baseElement } = render(<Home />, { wrapper: MemoryRouter });
 

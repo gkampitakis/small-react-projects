@@ -7,10 +7,12 @@ interface ArticleProps {
   snippet: string;
 }
 
-export default function Article (
-  { title, length, snippet, date }: ArticleProps
-): ReactElement {
-
+export default function Article({
+  title,
+  length,
+  snippet,
+  date
+}: ArticleProps): ReactElement {
   return (
     <article className="post">
       <h2>{title}</h2>

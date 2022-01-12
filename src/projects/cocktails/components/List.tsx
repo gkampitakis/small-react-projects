@@ -6,26 +6,24 @@ interface ListProps {
   items: CocktailI[];
 }
 
-export default function List ({ items }: ListProps): ReactElement {
+export default function List({ items }: ListProps): ReactElement {
   if (!items.length) {
-    return (
-      <h2 className="title">no cocktails match your search</h2>
-    );
+    return <h2 className="title">no cocktails match your search</h2>;
   }
 
   return (
     <section className="cocktail-list">
       <h2 className="title">Cocktails</h2>
       <div className="cocktails-center">
-        {items.map((c) =>
+        {items.map(c => (
           <Cocktail key={c.id} {...c} />
-        )}
+        ))}
       </div>
     </section>
   );
 }
 
-function Cocktail ({ glass, id, image, info, name }: CocktailI): ReactElement {
+function Cocktail({ glass, id, image, info, name }: CocktailI): ReactElement {
   return (
     <article className="cocktail">
       <div className="img-container">

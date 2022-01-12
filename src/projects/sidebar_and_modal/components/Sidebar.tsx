@@ -4,8 +4,7 @@ import { FaTimes } from 'react-icons/fa';
 import { useGlobalContext } from '../context';
 import { social, links } from '../data';
 
-
-export default function Sidebar (): ReactElement {
+export default function Sidebar(): ReactElement {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
   const sideRef = useRef<HTMLDivElement>(null);
   useOnClickOutside(sideRef, closeSidebar);
@@ -20,7 +19,7 @@ export default function Sidebar (): ReactElement {
           </button>
         </div>
         <ul className="links">
-          {links.map((link) => {
+          {links.map(link => {
             const { id, text, icon } = link;
             return (
               <li key={id}>
@@ -32,8 +31,8 @@ export default function Sidebar (): ReactElement {
             );
           })}
         </ul>
-        <ul className='social-icons'>
-          {social.map((link) => {
+        <ul className="social-icons">
+          {social.map(link => {
             const { id, icon } = link;
             return (
               <li key={id}>

@@ -1,6 +1,5 @@
 import React, { Fragment, ReactElement } from 'react';
 
-
 interface ListProps {
   data: {
     id: number;
@@ -10,8 +9,7 @@ interface ListProps {
   }[];
 }
 
-
-export default function List ({ data }: ListProps): ReactElement {
+export default function List({ data }: ListProps): ReactElement {
   return (
     <Fragment>
       {data.map(el => (

@@ -4,8 +4,7 @@ import Question from './components/Question';
 import data from './data';
 import './index.scss';
 
-
-export default function Accordion (): ReactElement {
+export default function Accordion(): ReactElement {
   useBodyStyles({
     background: '#4b145b',
     color: 'hsl(209, 61%, 16%)'

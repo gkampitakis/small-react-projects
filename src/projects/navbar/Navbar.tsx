@@ -4,8 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import { links, social } from './data';
 import './index.scss';
 
-
-export default function Navbar (): ReactElement {
+export default function Navbar(): ReactElement {
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
@@ -22,14 +21,20 @@ export default function Navbar (): ReactElement {
     } else {
       linksContainerRef.current!.style.height = '0px';
     }
-  }, [showLinks])
+  }, [showLinks]);
 
   return (
     <nav className="navbar_project">
       <div className="nav-center">
         <div className="nav-header">
           <img className="logo" src="./logo192.png" alt="React Logo" />
-          <button className="nav-toggle" data-testid="open-nvb" onClick={() => setShowLinks(!showLinks)}><FaBars /></button>
+          <button
+            className="nav-toggle"
+            data-testid="open-nvb"
+            onClick={() => setShowLinks(!showLinks)}
+          >
+            <FaBars />
+          </button>
         </div>
         <div className="links-container" ref={linksContainerRef}>
           <ul className="links" ref={linksRef}>
@@ -48,6 +53,6 @@ export default function Navbar (): ReactElement {
           ))}
         </ul>
       </div>
-    </nav >
+    </nav>
   );
 }

@@ -1,6 +1,12 @@
-import React, { createContext, ReactElement, useContext, useState, useEffect, useRef } from 'react';
+import React, {
+  createContext,
+  ReactElement,
+  useContext,
+  useState,
+  useEffect,
+  useRef
+} from 'react';
 import { useFetch } from '../../hooks';
-
 
 const URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 const DEBOUNCE_TIMER = 2000;
@@ -21,14 +27,20 @@ export interface CocktailI {
   image: string;
 }
 
-const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }): ReactElement => {
+const AppProvider = ({
+  children
+}: {
+  children: ReactElement | ReactElement[];
+}): ReactElement => {
   const [url, setUrl] = useState(`${URL}a`);
   const [bounceLoading, setBounceLoading] = useState(false);
-  const [data, loading, _, error] = useFetch<any>(url);
+  const [data, loading, , error] = useFetch<any>(url);
   const [cocktailList, setCocktailList] = useState<CocktailI[]>([]);
-  const searchDebounce = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const searchDebounce = useRef<ReturnType<typeof setTimeout> | undefined>(
+    undefined
+  );
 
-  function searchCocktail (cocktail: string) {
+  function searchCocktail(cocktail: string) {
     setBounceLoading(true);
     if (searchDebounce.current) clearTimeout(searchDebounce.current);
 
@@ -39,23 +51,21 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
     }, DEBOUNCE_TIMER);
   }
 
-  function filterResults (data: any[]): CocktailI[] {
+  function filterResults(data: any[]): CocktailI[] {
     if (!data) return [];
 
-    return data.map(({ idDrink,
-      strDrink,
-      strDrinkThumb,
-      strAlcoholic,
-      strGlass }) => ({
+    return data.map(
+      ({ idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass }) => ({
         id: idDrink,
         name: strDrink,
         image: strDrinkThumb,
         info: strAlcoholic,
         glass: strGlass
-      }));
+      })
+    );
   }
 
-  function refetch () {
+  function refetch() {
     setUrl(`${URL}a`);
   }
 
@@ -77,7 +87,7 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
       {children}
     </AppContext.Provider>
   );
-}
+};
 
 export const useGlobalContext = () => useContext(AppContext);
 export { AppProvider };

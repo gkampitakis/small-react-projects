@@ -4,13 +4,9 @@ import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import Birthday from './Birthday';
 
-
 describe('Birthday', () => {
-
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<Birthday />)
-      .toJSON();
+    const tree = renderer.create(<Birthday />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

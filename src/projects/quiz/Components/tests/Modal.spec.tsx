@@ -9,7 +9,7 @@ jest.mock('../../context', () => {
 
   return {
     useGlobalContext: () => ({
-      closeModal: () => isOpen = !isOpen,
+      closeModal: () => (isOpen = !isOpen),
       isModalOpen: isOpen,
       correct: 2,
       questions: ['', '', '']
@@ -21,9 +21,7 @@ describe('Modal', () => {
   const { useGlobalContext } = jest.requireMock('../../context');
 
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<Modal />)
-      .toJSON();
+    const tree = renderer.create(<Modal />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

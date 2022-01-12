@@ -10,7 +10,6 @@ import {
 import { useBodyStyles, useDocTitle, useFetch } from '../../hooks';
 import './index.scss';
 
-
 interface Person {
   image: string;
   name: string;
@@ -23,7 +22,7 @@ interface Person {
 
 const URL = 'https://randomuser.me/api/';
 
-export default function RandomUser (): ReactElement {
+export default function RandomUser(): ReactElement {
   useDocTitle('Random User');
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)'
@@ -71,7 +70,7 @@ export default function RandomUser (): ReactElement {
     setPerson(newPerson);
   }, [data, error]);
 
-  function handleValue (e: any) {
+  function handleValue(e: any) {
     if (e.target.classList.contains('icon')) {
       const newValue: keyof Person = e.target.dataset.label;
       setTitle(newValue);
@@ -98,49 +97,45 @@ export default function RandomUser (): ReactElement {
           <div className="values-list">
             <button
               className="icon"
-              data-label='name'
+              data-label="name"
               onMouseOver={handleValue}
             >
               <FaUser />
             </button>
             <button
               className="icon"
-              data-label='email'
-              data-testid='email'
+              data-label="email"
+              data-testid="email"
               onMouseOver={handleValue}
             >
               <FaEnvelopeOpen />
             </button>
-            <button
-              className="icon"
-              data-label='age'
-              onMouseOver={handleValue}
-            >
+            <button className="icon" data-label="age" onMouseOver={handleValue}>
               <FaCalendarTimes />
             </button>
             <button
               className="icon"
-              data-label='street'
+              data-label="street"
               onMouseOver={handleValue}
             >
               <FaMap />
             </button>
             <button
               className="icon"
-              data-label='phone'
+              data-label="phone"
               onMouseOver={handleValue}
             >
               <FaPhone />
             </button>
             <button
               className="icon"
-              data-label='password'
+              data-label="password"
               onMouseOver={handleValue}
             >
               <FaLock />
             </button>
           </div>
-          <button className="btn" data-testid='change-btn' onClick={refetch}>
+          <button className="btn" data-testid="change-btn" onClick={refetch}>
             {loading ? 'loading...' : 'random user'}
           </button>
         </div>

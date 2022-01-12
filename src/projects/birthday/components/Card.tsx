@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import List from './List';
 
-
 interface CardProps {
   data: {
     id: number;
@@ -12,8 +11,7 @@ interface CardProps {
   clearFn: () => void;
 }
 
-
-export default function Card ({ data, clearFn }: CardProps): ReactElement {
+export default function Card({ data, clearFn }: CardProps): ReactElement {
   return (
     <main className="birthday_project">
       <section className="container">
@@ -22,5 +20,5 @@ export default function Card ({ data, clearFn }: CardProps): ReactElement {
         <button onClick={clearFn}>Clear All</button>
       </section>
     </main>
-  )
+  );
 }

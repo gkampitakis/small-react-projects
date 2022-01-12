@@ -4,9 +4,7 @@ import Accordion from './Accordion';
 
 describe('Accordion', () => {
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<Accordion />)
-      .toJSON();
+    const tree = renderer.create(<Accordion />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

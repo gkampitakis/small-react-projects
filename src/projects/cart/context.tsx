@@ -1,5 +1,10 @@
-import React, { useContext, useReducer, useEffect, createContext, ReactElement } from 'react';
-
+import React, {
+  useContext,
+  useReducer,
+  useEffect,
+  createContext,
+  ReactElement
+} from 'react';
 
 const URL = 'https://course-api.com/react-useReducer-cart-project';
 const AppContext = createContext<DispatchActions & CartState>({} as any);
@@ -27,15 +32,19 @@ interface CartState {
 }
 
 type Action =
-  | { type: 'DISPLAY_ITEMS', payload: { data: Cart[] } }
-  | { type: 'REMOVE', payload: { id: number } }
-  | { type: 'INCREASE', payload: { id: number } }
-  | { type: 'DECREASE', payload: { id: number } }
+  | { type: 'DISPLAY_ITEMS'; payload: { data: Cart[] } }
+  | { type: 'REMOVE'; payload: { id: number } }
+  | { type: 'INCREASE'; payload: { id: number } }
+  | { type: 'DECREASE'; payload: { id: number } }
   | { type: 'GET_TOTALS' }
   | { type: 'CLEAR_CART' }
   | { type: 'LOADING' };
 
-const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }): ReactElement => {
+const AppProvider = ({
+  children
+}: {
+  children: ReactElement | ReactElement[];
+}): ReactElement => {
   const [state, dispatch] = useReducer(reducer, {
     cart: [],
     loading: false,
@@ -43,7 +52,7 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
     amount: 0
   });
 
-  async function fetchData () {
+  async function fetchData() {
     dispatch({ type: 'LOADING' });
 
     const response = await fetch(URL);
@@ -52,19 +61,19 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
     dispatch({ type: 'DISPLAY_ITEMS', payload: { data } });
   }
 
-  function decrease (id: number) {
+  function decrease(id: number) {
     dispatch({ type: 'DECREASE', payload: { id } });
   }
 
-  function increase (id: number) {
+  function increase(id: number) {
     dispatch({ type: 'INCREASE', payload: { id } });
   }
 
-  function clearCart () {
+  function clearCart() {
     dispatch({ type: 'CLEAR_CART' });
   }
 
-  function remove (id: number) {
+  function remove(id: number) {
     dispatch({ type: 'REMOVE', payload: { id } });
   }
 
@@ -77,46 +86,53 @@ const AppProvider = ({ children }: { children: ReactElement | ReactElement[] }):
   }, [state.cart]);
 
   return (
-    <AppContext.Provider value={{
-      ...state,
-      clearCart,
-      increase,
-      decrease,
-      remove
-    }}>
+    <AppContext.Provider
+      value={{
+        ...state,
+        clearCart,
+        increase,
+        decrease,
+        remove
+      }}
+    >
       {children}
     </AppContext.Provider>
-  )
+  );
 };
 
-export const useGlobalContext = (): DispatchActions & CartState => useContext(AppContext);
+export const useGlobalContext = (): DispatchActions & CartState =>
+  useContext(AppContext);
 
 export { AppProvider };
 
-function reducer (state: CartState, action: Action): CartState {
+function reducer(state: CartState, action: Action): CartState {
   switch (action.type) {
     case 'INCREASE':
       return {
         ...state,
-        cart: state.cart.map((item) => {
-          if (item.id === action.payload.id) return {
-            ...item,
-            amount: item.amount + 1
-          };
+        cart: state.cart.map(item => {
+          if (item.id === action.payload.id)
+            return {
+              ...item,
+              amount: item.amount + 1
+            };
           return item;
         })
-      }
+      };
     case 'DECREASE':
       return {
         ...state,
-        cart: state.cart.map((item) => {
-          if (item.id === action.payload.id) return {
-            ...item,
-            amount: item.amount - 1
-          };
-          return item;
-        }).filter(i => !!i.amount)
-      }
+        cart: state.cart
+          .map(item => {
+            if (item.id === action.payload.id)
+              return {
+                ...item,
+                amount: item.amount - 1
+              };
+            return item;
+          })
+          .filter(i => !!i.amount)
+      };
     case 'LOADING':
       return {
         ...state,
@@ -131,23 +147,26 @@ function reducer (state: CartState, action: Action): CartState {
     case 'GET_TOTALS':
       return {
         ...state,
-        ...state.cart.reduce((acc, item) => {
-          const { amount, price } = item;
-          const total = amount * price;
+        ...state.cart.reduce(
+          (acc, item) => {
+            const { amount, price } = item;
+            const total = amount * price;
 
-          return { amount: acc.amount + amount, total: acc.total + total }
-        }, { amount: 0, total: 0 })
-      }
+            return { amount: acc.amount + amount, total: acc.total + total };
+          },
+          { amount: 0, total: 0 }
+        )
+      };
     case 'REMOVE':
       return {
         ...state,
         cart: state.cart.filter(i => i.id !== action.payload.id)
-      }
+      };
     case 'CLEAR_CART':
       return {
         ...state,
         cart: []
-      }
+      };
     default:
       throw Error('Reached to unknown state in reducer');
   }

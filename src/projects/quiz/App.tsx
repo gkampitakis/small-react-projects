@@ -4,7 +4,7 @@ import Quiz from './Components/Quiz';
 import './index.scss';
 import { useBodyStyles, useDocTitle } from '../../hooks';
 
-export default function App (): ReactElement {
+export default function App(): ReactElement {
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)'
   });

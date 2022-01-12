@@ -5,20 +5,19 @@ import Tabs from './components/Tabs';
 import data from './data';
 import './index.scss';
 
-
-export default function Menu (): ReactElement {
+export default function Menu(): ReactElement {
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
   useDocTitle('Menu');
   const [tab, setTab] = useState('all');
-  const [menuList, setMenuList] = useState(data)
+  const [menuList, setMenuList] = useState(data);
 
   useEffect(() => {
     if (tab === 'all') return setMenuList(data);
     setMenuList(data.filter(l => l.category === tab));
-  }, [tab])
+  }, [tab]);
 
   return (
     <main className="menu_project">

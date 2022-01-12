@@ -2,9 +2,8 @@ import { useLocalStorage } from '../useLocalStorage';
 import { act, renderHook } from '@testing-library/react-hooks';
 
 describe('useLocalStorage', () => {
-
   beforeEach(() => {
-    localStorage.clear()
+    localStorage.clear();
   });
 
   it('Should return default value', () => {
@@ -26,7 +25,9 @@ describe('useLocalStorage', () => {
     });
 
     expect(result.current[0]).toEqual(['mockData']);
-    expect(localStorage.getItem('mockKey')).toEqual(JSON.stringify(['mockData']));
+    expect(localStorage.getItem('mockKey')).toEqual(
+      JSON.stringify(['mockData'])
+    );
   });
 
   it('Should sync data with localStorage data', () => {
@@ -44,27 +45,37 @@ describe('useLocalStorage', () => {
   });
 
   it('Should setData with a function', () => {
-    const { result } = renderHook(() => useLocalStorage<string[]>('mockKey', []));
+    const { result } = renderHook(() =>
+      useLocalStorage<string[]>('mockKey', [])
+    );
 
     expect(result.current[0]).toEqual([]);
 
     act(() => {
-      result.current[1]((data) => data.concat(['mockData']));
+      result.current[1](data => data.concat(['mockData']));
     });
 
     expect(result.current[0]).toEqual(['mockData']);
-    expect(localStorage.getItem('mockKey')).toEqual(JSON.stringify(['mockData']));
+    expect(localStorage.getItem('mockKey')).toEqual(
+      JSON.stringify(['mockData'])
+    );
   });
 
   it('Should print a warn if key was not set', () => {
     const warnSpy = jest.spyOn(console, 'warn').mockImplementation();
 
-    const { result } = renderHook(() => useLocalStorage<string[]>('mockKey', []));
+    const { result } = renderHook(() =>
+      useLocalStorage<string[]>('mockKey', [])
+    );
 
     act(() => {
-      result.current[1](() => { throw new Error('mock Error') });
+      result.current[1](() => {
+        throw new Error('mock Error');
+      });
     });
 
-    expect(warnSpy).toHaveBeenCalledWith("Error setting localStorage key \"mockKey\": mock Error");
+    expect(warnSpy).toHaveBeenCalledWith(
+      'Error setting localStorage key "mockKey": mock Error'
+    );
   });
 });

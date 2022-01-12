@@ -4,12 +4,9 @@ import userEvent from '@testing-library/user-event';
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-
 describe('App', () => {
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<App />)
-      .toJSON();
+    const tree = renderer.create(<App />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -36,4 +33,4 @@ describe('App', () => {
 
     expect(baseElement).toMatchSnapshot();
   });
-})
+});

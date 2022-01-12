@@ -4,11 +4,9 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Menu from './Menu';
 
-
 describe('Menu', () => {
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<Menu />);
+    const tree = renderer.create(<Menu />);
 
     expect(tree).toMatchSnapshot();
   });

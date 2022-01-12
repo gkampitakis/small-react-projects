@@ -4,22 +4,19 @@ import userEvent from '@testing-library/user-event';
 import renderer from 'react-test-renderer';
 import Navbar from './Navbar';
 
-
-function resizeWindow (width: number, height: number) {
+function resizeWindow(width: number, height: number) {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   window.innerWidth = width;
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
-  window.innerHeight = height
-  window.dispatchEvent(new Event('resize'))
+  window.innerHeight = height;
+  window.dispatchEvent(new Event('resize'));
 }
 
 describe('Navbar', () => {
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<Navbar />)
-      .toJSON();
+    const tree = renderer.create(<Navbar />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

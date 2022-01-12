@@ -2,16 +2,17 @@ import { useFetch } from '../useFetch';
 import { act, renderHook } from '@testing-library/react-hooks';
 import { FetchMock } from 'jest-fetch-mock';
 
-const fetchMock = (fetch as FetchMock);
+const fetchMock = fetch as FetchMock;
 
 describe('useFetch', () => {
-
   beforeEach(() => {
     fetchMock.resetMocks();
   });
 
   it('Should return default values', async () => {
-    const { result, waitForNextUpdate } = renderHook(() => useFetch('http://mockUrl.com'));
+    const { result, waitForNextUpdate } = renderHook(() =>
+      useFetch('http://mockUrl.com')
+    );
 
     expect(result.current[0]).toBeUndefined();
     expect(result.current[1]).toBe(true);
@@ -24,7 +25,9 @@ describe('useFetch', () => {
   it('Should fetch data', async () => {
     fetchMock.mockResponse(JSON.stringify({ data: [] }));
 
-    const { result, waitForNextUpdate } = renderHook(() => useFetch('http://mockUrl.com'));
+    const { result, waitForNextUpdate } = renderHook(() =>
+      useFetch('http://mockUrl.com')
+    );
 
     await waitForNextUpdate();
 
@@ -38,7 +41,9 @@ describe('useFetch', () => {
   it('Should re-retrieve data', async () => {
     fetchMock.mockResponse(JSON.stringify({ data: [] }));
 
-    const { result, waitForNextUpdate } = renderHook(() => useFetch('http://mockUrl.com'));
+    const { result, waitForNextUpdate } = renderHook(() =>
+      useFetch('http://mockUrl.com')
+    );
 
     await waitForNextUpdate();
 
@@ -56,7 +61,9 @@ describe('useFetch', () => {
   it('Should return error', async () => {
     fetchMock.mockRejectOnce(() => Promise.reject('Mock Error'));
 
-    const { result, waitForNextUpdate } = renderHook(() => useFetch('http://mockUrl.com'));
+    const { result, waitForNextUpdate } = renderHook(() =>
+      useFetch('http://mockUrl.com')
+    );
 
     await waitForNextUpdate();
 

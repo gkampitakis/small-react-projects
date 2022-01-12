@@ -5,7 +5,6 @@ import Tab from './components/Tab';
 import Error from '../../components/Error';
 import './index.scss';
 
-
 const DATA_URL = 'https://course-api.com/react-tabs-project';
 
 type dataSchema = {
@@ -17,14 +16,13 @@ type dataSchema = {
   company: string;
 }[];
 
-
-export default function Tabs (): ReactElement {
+export default function Tabs(): ReactElement {
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'
   });
   useDocTitle('Tabs');
-  const [data, loading, _, error] = useFetch<dataSchema>(DATA_URL);
+  const [data, loading, , error] = useFetch<dataSchema>(DATA_URL);
   const [tab, setTab] = useState(0);
 
   return (
@@ -37,24 +35,24 @@ export default function Tabs (): ReactElement {
       </div>
       {loading && <h2 className="loading">Loading...</h2>}
       {error && <Error message={error} />}
-      {
-        data &&
+      {data && (
         <>
           <section className="main-content">
             <section className="tabs-container">
-              {
-                data.map(({ company, id }, idx) => (
-                  <Tab key={id} selected={idx === tab} title={company} handler={() => setTab(idx)} />
-                ))
-              }
+              {data.map(({ company, id }, idx) => (
+                <Tab
+                  key={id}
+                  selected={idx === tab}
+                  title={company}
+                  handler={() => setTab(idx)}
+                />
+              ))}
             </section>
             <Details data={data[tab]} />
           </section>
-          <button className="info-btn">
-            more info
-       </button>
+          <button className="info-btn">more info</button>
         </>
-      }
+      )}
     </main>
   );
 }

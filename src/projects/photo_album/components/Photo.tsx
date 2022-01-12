@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import ImageLoad from './ImageLoad';
 
-
 export interface PhotoProps {
   urls: {
     raw: string;
@@ -18,8 +17,15 @@ export interface PhotoProps {
   };
 }
 
-export default function Photo (props: PhotoProps): ReactElement {
-  const { user: { name, portfolio_url, profile_image: { medium } }, likes } = props;
+export default function Photo(props: PhotoProps): ReactElement {
+  const {
+    user: {
+      name,
+      portfolio_url,
+      profile_image: { medium }
+    },
+    likes
+  } = props;
 
   return (
     <article className="photo">
@@ -34,7 +40,7 @@ export default function Photo (props: PhotoProps): ReactElement {
           <p>{likes} likes</p>
         </div>
         <a href={portfolio_url} target="_blank" rel="noreferrer">
-          <img src={medium} alt='User Avatar' className='user-img' />
+          <img src={medium} alt="User Avatar" className="user-img" />
         </a>
       </div>
     </article>

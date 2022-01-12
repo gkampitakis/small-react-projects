@@ -1,7 +1,8 @@
 import { useEffect, useState, useCallback } from 'react';
 
-
-function useFetch<T> (url: string): [T | undefined, boolean, () => void, string | null] {
+function useFetch<T>(
+  url: string
+): [T | undefined, boolean, () => void, string | null] {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [data, setData] = useState(undefined);
@@ -13,7 +14,7 @@ function useFetch<T> (url: string): [T | undefined, boolean, () => void, string 
       .then(d => d.json())
       .then(d => setData(d))
       .catch(e => setError(e))
-      .finally(() => setLoading(false))
+      .finally(() => setLoading(false));
   }, [url]);
 
   useEffect(() => {

@@ -1,6 +1,11 @@
-import React, { ReactElement, useState, useEffect, memo, Component } from 'react';
+import React, {
+  ReactElement,
+  useState,
+  useEffect,
+  memo,
+  Component
+} from 'react';
 import { Blurhash } from 'react-blurhash';
-
 
 interface ImageLoadProps {
   placeholder: string;
@@ -8,7 +13,11 @@ interface ImageLoadProps {
   alt: string;
 }
 
-function ImageLoad ({ alt, regular, placeholder }: ImageLoadProps): ReactElement {
+function ImageLoad({
+  alt,
+  regular,
+  placeholder
+}: ImageLoadProps): ReactElement {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -16,7 +25,7 @@ function ImageLoad ({ alt, regular, placeholder }: ImageLoadProps): ReactElement
     regularImage.src = regular;
     regularImage.onload = () => {
       setLoading(false);
-    }
+    };
   }, [regular]);
 
   return (
@@ -47,23 +56,26 @@ function ImageLoad ({ alt, regular, placeholder }: ImageLoadProps): ReactElement
 
 export default memo(ImageLoad);
 
-class ErrorBoundary extends Component<{ src: string; alt: string; }, { hasError: boolean }> {
-  constructor (props: { src: string; alt: string; }) {
+class ErrorBoundary extends Component<
+  { src: string; alt: string },
+  { hasError: boolean }
+> {
+  constructor(props: { src: string; alt: string }) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError (): { hasError: boolean } {
+  static getDerivedStateFromError(): { hasError: boolean } {
     return { hasError: true };
   }
 
-  componentDidCatch (error: any, errorInfo: any): void {
+  componentDidCatch(error: unknown, errorInfo: unknown): void {
     console.log(error, errorInfo);
   }
 
-  render () {
+  render() {
     if (this.state.hasError) {
-      return <img src={this.props.src} alt={this.props.alt} />
+      return <img src={this.props.src} alt={this.props.alt} />;
     } else {
       return this.props.children;
     }

@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import App from './App';
 
-const fetchMock = (fetch as FetchMock);
+const fetchMock = fetch as FetchMock;
 const mockData = [
   {
     idDrink: 0,
@@ -33,7 +33,6 @@ const mockData = [
 ];
 
 describe('Cocktail', () => {
-
   beforeAll(fetchMock.enableMocks);
   beforeEach(() => {
     fetchMock.resetMocks();
@@ -42,8 +41,7 @@ describe('Cocktail', () => {
 
   it('Should render correctly', async () => {
     await act(async () => {
-      const { baseElement } = render(<App />,
-        { wrapper: BrowserRouter });
+      const { baseElement } = render(<App />, { wrapper: BrowserRouter });
 
       expect(baseElement).toMatchSnapshot();
     });

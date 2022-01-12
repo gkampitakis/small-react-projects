@@ -6,8 +6,7 @@ import Sidebar from './components/Sidebar';
 import { AppProvider } from './context';
 import './index.scss';
 
-
-export default function App (): ReactElement {
+export default function App(): ReactElement {
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)',
     color: 'hsl(209, 61%, 16%)'

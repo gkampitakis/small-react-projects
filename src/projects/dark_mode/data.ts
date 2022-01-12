@@ -27,6 +27,6 @@ const articles = [
     length: 5,
     snippet: `UI Before API.`
   }
-]
+];
 
 export default articles;

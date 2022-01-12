@@ -4,8 +4,7 @@ import { useBodyStyles, useDocTitle } from '../../hooks';
 import 'github-markdown-css';
 import './index.scss';
 
-
-export default function App (): ReactElement {
+export default function App(): ReactElement {
   useDocTitle('Markdown Preview');
   useBodyStyles({
     background: 'hsl(210, 36%, 96%)'
@@ -15,10 +14,7 @@ export default function App (): ReactElement {
   return (
     <main className="markdown_preview">
       <section>
-        <textarea
-          value={preview}
-          onChange={(e) => setPreview(e.target.value)}
-        />
+        <textarea value={preview} onChange={e => setPreview(e.target.value)} />
         <article>
           <ReactMarkdown className="markdown-body">{preview}</ReactMarkdown>
         </article>

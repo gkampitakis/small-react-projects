@@ -4,12 +4,9 @@ import renderer from 'react-test-renderer';
 import App from './App';
 import userEvent from '@testing-library/user-event';
 
-
 describe('Dark Mode', () => {
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<App />)
-      .toJSON();
+    const tree = renderer.create(<App />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -17,8 +14,12 @@ describe('Dark Mode', () => {
   it('Should set lightTheme', () => {
     render(<App />);
 
-    expect(localStorage.getItem('dark-mode')).toBe(JSON.stringify('dark_theme'));
+    expect(localStorage.getItem('dark-mode')).toBe(
+      JSON.stringify('dark_theme')
+    );
     userEvent.click(screen.getByText(/toggle/i));
-    expect(localStorage.getItem('dark-mode')).toBe(JSON.stringify('light_theme'));
+    expect(localStorage.getItem('dark-mode')).toBe(
+      JSON.stringify('light_theme')
+    );
   });
 });

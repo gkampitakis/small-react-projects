@@ -5,12 +5,9 @@ import { render, screen } from '@testing-library/react';
 import Reviews from './Reviews';
 import data from './data';
 
-
 describe('Reviews', () => {
   it('Should render correctly', () => {
-    const tree = renderer
-      .create(<Reviews />)
-      .toJSON();
+    const tree = renderer.create(<Reviews />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -53,7 +50,7 @@ describe('Reviews', () => {
     userEvent.click(screen.getByText(/surprise me/i));
 
     const updatedImage = screen.getByAltText(/'s Avatar/i).outerHTML;
-    
+
     expect(image).not.toBe(updatedImage);
   });
 });
