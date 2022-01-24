@@ -1,11 +1,5 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import About from '../About';
+export {};
 
 describe('About', () => {
-  it('Should render correctly', () => {
-    const tree = renderer.create(<About />).toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
+  it.todo('Should render correctly');
 });
